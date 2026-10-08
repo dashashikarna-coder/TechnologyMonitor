@@ -1,0 +1,1867 @@
+# Сгенерировано import_topics.py из Google-таблицы — правьте таблицу, а не этот файл
+robotics:
+  name: Робототехника
+  queries:
+    ru:
+    - робототехника
+    - робот
+    - роботизированная система
+    - роботизированный комплекс
+    - робототехнический комплекс
+    - РТК
+    - роботизированная платформа
+    - автономный робот
+    - интеллектуальный робот
+    - сервисный робот
+    en:
+    - robotics
+    - robot
+    - robotic system
+    - robotic platform
+    - robotic complex
+    - autonomous robot
+    - autonomous robotic system
+    - intelligent robot
+    - intelligent robotics
+    - service robot
+  patent_words:
+  - робототехника
+  - робот
+  - роботизированная система
+  - роботизированный комплекс
+  - робототехнический комплекс
+  - РТК
+  - роботизированная платформа
+  - автономный робот
+  - интеллектуальный робот
+  - сервисный робот
+  - мобильный робот
+  - автономная система
+  - автономная роботизированная система
+  - интеллектуальная система
+  - беспилотная система
+  - мобильная робототехника
+  - автономный мобильный робот
+  - наземный робот
+  - беспилотная наземная система
+  - беспилотный наземный комплекс
+  - наземный робототехнический комплекс
+  - НРК
+  - робот для охраны
+  - робот-охранник
+  - охранный робот
+  - роботизированная охрана
+  - роботизированная система безопасности
+  - роботизированное обеспечение безопасности
+  - роботизированное патрулирование
+  - автономное патрулирование
+  - патрульный робот
+  - робот для патрулирования
+  - автономный патрульный робот
+  - роботизированный контроль территории
+  - роботизированная охрана объекта
+  - автономный контроль территории
+  - роботизированный мониторинг территории
+  - роботизированное видеонаблюдение
+  - робот для видеонаблюдения
+  - охрана периметра
+  patent_words_en:
+  - robotics
+  - robot
+  - robotic system
+  - robotic platform
+  - robotic complex
+  - autonomous robot
+  - autonomous robotic system
+  - intelligent robot
+  - intelligent robotics
+  - service robot
+  - mobile robot
+  - mobile robotics
+  - autonomous system
+  - unmanned system
+  - autonomous mobile robot
+  - AMR
+  - autonomous mobile robotics
+  - ground robot
+  - unmanned ground vehicle
+  - UGV
+  - unmanned ground system
+  - ground robotic system
+  - autonomous ground vehicle
+  - AGV
+  - security robotics
+  - security robot
+  - security robots
+  - robotic security
+  - robotic security system
+  - autonomous security robot
+  - autonomous security system
+  - robotic patrol
+  - autonomous patrol
+  - autonomous patrol robot
+  - patrol robot
+  - perimeter security robot
+  - perimeter patrol robot
+  - robotic surveillance
+  - autonomous surveillance
+  - mobile surveillance robot
+  keywords:
+  - робототехника
+  - робот
+  - роботы
+  - роботизированная система
+  - роботизированный комплекс
+  - робототехнический комплекс
+  - РТК
+  - роботизированная платформа
+  - автономный робот
+  - интеллектуальный робот
+  - сервисный робот
+  - мобильный робот
+  - автономная система
+  - автономная роботизированная система
+  - интеллектуальная система
+  - беспилотная система
+  - мобильная робототехника
+  - автономный мобильный робот
+  - наземный робот
+  - беспилотная наземная система
+  - беспилотный наземный комплекс
+  - наземный робототехнический комплекс
+  - НРК
+  - робот для охраны
+  - робот-охранник
+  - охранный робот
+  - роботизированная охрана
+  - роботизированная система безопасности
+  - роботизированное обеспечение безопасности
+  - роботизированное патрулирование
+  - автономное патрулирование
+  - патрульный робот
+  - робот для патрулирования
+  - автономный патрульный робот
+  - роботизированный контроль территории
+  - роботизированная охрана объекта
+  - автономный контроль территории
+  - роботизированный мониторинг территории
+  - роботизированное видеонаблюдение
+  - робот для видеонаблюдения
+  - охрана периметра
+  - автономная охрана периметра
+  - роботизированная охрана периметра
+  - интеллектуальная система безопасности
+  - автономная система безопасности
+  - физическая безопасность
+  - технические средства охраны
+  - БПЛА
+  - БВС
+  - беспилотник
+  - беспилотные системы
+  - беспилотная авиационная система
+  - БАС
+  - беспилотный летательный аппарат
+  - дрон
+  - дроны
+  - автономный дрон
+  - роботизированный БПЛА
+  - интеллектуальный БПЛА
+  - автономная авиационная система
+  - беспилотная авиация
+  - низковысотные системы
+  - низковысотные технологии
+  - низковысотная авиация
+  - низковысотная экономика
+  - автономные низковысотные системы
+  - гуманоидный робот
+  - гуманоид
+  - человекоподобный робот
+  - антропоморфный робот
+  - робот-гуманоид
+  - четвероногий робот
+  - робот-собака
+  - роботизированная инспекция
+  - инспекционный робот
+  - автономная инспекция
+  - робот для обследования объекта
+  - экзоскелет
+  - роботизированный экзоскелет
+  - промышленный экзоскелет
+  - медицинский экзоскелет
+  - носимая робототехника
+  - роботизированный манипулятор
+  - промышленный робот
+  - коллаборативный робот
+  - кобот
+  - роботизированная автоматизация
+  - robotics
+  - robot
+  - robots
+  - robotic system
+  - robotic systems
+  - robotic platform
+  - robotic complex
+  - autonomous robot
+  - autonomous robotic system
+  - intelligent robot
+  - intelligent robotics
+  - service robot
+  - mobile robot
+  - mobile robotics
+  - autonomous system
+  - autonomous systems
+  - unmanned system
+  - unmanned systems
+  - autonomous mobile robot
+  - AMR
+  - autonomous mobile robotics
+  - ground robot
+  - unmanned ground vehicle
+  - UGV
+  - unmanned ground system
+  - ground robotic system
+  - autonomous ground vehicle
+  - AGV
+  - security robotics
+  - security robot
+  - security robots
+  - robotic security
+  - robotic security system
+  - autonomous security robot
+  - autonomous security system
+  - robotic patrol
+  - robotic patrolling
+  - autonomous patrol
+  - autonomous patrol robot
+  - patrol robot
+  - perimeter security robot
+  - perimeter patrol robot
+  - robotic surveillance
+  - autonomous surveillance
+  - mobile surveillance robot
+  - robotic monitoring
+  - robotic inspection
+  - inspection robot
+  - autonomous inspection robot
+  - physical security robotics
+  - public safety robotics
+  - robotic public safety
+  - security automation
+  - UAV
+  - UAS
+  - drone
+  - drones
+  - unmanned aerial vehicle
+  - unmanned aerial system
+  - autonomous drone
+  - autonomous UAV
+  - intelligent drone
+  - aerial robotics
+  - autonomous aerial system
+  - autonomous aircraft
+  - low-altitude systems
+  - low-altitude economy
+  - low-altitude aviation
+  - low-altitude autonomous systems
+  - low-altitude mobility
+  - advanced air mobility
+  - AAM
+  - urban air mobility
+  - UAM
+  - humanoid robot
+  - humanoid robotics
+  - humanoid
+  - embodied AI
+  - embodied intelligence
+  - general purpose robot
+  - quadruped robot
+  - quadruped robotics
+  - robotic dog
+  - robot dog
+  - autonomous inspection
+  - robotic inspection system
+  - inspection robotics
+  - exoskeleton
+  - robotic exoskeleton
+  - industrial exoskeleton
+  - medical exoskeleton
+  - wearable robotics
+  - industrial robot
+  - collaborative robot
+  - cobot
+  - robotic manipulator
+  - robot arm
+  - autonomous robotics
+  - 机器人
+  - 机器人技术
+  - 机器人系统
+  - 智能机器人
+  - 自主机器人
+  - 自主系统
+  - 无人系统
+  - 移动机器人
+  - 移动机器人技术
+  - 自主移动机器人
+  - AMR机器人
+  - 地面机器人
+  - 无人地面车辆
+  - 无人地面系统
+  - 地面无人系统
+  - 安防机器人
+  - 安保机器人
+  - 巡逻机器人
+  - 安防巡逻机器人
+  - 智能安防机器人
+  - 自主巡逻机器人
+  - 无人巡逻系统
+  - 周界安防机器人
+  - 安防无人系统
+  - 智慧安防
+  - 无人机
+  - 无人航空器
+  - 无人航空系统
+  - 无人机系统
+  - 智能无人机
+  - 自主无人机
+  - 无人飞行器
+  - 航空机器人
+  - 低空经济
+  - 低空飞行
+  - 低空无人机
+  - 低空智能系统
+  - 低空产业
+  - 低空无人系统
+  - 人形机器人
+  - 类人机器人
+  - 具身智能
+  - 具身智能机器人
+  - 四足机器人
+  - 机器狗
+  - 检查机器人
+  - 巡检机器人
+  - 自主巡检
+  - 机器人巡检
+  - 外骨骼
+  - 机器人外骨骼
+  - 工业外骨骼
+  - 医疗外骨骼
+  - 可穿戴机器人
+  - 工业机器人
+  - 协作机器人
+  - 机械臂
+  - 机器人手臂
+  - 智能制造机器人
+biotech:
+  name: Биотехнологии
+  queries:
+    ru:
+    - биотехнологии
+    - биотехнологическое решение
+    - биотехнологическая разработка
+    - биотехнологический продукт
+    - биотехнологическая платформа
+    - биоинженерия
+    - биоинженерные технологии
+    - биомедицина
+    - биомедицинские технологии
+    - молекулярная биология
+    en:
+    - biotechnology
+    - biotech solution
+    - biotech innovation
+    - biotech product
+    - biotech platform
+    - bioengineering
+    - biomedical engineering
+    - biomedical technology
+    - biomedicine
+    - molecular biology
+  patent_words:
+  - биотехнологии
+  - биотехнологическое решение
+  - биотехнологическая разработка
+  - биотехнологический продукт
+  - биотехнологическая платформа
+  - биоинженерия
+  - биоинженерные технологии
+  - биомедицина
+  - биомедицинские технологии
+  - молекулярная биология
+  - молекулярные технологии
+  - клеточные технологии
+  - клеточная инженерия
+  - клеточная терапия
+  - генная инженерия
+  - генетические технологии
+  - геномика
+  - геномные технологии
+  - генотерапия
+  - редактирование генома
+  - редактирование генов
+  - синтетическая биология
+  - синтетическая биотехнология
+  - биосинтез
+  - биопроизводство
+  - биофабрика
+  - биоматериалы
+  - биосовместимые материалы
+  - биополимеры
+  - биопринтинг
+  - 3D-биопечать
+  - тканевая инженерия
+  - регенеративная медицина
+  - персонализированная медицина
+  - прецизионная медицина
+  - биомедицинская диагностика
+  - биосенсоры
+  - молекулярная диагностика
+  - генетическая диагностика
+  - биоинформатика
+  patent_words_en:
+  - biotechnology
+  - biotech solution
+  - biotech innovation
+  - biotech product
+  - biotech platform
+  - bioengineering
+  - biomedical engineering
+  - biomedical technology
+  - biomedicine
+  - molecular biology
+  - molecular technology
+  - cell technology
+  - cell engineering
+  - cell therapy
+  - gene engineering
+  - genetic engineering
+  - genetic technology
+  - genomics
+  - genomic technology
+  - gene therapy
+  - genome editing
+  - gene editing
+  - synthetic biology
+  - synbio
+  - synthetic biotechnology
+  - biosynthesis
+  - biomanufacturing
+  - bioproduction
+  - biofabrication
+  - biomaterials
+  - biocompatible materials
+  - biopolymers
+  - bioprinting
+  - 3D bioprinting
+  - tissue engineering
+  - regenerative medicine
+  - personalized medicine
+  - precision medicine
+  - biomedical diagnostics
+  - biosensors
+  keywords:
+  - биотехнологии
+  - биотехнология
+  - биотех
+  - биотехнологическое решение
+  - биотехнологическая разработка
+  - биотехнологический продукт
+  - биотехнологическая платформа
+  - биоинженерия
+  - биоинженерные технологии
+  - биомедицина
+  - биомедицинские технологии
+  - молекулярная биология
+  - молекулярные технологии
+  - клеточные технологии
+  - клеточная инженерия
+  - клеточная терапия
+  - генная инженерия
+  - генетические технологии
+  - геномика
+  - геномные технологии
+  - генотерапия
+  - редактирование генома
+  - редактирование генов
+  - синтетическая биология
+  - синтетическая биотехнология
+  - биосинтез
+  - биопроизводство
+  - биофабрика
+  - биоматериалы
+  - биосовместимые материалы
+  - биополимеры
+  - биопринтинг
+  - 3D-биопечать
+  - тканевая инженерия
+  - регенеративная медицина
+  - персонализированная медицина
+  - прецизионная медицина
+  - биомедицинская диагностика
+  - биосенсоры
+  - молекулярная диагностика
+  - генетическая диагностика
+  - биоинформатика
+  - вычислительная биология
+  - ИИ в биотехнологиях
+  - искусственный интеллект в биологии
+  - цифровая биология
+  - микробиология
+  - микробиом
+  - микробиомные технологии
+  - биофармацевтика
+  - биофарма
+  - биопрепарат
+  - биологический препарат
+  - биологическое лекарство
+  - моноклональные антитела
+  - биосинтетические технологии
+  - биотехнологии здоровья
+  - biotechnology
+  - biotech
+  - biotechnologies
+  - biotech solution
+  - biotechnology solution
+  - biotech innovation
+  - biotech product
+  - biotech platform
+  - bioengineering
+  - biomedical engineering
+  - biomedical technology
+  - biomedicine
+  - molecular biology
+  - molecular technology
+  - cell technology
+  - cell engineering
+  - cell therapy
+  - gene engineering
+  - genetic engineering
+  - genetic technology
+  - genomics
+  - genomic technology
+  - gene therapy
+  - genome editing
+  - gene editing
+  - synthetic biology
+  - synbio
+  - synthetic biotechnology
+  - biosynthesis
+  - biomanufacturing
+  - bioproduction
+  - biofabrication
+  - biomaterials
+  - biocompatible materials
+  - biopolymers
+  - bioprinting
+  - 3D bioprinting
+  - tissue engineering
+  - regenerative medicine
+  - personalized medicine
+  - precision medicine
+  - biomedical diagnostics
+  - biosensors
+  - biomarkers
+  - molecular diagnostics
+  - rapid diagnostics
+  - genetic diagnostics
+  - bioinformatics
+  - computational biology
+  - AI in biotechnology
+  - AI in biology
+  - artificial intelligence in biotech
+  - digital biology
+  - microbiology
+  - microbiome
+  - microbiome technology
+  - biopharmaceutical
+  - biopharma
+  - biologics
+  - biological drug
+  - monoclonal antibodies
+  - RNA technology
+  - mRNA
+  - RNA therapeutics
+  - therapeutic vaccine
+  - biotech health
+  - health biotechnology
+  - human health technology
+  - human enhancement
+  - biohacking
+  - neurotechnology
+  - neurotech
+  - brain-computer interface
+  - BCI
+  - neural interface
+  - bionics
+  - bionic technology
+  - artificial organs
+  - organoids
+  - organ-on-a-chip
+  - lab-on-a-chip
+  - longevity biotechnology
+  - anti-aging biotechnology
+  - aging research
+  - 生物技术
+  - 生物科技
+  - 生物技术产业
+  - 生物技术创新
+  - 生物技术产品
+  - 生物工程
+  - 生物医学工程
+  - 生物医学技术
+  - 生物医药
+  - 分子生物学
+  - 分子技术
+  - 细胞技术
+  - 细胞工程
+  - 细胞治疗
+  - 基因工程
+  - 基因技术
+  - 基因组学
+  - 基因组技术
+  - 基因治疗
+  - 基因编辑
+  - 基因组编辑
+  - 合成生物学
+  - 合成生物技术
+  - 生物合成
+  - 生物制造
+  - 生物生产
+  - 生物制造技术
+  - 生物材料
+  - 生物相容性材料
+  - 生物聚合物
+  - 生物打印
+  - 3D生物打印
+  - 组织工程
+  - 再生医学
+  - 个性化医疗
+  - 精准医疗
+  - 生物医学诊断
+  - 生物传感器
+  - 生物标志物
+  - 分子诊断
+  - 快速诊断
+  - 基因诊断
+  - 生物信息学
+  - 计算生物学
+  - 人工智能与生物技术
+  - AI生物技术
+  - 数字生物学
+  - 微生物学
+  - 微生物组
+  - 微生物组技术
+  - 生物制药
+  - 生物药
+  - 生物制品
+  - 单克隆抗体
+  - RNA技术
+  - 信使RNA
+  - RNA疗法
+  - 治疗性疫苗
+  - 健康生物技术
+  - 人类健康技术
+  - 人类增强
+  - 生物黑客
+  - 神经技术
+  - 脑机接口
+  - 神经接口
+  - 仿生学
+  - 仿生技术
+  - 人工器官
+  - 类器官
+  - 器官芯片
+  - 芯片实验室
+  - 长寿生物技术
+  - 抗衰老生物技术
+  - 衰老研究
+radio:
+  name: Радио- и спутниковая связь в охране
+  queries:
+    ru:
+    - радиосистема
+    - беспроводная связь
+    - беспроводные технологии
+    - беспроводная сеть
+    - радиоканал
+    - радиопередача
+    - радиотехнологии
+    - радиочастотные технологии
+    - радиочастотная связь
+    - радиочастота
+    en:
+    - private 5G
+    - LTE
+    - radio communication
+    - radio system
+    - radio network
+    - radio technology
+    - wireless communication
+    - wireless technology
+    - wireless network
+    - RF communication
+  patent_words:
+  - радиосистема
+  - беспроводная связь
+  - беспроводные технологии
+  - беспроводная сеть
+  - радиоканал
+  - радиопередача
+  - радиотехнологии
+  - радиочастотные технологии
+  - радиочастотная связь
+  - радиочастота
+  - радиочастотный спектр
+  - радиомодуль
+  - профессиональная радиосвязь
+  - цифровая радиосвязь
+  - мобильная радиосвязь
+  - двусторонняя радиосвязь
+  - критическая связь
+  - защищённая связь
+  - специальная связь
+  - оперативная связь
+  - экстренная связь
+  - аварийная связь
+  - связь для служб безопасности
+  - связь для критической инфраструктуры
+  - миссионно-критическая связь
+  - частная LTE-сеть
+  - частная 5G-сеть
+  - беспроводные сети
+  - мобильные сети
+  - телекоммуникации
+  - коммуникационные технологии
+  - наземно-независимая сеть
+  - гибридная сеть связи
+  - интегрированная сеть связи
+  - автономная сеть связи
+  patent_words_en:
+  - private 5G
+  - LTE
+  - radio communication
+  - radio system
+  - radio network
+  - radio technology
+  - wireless communication
+  - wireless technology
+  - wireless network
+  - RF communication
+  - RF technology
+  - radio frequency
+  - RF spectrum
+  - spectrum management
+  - spectrum technology
+  - radio transceiver
+  - two-way radio
+  - digital radio
+  - digital radio communication
+  - mobile radio
+  - professional radio communication
+  - critical communications
+  - mission-critical communications
+  - secure communications
+  - emergency communications
+  - public safety communications
+  - private communications network
+  - professional mobile radio
+  - PMR
+  - DMR
+  - TETRA
+  - P25
+  - private LTE
+  - wireless infrastructure
+  - telecommunications
+  - telecom technology
+  - mobile communications
+  - cellular communications
+  - NTN
+  - non-terrestrial networks
+  keywords:
+  - радиосвязь
+  - радио
+  - радиосистема
+  - беспроводная связь
+  - беспроводные технологии
+  - беспроводная сеть
+  - радиосеть
+  - радиоканал
+  - радиопередача
+  - радиотехнологии
+  - радиочастотные технологии
+  - радиочастотная связь
+  - радиочастота
+  - радиочастотный спектр
+  - радиомодуль
+  - радиостанция
+  - профессиональная радиосвязь
+  - цифровая радиосвязь
+  - мобильная радиосвязь
+  - двусторонняя радиосвязь
+  - критическая связь
+  - защищённая связь
+  - специальная связь
+  - оперативная связь
+  - экстренная связь
+  - аварийная связь
+  - связь для служб безопасности
+  - связь для критической инфраструктуры
+  - миссионно-критическая связь
+  - частная LTE-сеть
+  - private 5G
+  - частная 5G-сеть
+  - LTE
+  - беспроводные сети
+  - мобильные сети
+  - телекоммуникации
+  - телеком
+  - коммуникационные технологии
+  - наземно-независимая сеть
+  - гибридная сеть связи
+  - интегрированная сеть связи
+  - автономная сеть связи
+  - radio communication
+  - radio communications
+  - radio system
+  - radio network
+  - radio technology
+  - wireless communication
+  - wireless communications
+  - wireless technology
+  - wireless network
+  - wireless networking
+  - RF communication
+  - RF technology
+  - radio frequency
+  - RF spectrum
+  - spectrum management
+  - spectrum technology
+  - radio transceiver
+  - two-way radio
+  - digital radio
+  - digital radio communication
+  - mobile radio
+  - professional radio communication
+  - critical communications
+  - mission-critical communications
+  - secure communications
+  - emergency communications
+  - public safety communications
+  - private communications network
+  - professional mobile radio
+  - PMR
+  - DMR
+  - TETRA
+  - P25
+  - private LTE
+  - wireless infrastructure
+  - telecommunications
+  - telecom technology
+  - mobile communications
+  - cellular communications
+  - NTN
+  - non-terrestrial networks
+  - hybrid communications
+  - hybrid network
+  - integrated communications
+  - resilient communications
+  - autonomous communications network
+  - mesh network
+  - wireless mesh network
+  - ad hoc network
+  - software defined radio
+  - SDR
+  - cognitive radio
+  - IoT connectivity
+  - M2M communications
+  - 无线电通信
+  - 无线通信
+  - 无线电技术
+  - 无线技术
+  - 无线网络
+  - 无线通信技术
+  - 无线电系统
+  - 无线通信系统
+  - 无线电网络
+  - 射频通信
+  - 射频技术
+  - 无线电频率
+  - 无线电频谱
+  - 频谱管理
+  - 无线电设备
+  - 数字无线电
+  - 数字通信
+  - 移动通信
+  - 专业移动无线电
+  - 专业无线通信
+  - 公共安全通信
+  - 关键通信
+  - 任务关键通信
+  - 应急通信
+  - 安全通信
+  - 加密通信
+  - 专用通信网络
+  - 专网通信
+  - 专用LTE
+  - 专用5G
+  - 5G专网
+  - 电信技术
+  - 通信技术
+  - 非地面网络
+  - 卫星地面融合
+  - 混合通信网络
+  - 一体化通信网络
+  - 自组织网络
+  - 自主通信网络
+  - 网状网络
+  - Mesh网络
+  - 自组网
+  - 软件定义无线电
+  - 认知无线电
+  - 物联网通信
+  - M2M通信
+  - 卫星通信
+  - 卫星通信技术
+  - 卫星通信系统
+  - 卫星网络
+  - 卫星互联网
+  - 卫星连接
+  - 卫星宽带
+  - 卫星移动通信
+  - 卫星通信基础设施
+  - 卫星星座
+  - 卫星互联网星座
+  - 巨型卫星星座
+  - 卫星组网
+  - 卫星物联网
+  - 卫星IoT
+  - SATCOM
+  - 低轨卫星
+  - LEO
+  - 中轨卫星
+  - MEO
+  - 高轨卫星
+  - GEO
+  - 低地球轨道
+  - 中地球轨道
+  - 地球同步轨道
+  - 非地球同步轨道
+  - NGSO
+  - 低轨卫星通信
+  - 5G NTN
+  - 6G NTN
+  - 卫星与地面网络融合
+  - 天地一体化网络
+  - 卫星直连手机
+  - 手机直连卫星
+  - 直连设备
+  - Direct-to-Device
+  - D2D卫星通信
+  - 卫星直连
+  - 卫星蜂窝通信
+  - 卫星宽带互联网
+  - 卫星数据通信
+materials:
+  name: Материалы и микроэлектроника
+  queries:
+    ru:
+    - материаловедение
+    - новые материалы
+    - передовые материалы
+    - функциональные материалы
+    - высокотехнологичные материалы
+    - композитные материалы
+    - композиты
+    - наноматериалы
+    - нанотехнологии
+    - двумерные материалы
+    en:
+    - materials science
+    - advanced materials
+    - novel materials
+    - functional materials
+    - smart materials
+    - composite materials
+    - nanomaterials
+    - nanotechnology
+    - 2D materials
+    - graphene
+  patent_words:
+  - материаловедение
+  - новые материалы
+  - передовые материалы
+  - функциональные материалы
+  - высокотехнологичные материалы
+  - композитные материалы
+  - композиты
+  - наноматериалы
+  - нанотехнологии
+  - двумерные материалы
+  - 2D-материалы
+  - графен
+  - углеродные нанотрубки
+  - квантовые материалы
+  - метаматериалы
+  - сверхпроводники
+  - керамические материалы
+  - биоматериалы
+  - умные материалы
+  - электронные материалы
+  - полупроводниковые материалы
+  - материалы для микроэлектроники
+  - тонкие пленки
+  - функциональные покрытия
+  - перовскиты
+  - квантовые точки
+  - микроэлектроника
+  - наноэлектроника
+  - полупроводники
+  - чипы
+  - микрочип
+  - интегральная схема
+  - производство полупроводников
+  - производство чипов
+  patent_words_en:
+  - materials science
+  - advanced materials
+  - novel materials
+  - functional materials
+  - smart materials
+  - composite materials
+  - nanomaterials
+  - nanotechnology
+  - 2D materials
+  - graphene
+  - carbon nanotubes
+  - quantum materials
+  - metamaterials
+  - superconductors
+  - advanced ceramics
+  - biomaterials
+  - electronic materials
+  - semiconductor materials
+  - microelectronic materials
+  - thin films
+  - functional coatings
+  - perovskites
+  - quantum dots
+  - silicon carbide
+  - SiC
+  - gallium nitride
+  - GaN
+  - gallium arsenide
+  - GaAs
+  - indium phosphide
+  - InP
+  - microelectronics
+  - nanoelectronics
+  - semiconductors
+  - semiconductor industry
+  - semiconductor technology
+  - semiconductor manufacturing
+  - chip
+  - microchip
+  - integrated circuit
+  keywords:
+  - материаловедение
+  - новые материалы
+  - передовые материалы
+  - функциональные материалы
+  - высокотехнологичные материалы
+  - композитные материалы
+  - композиты
+  - наноматериалы
+  - нанотехнологии
+  - двумерные материалы
+  - 2D-материалы
+  - графен
+  - углеродные нанотрубки
+  - квантовые материалы
+  - метаматериалы
+  - сверхпроводники
+  - керамические материалы
+  - биоматериалы
+  - умные материалы
+  - электронные материалы
+  - полупроводниковые материалы
+  - материалы для микроэлектроники
+  - тонкие пленки
+  - функциональные покрытия
+  - перовскиты
+  - квантовые точки
+  - микроэлектроника
+  - наноэлектроника
+  - полупроводники
+  - чипы
+  - микрочип
+  - интегральная схема
+  - производство полупроводников
+  - производство чипов
+  - materials science
+  - advanced materials
+  - novel materials
+  - functional materials
+  - smart materials
+  - composite materials
+  - nanomaterials
+  - nanotechnology
+  - 2D materials
+  - graphene
+  - carbon nanotubes
+  - quantum materials
+  - metamaterials
+  - superconductors
+  - advanced ceramics
+  - biomaterials
+  - electronic materials
+  - semiconductor materials
+  - microelectronic materials
+  - thin films
+  - functional coatings
+  - perovskites
+  - quantum dots
+  - silicon carbide
+  - SiC
+  - gallium nitride
+  - GaN
+  - gallium arsenide
+  - GaAs
+  - indium phosphide
+  - InP
+  - microelectronics
+  - nanoelectronics
+  - semiconductors
+  - semiconductor industry
+  - semiconductor technology
+  - semiconductor manufacturing
+  - chip
+  - microchip
+  - integrated circuit
+  - wafer
+  - silicon wafer
+  - lithography
+  - photolithography
+  - EUV lithography
+  - DUV lithography
+  - transistor
+  - 材料科学
+  - 新材料
+  - 先进材料
+  - 功能材料
+  - 高性能材料
+  - 智能材料
+  - 复合材料
+  - 纳米材料
+  - 纳米技术
+  - 二维材料
+  - 2D材料
+  - 石墨烯
+  - 碳纳米管
+  - 量子材料
+  - 超材料
+  - 超导材料
+  - 超导体
+  - 先进陶瓷
+  - 生物材料
+  - 电子材料
+  - 半导体材料
+  - 微电子材料
+  - 薄膜材料
+  - 功能涂层
+  - 钙钛矿
+  - 量子点
+  - 碳化硅
+  - 氮化镓
+  - 砷化镓
+  - 微电子
+  - 纳米电子
+  - 半导体
+  - 半导体产业
+  - 半导体技术
+  - 半导体制造
+  - 微芯片
+  - 集成电路
+  - 硅晶圆
+  - 光刻技术
+  - 晶体管
+  - 先进封装
+  - 3D封装
+  - 异构集成
+  - 半导体设备
+  - 光刻胶
+  - 芯片设计
+  - EUV光刻
+  - DUV光刻
+  - SoC
+  - SiP
+  - HBM
+exoskeletons:
+  name: Экзоскелеты
+  queries:
+    ru:
+    - экзоскелет
+    - экзокостюм
+    - экзоброня
+    - роботизированный экзоскелет
+    - пассивный экзоскелет
+    - активный экзоскелет
+    - гибридный экзоскелет
+    - механический экзоскелет
+    - электромеханический экзоскелет
+    - модульный экзоскелет
+    en:
+    - exoskeleton
+    - exosuit
+    - exo-suit
+    - exo-armor
+    - robotic exoskeleton
+    - wearable robot
+    - passive exoskeleton
+    - active exoskeleton
+    - powered exoskeleton
+    - hybrid exoskeleton
+  patent_words:
+  - экзоскелет
+  - экзокостюм
+  - экзоброня
+  - роботизированный экзоскелет
+  - пассивный экзоскелет
+  - активный экзоскелет
+  - гибридный экзоскелет
+  - механический экзоскелет
+  - электромеханический экзоскелет
+  - модульный экзоскелет
+  - мягкий экзоскелет
+  - жёсткий экзоскелет
+  - гибкий экзоскелет
+  - квазипассивный экзоскелет
+  - экзоскелет верхних конечностей
+  - экзоскелет нижних конечностей
+  - полнотелый экзоскелет
+  - поясничный экзоскелет
+  - плечевой экзоскелет
+  - тазобедренный экзоскелет
+  - коленный экзоскелет
+  - кистевой экзоскелет
+  - промышленный экзоскелет
+  - медицинский экзоскелет
+  - реабилитационный экзоскелет
+  - военный экзоскелет
+  - тактический экзоскелет
+  - спортивный экзоскелет
+  - логистический экзоскелет
+  - строительный экзоскелет
+  - носимая робототехника
+  - ассистивная робототехника
+  - устройство усиления мышечной силы
+  - экзопротез
+  - биомеханический усилитель
+  patent_words_en:
+  - exoskeleton
+  - exosuit
+  - exo-suit
+  - exo-armor
+  - robotic exoskeleton
+  - wearable robot
+  - passive exoskeleton
+  - active exoskeleton
+  - powered exoskeleton
+  - hybrid exoskeleton
+  - unpowered exoskeleton
+  - electromechanical exoskeleton
+  - rigid exoskeleton
+  - soft exosuit
+  - modular exoskeleton
+  - flexible exoskeleton
+  - quasi-passive exoskeleton
+  - upper-limb exoskeleton
+  - lower-limb exoskeleton
+  - full-body exoskeleton
+  - back support exoskeleton
+  - shoulder exoskeleton
+  - hip exoskeleton
+  - knee exoskeleton
+  - hand exoskeleton
+  - wrist exoskeleton
+  - industrial exoskeleton
+  - medical exoskeleton
+  - rehabilitation exoskeleton
+  - military exoskeleton
+  - tactical exoskeleton
+  - occupational exoskeleton
+  - assistive exoskeleton
+  - sports exoskeleton
+  - construction exoskeleton
+  - logistics exoskeleton
+  - wearable robotics
+  - assistive robotics
+  - human augmentation device
+  - power-assist device
+  keywords:
+  - экзоскелет
+  - экзоскелетон
+  - экзокостюм
+  - экзоброня
+  - роботизированный экзоскелет
+  - пассивный экзоскелет
+  - активный экзоскелет
+  - гибридный экзоскелет
+  - механический экзоскелет
+  - электромеханический экзоскелет
+  - модульный экзоскелет
+  - мягкий экзоскелет
+  - жёсткий экзоскелет
+  - гибкий экзоскелет
+  - квазипассивный экзоскелет
+  - экзоскелет верхних конечностей
+  - экзоскелет нижних конечностей
+  - полнотелый экзоскелет
+  - поясничный экзоскелет
+  - плечевой экзоскелет
+  - тазобедренный экзоскелет
+  - коленный экзоскелет
+  - кистевой экзоскелет
+  - промышленный экзоскелет
+  - медицинский экзоскелет
+  - реабилитационный экзоскелет
+  - военный экзоскелет
+  - тактический экзоскелет
+  - спортивный экзоскелет
+  - логистический экзоскелет
+  - строительный экзоскелет
+  - носимая робототехника
+  - ассистивная робототехника
+  - устройство усиления мышечной силы
+  - экзопротез
+  - биомеханический усилитель
+  - exoskeleton
+  - exosuit
+  - exo-suit
+  - exo-armor
+  - robotic exoskeleton
+  - wearable robot
+  - passive exoskeleton
+  - active exoskeleton
+  - powered exoskeleton
+  - hybrid exoskeleton
+  - unpowered exoskeleton
+  - electromechanical exoskeleton
+  - rigid exoskeleton
+  - soft exosuit
+  - modular exoskeleton
+  - flexible exoskeleton
+  - quasi-passive exoskeleton
+  - upper-limb exoskeleton
+  - lower-limb exoskeleton
+  - full-body exoskeleton
+  - back support exoskeleton
+  - shoulder exoskeleton
+  - hip exoskeleton
+  - knee exoskeleton
+  - hand exoskeleton
+  - wrist exoskeleton
+  - industrial exoskeleton
+  - medical exoskeleton
+  - rehabilitation exoskeleton
+  - military exoskeleton
+  - tactical exoskeleton
+  - occupational exoskeleton
+  - assistive exoskeleton
+  - sports exoskeleton
+  - construction exoskeleton
+  - logistics exoskeleton
+  - wearable robotics
+  - assistive robotics
+  - human augmentation device
+  - power-assist device
+  - muscle-assist suit
+  - bionic suit
+  - exo-prosthesis
+  - 外骨骼
+  - 外骨骼机器人
+  - 可穿戴机器人
+  - 被动外骨骼
+  - 主动外骨骼
+  - 动力外骨骼
+  - 混合外骨骼
+  - 刚性外骨骼
+  - 柔性外骨骼
+  - 软体外骨骼
+  - 模块化外骨骼
+  - 上肢外骨骼
+  - 下肢外骨骼
+  - 全身外骨骼
+  - 腰部外骨骼
+  - 肩部外骨骼
+  - 髋部外骨骼
+  - 膝关节外骨骼
+  - 工业外骨骼
+  - 医疗外骨骼
+  - 康复外骨骼
+  - 军用外骨骼
+  - 战术外骨骼
+  - 辅助外骨骼
+quantum:
+  name: Квантовые вычисления
+  queries:
+    ru:
+    - квантовые вычисления
+    - квантовый компьютер
+    - квантовые технологии
+    - квантовая информатика
+    - квантовое преимущество
+    - квантовое превосходство
+    - облачные квантовые вычисления
+    - гибридные квантово-классические вычисления
+    - квантовый процессор
+    - квантовый чип
+    en:
+    - quantum computing
+    - quantum technologies
+    - quantum information science
+    - quantum information
+    - quantum advantage
+    - quantum supremacy
+    - cloud quantum computing
+    - hybrid quantum-classical computing
+    - quantum processor
+    - quantum chip
+  patent_words:
+  - квантовые вычисления
+  - квантовый компьютер
+  - квантовые технологии
+  - квантовая информатика
+  - квантовое преимущество
+  - квантовое превосходство
+  - облачные квантовые вычисления
+  - гибридные квантово-классические вычисления
+  - квантовый процессор
+  - квантовый чип
+  - квантовая связь
+  - квантовое распределение ключей
+  - квантовая сеть
+  - квантовый интернет
+  - квантовая криптография
+  - постквантовая криптография
+  - квантовый алгоритм
+  - квантовый симулятор
+  - квантовый бит
+  - кубит
+  - сверхпроводниковый кубит
+  - ионная ловушка
+  - топологический кубит
+  - фотонные квантовые вычисления
+  - квантовое зондирование
+  - квантовые сенсоры
+  - квантовая метрология
+  - коррекция квантовых ошибок
+  - квантовое масштабирование
+  - экспортный контроль квантовых технологий
+  - Росатом квант
+  - Российский квантовый центр
+  - РКЦ
+  - НИЦ Курчатовский институт квант
+  patent_words_en:
+  - quantum computing
+  - quantum technologies
+  - quantum information science
+  - quantum information
+  - quantum advantage
+  - quantum supremacy
+  - cloud quantum computing
+  - hybrid quantum-classical computing
+  - quantum processor
+  - quantum chip
+  - quantum communication
+  - quantum network
+  - quantum internet
+  - entanglement distribution
+  - quantum key distribution
+  - quantum cryptography
+  - post-quantum cryptography
+  - quantum algorithm
+  - quantum simulator
+  - qubit
+  - superconducting qubit
+  - trapped-ion qubit
+  - topological qubit
+  - photonic quantum computing
+  - quantum sensing
+  - quantum sensors
+  - quantum metrology
+  - quantum error correction
+  - quantum scaling
+  - quantum export control
+  - Azure Quantum
+  - IonQ
+  - Quantinuum
+  - PsiQuantum
+  - QuEra
+  - National Quantum Initiative
+  - Quantum Flagship
+  - NIST PQC
+  - NIST post-quantum standardization
+  - IBM Quantum
+  keywords:
+  - квантовые вычисления
+  - квантовый компьютер
+  - квантовые компьютеры
+  - квантовые технологии
+  - квантовая информатика
+  - квантовая информация
+  - квантовое преимущество
+  - квантовое превосходство
+  - облачные квантовые вычисления
+  - гибридные квантово-классические вычисления
+  - квантовый процессор
+  - квантовый чип
+  - квантовая связь
+  - квантовое распределение ключей
+  - квантовая сеть
+  - квантовый интернет
+  - квантовая криптография
+  - постквантовая криптография
+  - квантовый алгоритм
+  - квантовый симулятор
+  - квантовый бит
+  - кубит
+  - сверхпроводниковый кубит
+  - ионная ловушка
+  - топологический кубит
+  - фотонные квантовые вычисления
+  - квантовое зондирование
+  - квантовые сенсоры
+  - квантовая метрология
+  - коррекция квантовых ошибок
+  - квантовое масштабирование
+  - экспортный контроль квантовых технологий
+  - Росатом квант
+  - Российский квантовый центр
+  - РКЦ
+  - НИЦ Курчатовский институт квант
+  - quantum computing
+  - quantum computer
+  - quantum computers
+  - quantum technologies
+  - quantum information science
+  - quantum information
+  - quantum advantage
+  - quantum supremacy
+  - cloud quantum computing
+  - hybrid quantum-classical computing
+  - quantum processor
+  - quantum chip
+  - quantum communication
+  - quantum network
+  - quantum internet
+  - entanglement distribution
+  - quantum key distribution
+  - quantum cryptography
+  - post-quantum cryptography
+  - quantum algorithm
+  - quantum simulator
+  - qubit
+  - superconducting qubit
+  - trapped-ion qubit
+  - topological qubit
+  - photonic quantum computing
+  - quantum sensing
+  - quantum sensors
+  - quantum metrology
+  - quantum error correction
+  - quantum scaling
+  - quantum export control
+  - Azure Quantum
+  - IonQ
+  - Quantinuum
+  - PsiQuantum
+  - QuEra
+  - National Quantum Initiative
+  - Quantum Flagship
+  - NIST PQC
+  - NIST post-quantum standardization
+  - IBM Quantum
+  - Google Quantum AI
+  - Rigett
+  - 量子计算
+  - 量子计算机
+  - 量子技术
+  - 量子信息学
+  - 量子信息
+  - 量子优势
+  - 量子霸权
+  - 云量子计算
+  - 混合量子-经典计算
+  - 量子处理器
+  - 量子芯片
+  - 量子通信
+  - 量子网络
+  - 量子互联网
+  - 纠缠分发
+  - 量子密钥分发
+  - 量子密码学
+  - 后量子密码学
+  - 量子算法
+  - 量子模拟器
+  - 量子比特
+  - 超导量子比特
+  - 离子阱量子比特
+  - 拓扑量子比特
+  - 光子量子计算
+  - 量子传感
+  - 量子测量学
+  - 量子纠错
+  - 量子扩展
+  - 量子出口管制
+  - 本源量子
+  - 国盾量子
+  - 中国科学技术大学量子实验室
+  - 阿里巴巴量子实验室
+cyber:
+  name: Кибербезопасность
+  queries:
+    ru:
+    - кибербезопасность
+    - информационная безопасность
+    - киберриски
+    - риски информационной безопасности
+    - риски ИБ
+    - кибератака
+    - инцидент информационной безопасности
+    - программа-вымогатель
+    - фишинг
+    - целевой фишинг
+    en:
+    - cybersecurity
+    - information security
+    - infosec
+    - cyber risk
+    - information security risk
+    - cybersecurity risk
+    - cyberattack
+    - information security incident
+    - ransomware
+    - phishing
+  patent_words:
+  - кибербезопасность
+  - информационная безопасность
+  - киберриски
+  - риски информационной безопасности
+  - риски ИБ
+  - кибератака
+  - инцидент информационной безопасности
+  - программа-вымогатель
+  - фишинг
+  - целевой фишинг
+  - вредоносное ПО
+  - утечка данных
+  - уязвимость нулевого дня
+  - ботнет
+  - социальная инженерия
+  - угрозы ИБ
+  - межсетевой экран
+  - антивирус
+  - средства защиты информации
+  - СЗИ
+  - СКЗИ
+  - средства криптографической защиты информации
+  - управление доступом
+  - многофакторная аутентификация
+  - сегментация сети
+  - аудит информационной безопасности
+  - пентест
+  - тестирование на проникновение
+  - управление уязвимостями
+  - реагирование на инциденты
+  - центр мониторинга кибербезопасности
+  - ГОСТ ИБ
+  - ФСТЭК
+  - ФСБ ИБ
+  - персональные данные защита
+  - критическая информационная инфраструктура
+  - КИИ
+  patent_words_en:
+  - cybersecurity
+  - information security
+  - infosec
+  - cyber risk
+  - information security risk
+  - cybersecurity risk
+  - cyberattack
+  - information security incident
+  - ransomware
+  - phishing
+  - spear phishing
+  - DDoS
+  - APT
+  - advanced persistent threat
+  - malware
+  - data breach
+  - data leak
+  - supply chain attack
+  - zero-day
+  - zero-day vulnerability
+  - botnet
+  - social engineering
+  - cyber threats
+  - SIEM
+  - SOC
+  - security operations center
+  - SOAR
+  - EDR
+  - XDR
+  - NDR
+  - DLP
+  - WAF
+  - NGFW
+  - next-generation firewall
+  - firewall
+  - antivirus
+  - EPP
+  - endpoint protection platform
+  - IAM
+  - identity and access management
+  keywords:
+  - кибербезопасность
+  - информационная безопасность
+  - киберриски
+  - риски информационной безопасности
+  - риски ИБ
+  - кибератака
+  - инцидент информационной безопасности
+  - программа-вымогатель
+  - фишинг
+  - целевой фишинг
+  - вредоносное ПО
+  - утечка данных
+  - уязвимость нулевого дня
+  - ботнет
+  - социальная инженерия
+  - угрозы ИБ
+  - межсетевой экран
+  - антивирус
+  - средства защиты информации
+  - СЗИ
+  - СКЗИ
+  - средства криптографической защиты информации
+  - управление доступом
+  - многофакторная аутентификация
+  - сегментация сети
+  - аудит информационной безопасности
+  - пентест
+  - тестирование на проникновение
+  - управление уязвимостями
+  - реагирование на инциденты
+  - центр мониторинга кибербезопасности
+  - ГОСТ ИБ
+  - ФСТЭК
+  - ФСБ ИБ
+  - персональные данные защита
+  - критическая информационная инфраструктура
+  - КИИ
+  - cybersecurity
+  - information security
+  - infosec
+  - cyber risk
+  - information security risk
+  - cybersecurity risk
+  - cyberattack
+  - information security incident
+  - ransomware
+  - phishing
+  - spear phishing
+  - DDoS
+  - APT
+  - advanced persistent threat
+  - malware
+  - data breach
+  - data leak
+  - supply chain attack
+  - zero-day
+  - zero-day vulnerability
+  - botnet
+  - social engineering
+  - cyber threats
+  - SIEM
+  - SOC
+  - security operations center
+  - SOAR
+  - EDR
+  - XDR
+  - NDR
+  - DLP
+  - WAF
+  - NGFW
+  - next-generation firewall
+  - firewall
+  - antivirus
+  - EPP
+  - endpoint protection platform
+  - IAM
+  - identity and access management
+  - PAM
+  - privileged access management
+  - VPN
+  - Zero Trust
+  - SASE
+  - CSPM
+  - cloud security posture management
+  - container security
+  - AppSec
+  - application security
+  - DevSecOps
+  - penetration testing
+  - pentest
+  - vulnerability management
+  - incident response
+  - threat intelligence
+  - multi-factor authentication
+  - MFA
+  - network segmentation
+  - 网络安全
+  - 信息安全
+  - 网络安全定义
+  - 什么是网络安全
+  - 信息安全基础
+  - 网络风险
+  - 信息安全风险
+  - 网络攻击
+  - 信息安全事件
+  - 勒索软件
+  - 网络钓鱼
+  - 鱼叉式网络钓鱼
+  - 分布式拒绝服务攻击
+  - 高级持续性威胁
+  - 恶意软件
+  - 数据泄露
+  - 供应链攻击
+  - 零日漏洞
+  - 僵尸网络
+  - 社会工程学
+  - 安全威胁
+  - 安全信息和事件管理
+  - 安全运营中心
+  - 安全编排自动化与响应
+  - 端点检测与响应
+  - 扩展检测与响应
+  - 网络检测与响应
+  - 数据防泄漏
+  - web应用防火墙
+  - 下一代防火墙
+  - 防火墙
+  - 杀毒软件
+  - 端点防护平台
+  - 身份与访问管理
+  - 特权访问管理
+  - 虚拟专用网络
+  - 零信任
+  - 安全访问服务边缘
+  - 云安全态势管理
+  - 容器安全
+  - 应用安全
+  - 开发安全运维一体化
+  - 渗透测试
+  - 漏洞管理
+  - 事件响应
+  - 多因素认证
+  - 网络分段
+  - 关键信息基础设施

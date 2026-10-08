@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сборщик патентов и тендеров</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <h1>Сборщик патентов и тендеров</h1>
+        </div>
+        <div id="updated" class="updated"></div>
+      </div>
+      <div id="stats" class="stats"></div>
+    </div>
+  </header>
+
+  <nav class="tabs-bar">
+    <div class="wrap tabs" id="tabs">
+      <button data-tab="stats" class="active">Аналитика</button>
+      <button data-tab="tender">Тендеры <span class="cnt"></span></button>
+      <button data-tab="patent">Патенты <span class="cnt"></span></button>
+      <button data-tab="star">★ Избранное <span class="cnt"></span></button>
+    </div>
+  </nav>
+
+  <section class="filters">
+    <div class="wrap filters-grid">
+      <label class="f f-wide"><span>Поиск</span>
+        <input id="q" type="search" placeholder="Название, заказчик, заявитель, номер…"></label>
+      <label class="f"><span>Тема</span><select id="topic"></select></label>
+      <label class="f"><span>Страна</span><select id="country"></select></label>
+      <label class="f"><span>Источник</span><select id="source"></select></label>
+      <label class="f"><span>Дата с</span><input id="dateFrom" type="date" min="2021-01-01"></label>
+      <label class="f"><span>Дата по</span><input id="dateTo" type="date" min="2021-01-01"></label>
+      <label class="f" id="sortWrap"><span>Сортировка</span><select id="sort"></select></label>
+      <div class="f-checks">
+        <label class="chk" id="openWrap"><input type="checkbox" id="onlyOpen"> только с открытым приёмом заявок</label>
+        <label class="chk"><input type="checkbox" id="onlyNew"> только новые</label>
+        <button id="reset" class="link">Сбросить фильтры</button>
+        <button id="csv" class="btn primary">⬇ Скачать CSV</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div id="summary" class="summary-line"></div>
+    <div id="list" class="list"></div>
+    <button id="more" class="more" hidden>Показать ещё</button>
+    <div id="analytics" class="analytics" hidden></div>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="firebase-config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
