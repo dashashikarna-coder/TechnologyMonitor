@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Сборщик патентов и тендеров</title>
-  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <script>document.write(`<link rel="stylesheet" href="style.css?v=${Date.now()}">`);</script>
 </head>
 <body>
   <header class="hero">
@@ -57,7 +58,10 @@
   <script src="firebase-config.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script>
+    // свои файлы — всегда свежие: иначе браузер может взять новую страницу со старым app.js из кэша
+    const v = Date.now();
+    document.write(`<script src="data.js?v=${v}"><\/script><script src="app.js?v=${v}"><\/script>`);
+  </script>
 </body>
 </html>
