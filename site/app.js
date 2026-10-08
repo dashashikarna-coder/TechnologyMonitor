@@ -96,14 +96,12 @@
     const country = skip === "country" ? "" : $("#country").value;
     const source = skip === "source" ? "" : $("#source").value;
     const onlyOpen = $("#onlyOpen").checked && tab === "tender";
-    const onlyNew = $("#onlyNew").checked;
     return base(tab).filter((d) =>
       (!since || docDate(d) >= since) && (!until || docDate(d) <= until) &&
       (!topic || d.topics.includes(topic)) &&
       (!country || d.country === country) &&
       (!source || d.source === source) &&
       (!onlyOpen || isOpen(d)) &&
-      (!onlyNew || isNew(d)) &&
       (!q || [d.title, d.title_ru, d.customer, d.number, d.source_id, (d.applicants || []).join(" "), d.summary_ru, (d.ipc || []).join(" ")]
         .join(" ").toLowerCase().includes(q))
     );
@@ -422,14 +420,14 @@
   $("#csv").onclick = exportCsv;
 
   // ---------- события ----------
-  ["#q", "#topic", "#country", "#source", "#dateFrom", "#dateTo", "#sort", "#onlyOpen", "#onlyNew"].forEach((s) =>
+  ["#q", "#topic", "#country", "#source", "#dateFrom", "#dateTo", "#sort", "#onlyOpen"].forEach((s) =>
     $(s).addEventListener("input", () => { state.shown = PAGE; render(); }));
   document.querySelectorAll("#tabs button").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
   $("#more").onclick = () => { state.shown += PAGE; render(); };
   $("#reset").onclick = () => {
     ["#q", "#topic", "#country", "#source"].forEach((s) => ($(s).value = ""));
     $("#dateFrom").value = $("#dateTo").value = "";
-    $("#onlyOpen").checked = $("#onlyNew").checked = false;
+    $("#onlyOpen").checked = false;
     render();
   };
   $("#stats").addEventListener("click", (e) => {
