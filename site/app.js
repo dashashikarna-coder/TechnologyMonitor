@@ -306,8 +306,6 @@
       .filter(([, v]) => v).sort((a, b) => b[1] - a[1]);
     const totalRub = rub.reduce((s, d) => s + d.price, 0);
     const dyn = monthly ? "Динамика по месяцам" : "Динамика по годам";
-    const active = P.filter((d) => /^действ/i.test(d.status || "")).length;
-
     const switcher = `<div class="an-switch">${[["all", "Общая"], ["tender", `Тендеры (${T.length})`], ["patent", `Патенты (${P.length})`]]
       .map(([v, l]) => `<button data-an="${v}" class="${view === v ? "active" : ""}">${l}</button>`).join("")}</div>`;
 
