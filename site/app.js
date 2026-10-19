@@ -89,15 +89,43 @@
     return [$("#dateFrom").value, $("#dateTo").value];
   }
 
-  // поиск по тексту + по названию темы и ключевым словам разметки
-  // (иначе «экзоскелет» не находит заявки, где в оригинале только exoskeleton, а тема уже стоит)
+  // усечение окончаний: «медицинский» → «медицин» → находит медицинская / медицинских / medicine…
+  function stem(w) {
+    let s = w.toLowerCase();
+    if (/^[a-z]+$/i.test(s)) {
+      s = s.replace(/(?:ational|ing|ies|ied|es|ed|ly|s)$/i, "");
+      return s.length >= 3 ? s : w.toLowerCase();
+    }
+    const endings = ["ыми", "ими", "ого", "ему", "ому", "ых", "их", "ое", "ее", "ая", "яя", "ые", "ие",
+      "ой", "ый", "ий", "ою", "ею", "ом", "ем", "ам", "ям", "ах", "ях", "ов", "ев", "ью",
+      "ия", "ии", "ию", "ей", "ую", "юю", "ск", "нн"];
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (const e of endings) {
+        if (s.length - e.length >= 4 && s.endsWith(e)) { s = s.slice(0, -e.length); changed = true; break; }
+      }
+    }
+    if (s.length >= 5 && /[аеёиоуыэюя]$/i.test(s)) s = s.slice(0, -1);
+    return s.length >= 4 ? s : w.toLowerCase();
+  }
+
+  // поиск по тексту + теме + ключевым словам; слова — с учётом разных форм
   function textHit(d, q) {
     const blob = [
       d.title, d.title_ru, d.summary, d.summary_ru, d.customer, d.number, d.source_id, d.status,
       (d.applicants || []).join(" "), (d.ipc || []).join(" "), (d.keywords || []).join(" "),
       (d.topics || []).map((t) => topicInfo[t]?.name || t).join(" "),
     ].join(" ").toLowerCase();
-    return blob.includes(q);
+    if (blob.includes(q)) return true;
+    const tokens = q.split(/[^\p{L}\p{N}]+/u).filter((t) => t.length >= 2);
+    if (!tokens.length) return true;
+    const words = blob.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+    return tokens.every((t) => {
+      if (blob.includes(t)) return true;
+      const s = stem(t);
+      return words.some((w) => w.startsWith(s) || stem(w).startsWith(s) || s.startsWith(stem(w)) && stem(w).length >= 4);
+    });
   }
 
   function filtered(tab, skip = "") {
