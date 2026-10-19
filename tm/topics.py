@@ -9,6 +9,8 @@ CYR_RE = re.compile(r"[а-яё]", re.I)
 CYR_ENDING_RE = re.compile(r"[аеёиийоуыьэюя]{1,2}$", re.I)
 # экзоскелеты — отдельная тема: эти слова не должны тянуть документ ещё и в «Робототехнику»
 EXO_RE = re.compile(r"экзоскелет|exoskeleton|wearable robotics|assistive robotics|носим\w*\s+робот", re.I)
+# экзопротез (протез после ампутации) ≠ экзоскелет — убираем из темы, даже если слово есть в таблице
+EXO_PROSTH = re.compile(r"экзопротез|экзопротезир|exoprosthes|exo-?prosthes", re.I)
 
 
 def _word(word: str) -> str:
@@ -57,6 +59,12 @@ class Topics:
                         item[key] = [k for k in item[key] if not EXO_RE.search(str(k))]
                 qs = item.get("queries") or {}
                 item["queries"] = {lang: [q for q in qs.get(lang, []) if not EXO_RE.search(str(q))] for lang in qs}
+            if tid == "exoskeletons":
+                for key in ("keywords", "patent_words", "patent_words_en"):
+                    if item.get(key):
+                        item[key] = [k for k in item[key] if not EXO_PROSTH.search(str(k))]
+                qs = item.get("queries") or {}
+                item["queries"] = {lang: [q for q in qs.get(lang, []) if not EXO_PROSTH.search(str(q))] for lang in qs}
             self.items.append(item)
         self._kw = {t["id"]: Matcher([k for k in t.get("keywords") or [] if str(k).lower() not in ignore])
                     for t in self.items}

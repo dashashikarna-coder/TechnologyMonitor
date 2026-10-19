@@ -9,10 +9,22 @@ LETTER_RE = re.compile(r"[^\W\d_]")
 CYR_RE = re.compile(r"[а-яё]", re.I)
 
 
+# болгарский тоже на кириллице — без этих маркеров translate() думал, что текст уже русский
+BG_RE = re.compile(
+    r"ѝ|изграждане|предоставяне|съобщителн|далекомъобщител|далеком?съобщител|"
+    r"нуждите|осигуряване|чрез\s|избор на оператор|конфигуриране|поддържане|"
+    r"електроразпределен|киберзаплах|разузнаване",
+    re.I,
+)
+
+
 def is_russian(text: str) -> bool:
-    if re.search(r"[іїєґІЇЄҐўЎ]", text or ""):  # украинский / белорусский
+    t = text or ""
+    if re.search(r"[іїєґІЇЄҐўЎјљњћџ]", t):  # украинский / белорусский / сербский
         return False
-    letters = LETTER_RE.findall(text or "")
+    if BG_RE.search(t):
+        return False
+    letters = LETTER_RE.findall(t)
     return bool(letters) and sum(bool(CYR_RE.match(c)) for c in letters) / len(letters) > 0.5
 
 

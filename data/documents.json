@@ -3,7 +3,7 @@
   "updated": "2026-10-19T06:06:23+00:00",
   "prev_updated": "2026-10-08T06:46:34+00:00",
   "added": 0,
-  "total": 4419,
+  "total": 4394,
   "sources": {
    "ЕИС (Россия)": 4524,
    "Госзакупки Казахстана": 129,
@@ -47,40 +47,6 @@
   {
    "type": "tender",
    "source": "TED (Евросоюз)",
-   "source_id": "719984-2026",
-   "url": "https://ted.europa.eu/en/notice/-/detail/719984-2026",
-   "title": "Lieferung, Installation, Inbetriebnahme, Einschulung und Wartung eines robotisch-assistierten Chirurgie-System (RAS) für die Klinik Oberpullendorf",
-   "summary": "Austria – Operating-theatre devices – Lieferung, Installation, Inbetriebnahme, Einschulung und Wartung eines robotisch-assistierten Chirurgie-System (RAS) für die Klinik Oberpullendorf",
-   "date": "2026-10-19",
-   "country_code": "AT",
-   "customer": "Burgenländische Krankenanstalten-Gesellschaft m.b.H.",
-   "price": 1876000.0,
-   "currency": "EUR",
-   "deadline": null,
-   "status": "Намерение заключить контракт",
-   "law": "TED",
-   "procedure": "",
-   "cpv": [
-    "33162100",
-    "33000000",
-    "33100000",
-    "33160000",
-    "33162000"
-   ],
-   "title_ru": "Lieferung, Установка, Inbetriebnahme, Einschulung und Wartung eines robotisch-assistierten Chirurgie-System (RAS) for die Klinik Oberpullendorf",
-   "summary_ru": "Австрия – Аппараты для операционных – Lieferung, Installation, Inbetriebnahme, Einschulung und Wartung eines robotisch-assistierten Chirurgie-System (RAS) für die Klinik Oberpullendorf",
-   "topics": [
-    "robotics"
-   ],
-   "keywords": [
-    "robot"
-   ],
-   "country": "Австрия",
-   "first_seen": "2026-10-19T06:06:23+00:00"
-  },
-  {
-   "type": "tender",
-   "source": "TED (Евросоюз)",
    "source_id": "720757-2026",
    "url": "https://ted.europa.eu/en/notice/-/detail/720757-2026",
    "title": "Zapewnienie zasięgu komercyjnego, publicznego GSM/LTE/5G (w tym poprzez budowę stacji bazowych BTS) na potrzeby i zgodnie z wymogami SZ RP na obszarach bez biznesowego uzasadnienia dla inwestycji operatorów komercyjnych (w szczególności na obszarze Programu Tarcza Wschód) dla części 2 i 3",
@@ -106,36 +72,6 @@
     "LTE"
    ],
    "country": "Польша",
-   "first_seen": "2026-10-19T06:06:23+00:00"
-  },
-  {
-   "type": "tender",
-   "source": "TED (Евросоюз)",
-   "source_id": "720300-2026",
-   "url": "https://ted.europa.eu/en/notice/-/detail/720300-2026",
-   "title": "Доставка, изграждане, конфигуриране и поддържане на система за Управление на Информация за сигурност и на събития (SIEM) за Оперативен център за сигурност, интегрирана със съществуваща Hadoop система за въвеждане на допълнителни възможности за AI функции за информационна сигурност, разположена в инфраструктурата на проекта в УНСС, по проект ДИГД BG16RFPR002-1.014-0013-C01 с водеща организация УНСС",
-   "summary": "Bulgaria – Information systems and servers – Доставка, изграждане, конфигуриране и поддържане на система за Управление на Информация за сигурност и на събития (SIEM) за Оперативен център за сигурност, интегрирана със съществуваща Hadoop система за въвеждане на допълнителни възможности за AI функции за информационна сигурност, разположена в инфраструктурата на проекта в УНСС, по проект ДИГД BG16RFPR002-1.014-0013-C01 с водеща организация УНСС",
-   "date": "2026-10-19",
-   "country_code": "BG",
-   "customer": "УНИВЕРСИТЕТ ЗА НАЦИОНАЛНО И СВЕТОВНО СТОПАНСТВО",
-   "price": 63911.49,
-   "currency": "EUR",
-   "deadline": "2026-11-20",
-   "status": "Объявление о закупке",
-   "law": "TED",
-   "procedure": "",
-   "cpv": [
-    "48800000"
-   ],
-   "title_ru": "Доставка, изграждане, конфигуриране и поддържане на система за Управление на Информация за сигурност и на събития (SIEM) за Оперативен център за сигурност, интегрирана със съществуваща Hadoop система за въвеждане на допълнителни възможности за AI функции за информационна сигурност, разположена в инфраструктурата на проекта в УНСС, по проект ДИГД BG16RFPR002-1.014-0013-C01 с водеща организация УНСС",
-   "summary_ru": "Bulgaria – Information systems and servers – Доставка, изграждане, конфигуриране и поддържане на система за Управление на Информация за сигурност и на събития (SIEM) за Оперативен център за сигурност, интегрирана със съществуваща Hadoop система за въвеждане на допълнителни възможности за AI функции за информационна сигурност, разположена в инфраструктурата на проекта в УНСС, по проект ДИГД BG16RFPR002-1.014-0013-C01 с водеща организация УНСС",
-   "topics": [
-    "cyber"
-   ],
-   "keywords": [
-    "SIEM"
-   ],
-   "country": "Болгария",
    "first_seen": "2026-10-19T06:06:23+00:00"
   },
   {
@@ -541,13 +477,14 @@
    "cpv": [
     "42997300"
    ],
-   "title_ru": "Procedura aperta per l'affidamento della fornitura di un cane robot e relativi accessori nell'ambito del sistema integrato di monitoraggio e gestione dei cantieri",
+   "title_ru": "Открыта процедура согласования поставки робота-собаки и сопутствующих аксессуаров в комплексную систему мониторинга и управления объектами",
    "summary_ru": "Италия – Промышленные роботы – Процедура открытия системы мониторинга и управления тростью и относительными аксессуарами для интегрированной системы мониторинга и управления роботами",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Италия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -575,45 +512,16 @@
     "38800000",
     "35000000"
    ],
-   "title_ru": "Market dialogue: Robotised 3D printers for metal for educational purposes at the Vocational College in the north.",
+   "title_ru": "Диалог с рынком: Роботизированные 3D-принтеры по металлу для образовательных целей в профессиональном колледже на севере.",
    "summary_ru": "Норвегия – Оборудование для металлургии и сопутствующие детали – Диалог на рынке: Роботизированные 3D-принтеры по металлу для образовательных целей в профессиональном колледже на севере.",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Норвегия",
-   "first_seen": "2026-10-19T06:06:23+00:00"
-  },
-  {
-   "type": "tender",
-   "source": "TED (Евросоюз)",
-   "source_id": "715078-2026",
-   "url": "https://ted.europa.eu/en/notice/-/detail/715078-2026",
-   "title": "Mobilfunknetze (Ericsson, Huawei, Nokia, Siemens)",
-   "summary": "Germany – Radio network – Mobilfunknetze (Ericsson, Huawei, Nokia, Siemens)",
-   "date": "2026-10-16",
-   "country_code": "DE",
-   "customer": "Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau",
-   "price": null,
-   "currency": "EUR",
-   "deadline": "2026-11-16",
-   "status": "Объявление о закупке",
-   "law": "TED",
-   "procedure": "",
-   "cpv": [
-    "32418000"
-   ],
-   "title_ru": "Мобильные сети (Ericsson, Huawei, Nokia, Siemens)",
-   "summary_ru": "Германия – Радиосеть – Мобильные сети (Ericsson, Huawei, Nokia, Siemens)",
-   "topics": [
-    "radio"
-   ],
-   "keywords": [
-    "мобильные сети"
-   ],
-   "country": "Германия",
    "first_seen": "2026-10-19T06:06:23+00:00"
   },
   {
@@ -1670,7 +1578,7 @@
    "status": "Работа комиссии",
    "law": "223-ФЗ",
    "procedure": "Иной способ",
-   "title_ru": "поставка радиосистемы Hollyland Lark MAX 2 Combo",
+   "title_ru": "Подставка под радиосистему Hollyland Lark MAX 2 Combo",
    "summary_ru": "",
    "topics": [
     "radio"
@@ -1916,13 +1824,14 @@
    "cpv": [
     "42997300"
    ],
-   "title_ru": "Marché public portant sur l'acquisition de deux bras manipulateurs robotiques souples, gonflables et élancés pour le compte de l’UMR6004 LS2N",
-   "summary_ru": "Франция – Промышленные роботы – Marché public portant sur l'acquisition de deux bras Managingurs Robotiques Suples, gonflables et élancés pour le compte de l'UMR6004 LS2N",
+   "title_ru": "Открытый рынок приобретения двух роботов-манипуляторов для бюстгальтеров, супов, гонфлей и аксессуаров для счета UMR6004 LS2N",
+   "summary_ru": "Франция – Промышленные роботы – Публичный рынок приобретения двух роботизированных манипуляторов, супов, гонфблей и удлинений для учета UMR6004 LS2N",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Франция",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -1947,13 +1856,14 @@
     "38000000",
     "38434000"
    ],
-   "title_ru": "Pipetting robot for the department for pathology at St. Olavs Hospital.",
+   "title_ru": "Робот-пипетировщик для отделения патологии больницы Св. Олафа.",
    "summary_ru": "Норвегия – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – Робот для пипетирования для отделения патологии больницы Св. Олафа.",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Норвегия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -1978,13 +1888,14 @@
     "30000000",
     "48000000"
    ],
-   "title_ru": "Robotics",
+   "title_ru": "Робототехника",
    "summary_ru": "Германия – Офисная и вычислительная техника, оборудование и расходные материалы, кроме мебели и пакетов программного обеспечения – Робототехника",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robotics"
+    "robotics",
+    "робототехника"
    ],
    "country": "Германия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -2008,14 +1919,16 @@
    "cpv": [
     "42997300"
    ],
-   "title_ru": "Dostawa 8 stanowisk zrobotyzowanych z robotem typu SCARA oraz 8 stanowisk zrobotyzowanych z robotem współpracującym (cobotem) - KC-DE-zp.25.452.2026",
+   "title_ru": "Dostawa 8 становиск роботизированный с роботом типа SCARA или 8 становиск роботизированный с роботизированным роботом (коботем) - KC-DE-zp.25.452.2026",
    "summary_ru": "Польша – Промышленные роботы – Поставка 8 роботизированных станций с роботом SCARA и 8 роботизированных станций с коллаборативным роботом (коботом) - KC-DE-zp.25.452.2026",
    "topics": [
     "robotics"
    ],
    "keywords": [
     "robot",
-    "cobot"
+    "cobot",
+    "робот",
+    "кобот"
    ],
    "country": "Польша",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -2513,13 +2426,14 @@
     "39713400",
     "42000000"
    ],
-   "title_ru": "Autonomous cleaning robots for Ullensaker municipality",
+   "title_ru": "Автономные роботы-уборщики для муниципалитета Улленсакер",
    "summary_ru": "Норвегия – Разные уборочные машины – Автономные роботы-уборщики для муниципалитета Улленсакер",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "автономный робот"
    ],
    "country": "Норвегия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -2544,13 +2458,14 @@
     "42997300",
     "38000000"
    ],
-   "title_ru": "Acquisition d'un robot automatisé de manipulation de liquides pour extraction de lipides et de métabolites primaires et spécialisés",
+   "title_ru": "Приобретение автоматизированного робота для манипулирования жидкостями для экстракции первичных и специализированных липидов и метаболитов.",
    "summary_ru": "Франция – Промышленные роботы – Приобретение робота-автомата для манипуляций с жидкостями для экстракции липидов и метаболитов первичных и специальных.",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Франция",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -2604,7 +2519,7 @@
    "cpv": [
     "72210000"
    ],
-   "title_ru": "ПРОЦЕДУРА APERTA EX ART 71 D. LGS. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
+   "title_ru": "PROCEDURA APERTA EX ART. 71 Д. ЛГС. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
    "summary_ru": "Италия – Услуги по программированию пакетных программных продуктов – ПРОЦЕДУРА APERTA EX ART. 71 Д. ЛГС. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
    "topics": [
     "cyber"
@@ -3327,13 +3242,14 @@
     "31434000",
     "31155000"
    ],
-   "title_ru": "Autonomas mobilās robota platformas, sensoru, izpildmehānismu un lauksaimniecības tehnikas datu apmaiņas risinājumu piegāde projekta ER39 ietvaros",
-   "summary_ru": "Латвия – Промышленное оборудование – Платформы роботов Autonomas mobilās, датчики, механизмы и lauksaimniecības tehnikas datu apmainas risinājumu piegāde projekta ER39 ietvaros",
+   "title_ru": "Автономные мобильные роботы-платформы, датчики, механизмы и надежные технические средства, которые можно использовать для реализации проекта ER39 ietvaros",
+   "summary_ru": "Латвия – Промышленная техника – Поставка автономной мобильной роботизированной платформы, датчиков, приводов и решений по обмену данными для сельскохозяйственной техники в рамках проекта ER39",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "автономный мобильный робот"
    ],
    "country": "Латвия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -3357,13 +3273,14 @@
    "cpv": [
     "33162000"
    ],
-   "title_ru": "Procurement of a Robotic Surgical System",
+   "title_ru": "Закупка роботизированной хирургической системы",
    "summary_ru": "Ирландия – Приборы и инструменты для операционной – Закупка роботизированной хирургической системы",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Ирландия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -5182,45 +5099,16 @@
     "38636000",
     "42997300"
    ],
-   "title_ru": "Imaging robot",
+   "title_ru": "Робот для визуализации",
    "summary_ru": "Нидерланды – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – Робот для визуализации",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Нидерланды",
-   "first_seen": "2026-10-19T06:06:23+00:00"
-  },
-  {
-   "type": "tender",
-   "source": "TED (Евросоюз)",
-   "source_id": "691231-2026",
-   "url": "https://ted.europa.eu/en/notice/-/detail/691231-2026",
-   "title": "Fourniture, livraison, installation, mise en service et formation relatives à une cellule robotisée de dépose automatisée de fibres (AFP) et ses accessoires pour le campus arts et métiers d’Angers",
-   "summary": "France – Industrial robots – Fourniture, livraison, installation, mise en service et formation relatives à une cellule robotisée de dépose automatisée de fibres (AFP) et ses accessoires pour le campus arts et métiers d’Angers",
-   "date": "2026-10-07",
-   "country_code": "FR",
-   "customer": "ENSAM",
-   "price": null,
-   "currency": "EUR",
-   "deadline": "2026-11-06",
-   "status": "Объявление о закупке",
-   "law": "TED",
-   "procedure": "",
-   "cpv": [
-    "42997300"
-   ],
-   "title_ru": "Fourniture, livraison, installation, mise en service et formation relatives à une cellule robotisée de dépose automatisée de fibres (AFP) et ses accessoires pour le campus arts et métiers d’Angers",
-   "summary_ru": "Франция – Промышленные роботы – Оборудование, установка, монтаж, обслуживание и формирование родственники роботизированной ячейки для автоматического удаления волокон (AFP) и других аксессуаров для кампуса искусств и ремесел в Анжере",
-   "topics": [
-    "robotics"
-   ],
-   "keywords": [
-    "robot"
-   ],
-   "country": "Франция",
    "first_seen": "2026-10-19T06:06:23+00:00"
   },
   {
@@ -5243,13 +5131,14 @@
     "33000000",
     "33100000"
    ],
-   "title_ru": "CT3010/2026 - TENDER FOR THE SUPPLY OF QTY 4 STATIONARY (TYPE 1) AND QTY 1 MOBILE (TYPE 2) ROBOTIC UPPER LIMB NEURO-REHABILITATION EQUIPMENT REQUIRED FOR MATER DEI HOSPITAL, GOZO GENERAL HOSPITAL AND REHABILITATION HOSPITAL KARIN GRECH INCLUDING ENERGY EFFICIENT DEVICES",
+   "title_ru": "CT3010/2026 - ТЕНДЕР НА ПОСТАВКУ 4 СТАЦИОНАРНЫХ (ТИП 1) И 1 МОБИЛЬНЫХ (ТИП 2) РОБОТИЧЕСКОГО ОБОРУДОВАНИЯ ДЛЯ НЕЙРОРЕАБИЛИТАЦИИ ВЕРХНИХ КОНЕЧНОСТЕЙ, НЕОБХОДИМОГО ДЛЯ БОЛЬНИЦЫ MATER DEI, ОБЩЕЙ БОЛЬНИЦЫ ГОЗО И РЕАБИЛИТАЦИОННОЙ БОЛЬНИЦЫ КАРИН ГРЕЧ, ВКЛЮЧАЯ ЭНЕРГОЭФФЕКТИВНЫЕ УСТРОЙСТВА",
    "summary_ru": "Мальта – Медицинское оборудование, фармацевтические препараты и средства личной гигиены – CT3010/2026 – ТЕНДЕР НА ПОСТАВКУ 4 СТАЦИОНАРНЫХ (ТИП 1) И 1 МОБИЛЬНЫХ (ТИП 2) РОБОТИЧЕСКОГО НЕЙРОРЕАБИЛИТАЦИОННОГО ОБОРУДОВАНИЯ ВЕРХНИХ КОНЕЧНОСТЕЙ, НЕОБХОДИМОГО ДЛЯ БОЛЬНИЦЫ MATER DEI, ОБЩЕЙ БОЛЬНИЦЫ ГОЗО И РЕАБИЛИТАЦИОННАЯ БОЛЬНИЦА КАРИН ГРЕЧ, ВКЛЮЧАЯ ЭНЕРГОЭФФЕКТИВНЫЕ УСТРОЙСТВА",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Мальта",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -5304,7 +5193,7 @@
     "38432000"
    ],
    "title_ru": "Sga 26_964 - Поставка конфокальной системы NL5+, оснащенной технологией Line REscan, для нужд кафедры фармацевтических наук в рамках проекта FIS 3 «Наноматериалы и наноферменты для контроля кислорода и pH в опухолевых тканях» - CUP050 G0309C",
-   "summary_ru": "Италия – Аппарат для анализа – Sga 26_964 – Fornitura di un sistema confocale NL5+ dotato di tecnologia Line REscan per le esigenze del Dipartimento di Scienze Farmaceutiche nell'ambito del progetto FIS 3 «Наноматериалы и наноферменты для контроля кислорода и pH в опухолевых тканях» - CUP G53C25000900001",
+   "summary_ru": "Италия – Аппарат для анализа – Sga 26_964 – Fornitura di un sistema confocale NL5+ dotato di tecnologia Line REscan per le exigencia del Dipartimento di Scienze Farmaceutiche nell'ambito del progetto FIS 3 «Наноматериалы и наноферменты для контроля кислорода и pH в опухолевых тканях» - CUP G53C25000900001",
    "topics": [
     "materials"
    ],
@@ -5969,13 +5858,14 @@
    "cpv": [
     "33100000"
    ],
-   "title_ru": "OP-Roboter",
+   "title_ru": "ОП-Робот",
    "summary_ru": "Германия – Медицинское оборудование – OP-Roboter",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Германия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -6000,13 +5890,14 @@
     "42997300",
     "30200000"
    ],
-   "title_ru": "Dostawa stanowiska edukacyjnego z robotem 6-osiowym (8 sztuk) przeznaczonym do nauki programowania and symulacji procesów przemysłowych w zestawie z komputerem stacjonarnym I kompletem akcesoriów.",
+   "title_ru": "Достаточная учебная программа с 6-осевым роботом (8 классов) для научных программ и симуляций процессов, выполняемых с компьютером, стационарным и полным набором аксессуаров.",
    "summary_ru": "Польша – Промышленные роботы – Поставка учебной станции с 6-осевым роботом (8 шт.), предназначенной для обучения программированию и моделированию промышленных процессов, вместе с настольным компьютером и набором аксессуаров.",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Польша",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -6032,7 +5923,7 @@
     "42997300"
    ],
    "title_ru": "Колаборативная робота \"Universal Robots UR10e\" со специальными папильотками - (набор комплектов) с двигателем и педерумием",
-   "summary_ru": "Латвия – Учебные пособия и устройства – Kolaboratīvā robota \"Universal Robots UR10e\" specifiskais papildus aprīkojums - (satvērēju komlekts) ar Motoriem un Piederumiem",
+   "summary_ru": "Латвия – Учебные пособия и устройства – Специальное дополнительное оборудование коллаборативного робота «Universal Robots UR10e» - (комплект захватов) с двигателями и аксессуарами.",
    "topics": [
     "robotics"
    ],
@@ -6404,7 +6295,7 @@
     "38651600"
    ],
    "title_ru": "ТЕРМИН МАТИМО КАМЕРОС FPV ДРОНУИ",
-   "summary_ru": "Литва – Цифровые фотоаппараты – TERMINIO MATYMO KAMEROS FPV DRONUI",
+   "summary_ru": "Литва – Цифровые фотоаппараты – TERMINIO MATYMO KAMEROS FPV ДРОНЫ",
    "topics": [
     "robotics"
    ],
@@ -6588,7 +6479,7 @@
     "42997300"
    ],
    "title_ru": "Робот współpracujący (гуманоидальный) двустворчатый с системой Wizyjnym - KC-DE-zp.25.457.2026",
-   "summary_ru": "Польша – Промышленные роботы – Robot współpracujący (humanoidalny) dwuramienny z systemem wizyjnym - KC-DE-zp.25.457.2026",
+   "summary_ru": "Польша – Промышленные роботы – Робот кооперативный (гуманоидальный) dwuramienny z systemem wizyjnym - KC-DE-zp.25.457.2026",
    "topics": [
     "robotics"
    ],
@@ -6651,7 +6542,7 @@
    "cpv": [
     "45221100"
    ],
-   "title_ru": "ГБО | Ertüchtigung Lpz-Plagw - Марклеберг-Вальдбан, Hauptbaumaßnahme (HBM)",
+   "title_ru": "ГБО | Модернизация лесной железной дороги Lpz-Plagw - Марклеберг, основной строительный проект (HBM)",
    "summary_ru": "Германия – Строительство мостов – GBO | Ertüchtigung Lpz-Plagw - Марклеберг-Вальдбан, Hauptbaumaßnahme (HBM)",
    "topics": [
     "materials"
@@ -6681,7 +6572,7 @@
    "cpv": [
     "72000000"
    ],
-   "title_ru": "3.RV-P — Miniwettbewerb — Hybrid-SOC — управляемый сервис — Los 3",
+   "title_ru": "3.RV-P — Мини-конкурс — Гибридный SOC — Управляемое обслуживание — Лот 3",
    "summary_ru": "Германия – ИТ-услуги: консалтинг, разработка программного обеспечения, Интернет и поддержка – 3.RV-P – Miniwettbewerb – Hybrid-SOC – Managed Service – Los 3",
    "topics": [
     "cyber"
@@ -6900,13 +6791,14 @@
    "cpv": [
     "80533100"
    ],
-   "title_ru": "OO opleidingen op hebied van cybersecurity",
+   "title_ru": "OO opleidingen в области кибербезопасности",
    "summary_ru": "Бельгия – Услуги компьютерного обучения – OO opleidingen op het gebied van cybersecurity",
    "topics": [
     "cyber"
    ],
    "keywords": [
-    "cybersecurity"
+    "cybersecurity",
+    "кибербезопасность"
    ],
    "country": "Бельгия",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -7991,14 +7883,14 @@
     "42900000",
     "42997300"
    ],
-   "title_ru": "Гуманоидный робот да tähän liittyvän ohjelmoinnin suorahankinta",
+   "title_ru": "Гуманоидироботин и хиатин-сайтаван, программируемый в суораханкинте",
    "summary_ru": "Финляндия – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – Humanoidirobotin yes tähän liittyvän ohjelmoinnin suorahankinta",
    "topics": [
     "robotics"
    ],
    "keywords": [
     "humanoid",
-    "гуманоидный робот"
+    "гуманоид"
    ],
    "country": "Финляндия",
    "first_seen": "2026-10-05T10:28:26+00:00"
@@ -8022,8 +7914,8 @@
    "cpv": [
     "32552410"
    ],
-   "title_ru": "Доставка на 4G LTE модеми за нуждите на „Електроразпределение Север“ АД",
-   "summary_ru": "Bulgaria – Modems – Доставка на 4G LTE модеми за нуждите на „Електроразпределение Север“ АД",
+   "title_ru": "Поставка модемов 4G LTE для нужд ООО «Электроразпраделение Север АД»",
+   "summary_ru": "Болгария - Модемы - Поставка модемов 4G LTE для нужд ООО \"Электроразделение Север АД\"",
    "topics": [
     "radio"
    ],
@@ -10084,7 +9976,7 @@
     "38290000"
    ],
    "title_ru": "Комплектация, поставка и сервис научно-лабораторного оборудования, модульного дрона и батиметрического датчика на средства Университета Майотты.",
-   "summary_ru": "Франция – Беспилотные летательные аппараты – Fourniture, livraison и Mise en Service d'Equipements Scientifiques de Laboratoire, d'un modulable дрон и d'un Capteur Bathymétrique au Profit de l'Université de Mayotte",
+   "summary_ru": "Франция – Непилотируемые летательные аппараты – Поставка, обучение и обслуживание научного лабораторного оборудования, модульного дрона и батиметрического захвата для получения прибыли Университета Майотты",
    "topics": [
     "robotics"
    ],
@@ -10252,7 +10144,7 @@
     "48000000"
    ],
    "title_ru": "Автоматизированные методы критического тестирования и максимальная интеллектуальная работа с роботизированной системой управления системой",
-   "summary_ru": "Латвия – Промышленные роботы – Automatizētas atkritumu šķirošanas iekārtas a mākslīgā intelekta vadītu robotizētu satvērējroku sistēmu piegāde un uzstādīšana",
+   "summary_ru": "Латвия – Промышленные роботы – Автоматизированные машины для сортировки мусора и искусственный интеллект vädatu robotizätu satvērējroku, доставка и установка систем",
    "topics": [
     "robotics"
    ],
@@ -10282,8 +10174,8 @@
    "cpv": [
     "64200000"
    ],
-   "title_ru": "Предоставяне на електронни съобщителни услуги, чрез обществена електронна съобщителна подвижна мобилна клетъчна мрежа по стандарт GSМ/UMTS/LTE/5G с оглед изпълнение на служебните задължения от служителите на „Напоителни системи” ЕАД",
-   "summary_ru": "Bulgaria – Telecommunications services – Предоставяне на електронни съобщителни услуги, чрез обществена електронна съобщителна подвижна мобилна клетъчна мрежа по стандарт GSМ/UMTS/LTE/5G с оглед изпълнение на служебните задължения от служителите на „Напоителни системи” ЕАД",
+   "title_ru": "Оказание услуг электронной связи, посредством мобильной мобильной сотовой сети электронной связи общего пользования по стандарту GSM/UMTS/LTE/5G, в целях выполнения служебных обязанностей сотрудниками ЕАД «Ирригационные системы»",
+   "summary_ru": "Болгария - Телекоммуникационные услуги - Предоставление услуг электронной связи, через сеть мобильной мобильной сотовой связи общего пользования по стандарту GSM/UMTS/LTE/5G, с целью выполнения служебных обязанностей сотрудниками \"Ирригационные системы\" ЕАД",
    "topics": [
     "radio"
    ],
@@ -12034,36 +11926,6 @@
   {
    "type": "tender",
    "source": "TED (Евросоюз)",
-   "source_id": "665511-2026",
-   "url": "https://ted.europa.eu/en/notice/-/detail/665511-2026",
-   "title": "Rahmenvertrag über die Lieferung, Betriebsführung und Wartung von LTE-Routern",
-   "summary": "Germany – Networks – Rahmenvertrag über die Lieferung, Betriebsführung und Wartung von LTE-Routern",
-   "date": "2026-09-28",
-   "country_code": "DE",
-   "customer": "Stadtwerke Leipzig GmbH",
-   "price": null,
-   "currency": "EUR",
-   "deadline": null,
-   "status": "Итоги закупки",
-   "law": "TED",
-   "procedure": "",
-   "cpv": [
-    "32400000"
-   ],
-   "title_ru": "Rahmenvertrag über die Lieferung, Betriebsführung und Wartung von LTE-Routern",
-   "summary_ru": "Германия – Сети – Rahmenvertrag über die Lieferung, Betriebsführung und Wartung von LTE-Routern",
-   "topics": [
-    "radio"
-   ],
-   "keywords": [
-    "LTE"
-   ],
-   "country": "Германия",
-   "first_seen": "2026-10-05T10:28:26+00:00"
-  },
-  {
-   "type": "tender",
-   "source": "TED (Евросоюз)",
    "source_id": "665812-2026",
    "url": "https://ted.europa.eu/en/notice/-/detail/665812-2026",
    "title": "Incident Response Retainer diensten",
@@ -12579,13 +12441,14 @@
    "cpv": [
     "64212000"
    ],
-   "title_ru": "ПРЕДОСТАВЯНЕ НА ДАЛЕКОСЪОБЩИТЕЛНИ УСЛУГИ ЧРЕЗ ОБЩЕСТВЕНА ДАЛЕКОСЪОБЩИТЕЛНА ПОДВИЖНА КЛЕТЪЧНА МРЕЖА ПО СТАНДАРТ GSM/LTE/5G С НАЦИОНАЛНО ПОКРИТИЕ ОТ ЛИЦЕНЗИРАН ОПЕРАТОР",
-   "summary_ru": "Bulgaria – Mobile-telephone services – ПРЕДОСТАВЯНЕ НА ДАЛЕКОСЪОБЩИТЕЛНИ УСЛУГИ ЧРЕЗ ОБЩЕСТВЕНА ДАЛЕКОСЪОБЩИТЕЛНА ПОДВИЖНА КЛЕТЪЧНА МРЕЖА ПО СТАНДАРТ GSM/LTE/5G С НАЦИОНАЛНО ПОКРИТИЕ ОТ ЛИЦЕНЗИРАН ОПЕРАТОР",
+   "title_ru": "ПРЕДОСТАВЛЕНИЕ УСЛУГ ТЕЛЕКОММУНИКАЦИЙ ЧЕРЕЗ ОБЩЕСТВЕННУЮ МОБИЛЬНУЮ СОТОВУЮ СЕТЬ ТЕЛЕКОММУНИКАЦИЙ ПО СТАНДАРТУ GSM/LTE/5G С НАЦИОНАЛЬНЫМ ПОКРЫТИЕМ ЛИЦЕНЗИРОВАННОГО ОПЕРАТОРА",
+   "summary_ru": "Болгария – Услуги мобильной связи – ПРЕДОСТАВЛЕНИЕ ТЕЛЕКОММУНИКАЦИОННЫХ УСЛУГ ЧЕРЕЗ ОБЩЕСТВЕННУЮ ТЕЛЕКОММУНИКАЦИОННУЮ МОБИЛЬНУЮ СОТОВУЮ СЕТЬ ПО СТАНДАРТУ GSM/LTE/5G С НАЦИОНАЛЬНЫМ ПОКРЫТИЕМ ЛИЦЕНЗИРОВАННОГО ОПЕРАТОРА",
    "topics": [
     "radio"
    ],
    "keywords": [
-    "LTE"
+    "LTE",
+    "телекоммуникации"
    ],
    "country": "Болгария",
    "first_seen": "2026-10-05T10:28:26+00:00"
@@ -13812,7 +13675,7 @@
     "38120000"
    ],
    "title_ru": "Использование беспилотных авиационных систем для информирования о полете",
-   "summary_ru": "Чехия – Беспилотные самолеты – Pořízení bezlotních leteckých systémů a souvisejícího vybavení",
+   "summary_ru": "Чехия – Беспилотные самолеты – Pořízení bezpilotních vlavečích systéma a sútěního úměstího",
    "topics": [
     "robotics"
    ],
@@ -13925,7 +13788,7 @@
     "48000000"
    ],
    "title_ru": "Автоматизированные методы критического тестирования и максимальная интеллектуальная работа с роботизированной системой управления системой",
-   "summary_ru": "Латвия – Промышленные роботы – Automatizētas atkritumu šķirošanas iekārtas a mākslīgā intelekta vadītu robotizētu satvērējroku sistēmu piegāde un uzstādīšana",
+   "summary_ru": "Латвия – Промышленный робот – Поставка и монтаж автоматизированного оборудования для сортировки мусора с роботизированными системами захвата, управляемыми искусственным интеллектом.",
    "topics": [
     "robotics"
    ],
@@ -13960,7 +13823,7 @@
     "80511000"
    ],
    "title_ru": "Обновление системы радиосвязи",
-   "summary_ru": "Словакия – Радиооборудование – Обноват záložného rádiokomunikačného systému",
+   "summary_ru": "Словакия – Радиооборудование – Модернизация бытовой системы радиосвязи",
    "topics": [
     "radio"
    ],
@@ -15270,36 +15133,6 @@
   },
   {
    "type": "tender",
-   "source": "TED (Евросоюз)",
-   "source_id": "652873-2026",
-   "url": "https://ted.europa.eu/en/notice/-/detail/652873-2026",
-   "title": "146/PN/2026 Dostawa i montaż dwóch typów automatycznych robotów aptecznych magazynujących leki dla UCK",
-   "summary": "Poland – Industrial robots – 146/PN/2026 Dostawa i montaż dwóch typów automatycznych robotów aptecznych magazynujących leki dla UCK",
-   "date": "2026-09-22",
-   "country_code": "PL",
-   "customer": "Uniwersyteckie Centrum Kliniczne",
-   "price": 6498750.0,
-   "currency": "PLN",
-   "deadline": null,
-   "status": "Итоги закупки",
-   "law": "TED",
-   "procedure": "",
-   "cpv": [
-    "42997300"
-   ],
-   "title_ru": "146/PN/2026 Dostawa i montaż dwóch typów automatycznych robotów aptecznych magazynujących leki dla UCK",
-   "summary_ru": "Польша – Промышленные роботы – 146/PN/2026 Доставка и монтаж двух типов автоматических роботов aptecznych magazynujących leki dla UCK",
-   "topics": [
-    "robotics"
-   ],
-   "keywords": [
-    "robot"
-   ],
-   "country": "Польша",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "tender",
    "source": "ЕИС (zakupki.gov.ru)",
    "source_id": "0322300061426001112",
    "url": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0322300061426001112",
@@ -15428,13 +15261,14 @@
     "42997300",
     "30200000"
    ],
-   "title_ru": "Dostawa stanowiska edukacyjnego z robotem 6-osiowym (8 sztuk) przeznaczonym do nauki programowania and symulacji procesów przemysłowych w zestawie z komputerem stacjonarnym I kompletem akcesoriów.",
-   "summary_ru": "Польша – Промышленные роботы – Dostawa stanowiska edukacyjnego z robotem 6-osiowym (8 sztuk) przeznaczonym do nauki programowania i symulacji procesów przemysłowych w zestawie z komputerem stacjonarnym I kompletem akcesoriów.",
+   "title_ru": "Достаточная учебная программа с 6-осевым роботом (8 классов) для научных программ и симуляций процессов, выполняемых с компьютером, стационарным и полным набором аксессуаров.",
+   "summary_ru": "Польша – Промышленные роботы – Обучение 6-осным (8-штук) роботам Dostawa stanowiska с новыми процессами программирования и моделирования для стационарных компьютеров и комплектных аксессуаров.",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Польша",
    "first_seen": "2026-10-05T10:28:26+00:00"
@@ -15490,7 +15324,7 @@
     "42997300"
    ],
    "title_ru": "Мобильные автономинированные роботы-лаборатории (Atviras konkursas)",
-   "summary_ru": "Литва – Промышленные роботы – Mobilių autonominių robotų Laboratorijos įranga (Atviras konkursas)",
+   "summary_ru": "Литва – Промышленные роботы – Лаборатории автономных роботов Mobilių įranga (конкурсы Atviras)",
    "topics": [
     "robotics"
    ],
@@ -15695,7 +15529,7 @@
     "48000000",
     "72000000"
    ],
-   "title_ru": "Awarenesstool IT Sicherheit (включая фишинг), Datenschutz und Compliance",
+   "title_ru": "Инструмент повышения осведомленности IT Sicherheit (включая фишинг), Datenschutz und Compliance",
    "summary_ru": "Германия – Пакет программного обеспечения и информационные системы – Awarenesstool IT Sicherheit (включая фишинг), Datenschutz und Compliance",
    "topics": [
     "cyber"
@@ -16148,13 +15982,14 @@
    "cpv": [
     "48000000"
    ],
-   "title_ru": "EU-weite Ausschreibung einer Software-Lösung für Security Awareness und Phishing-Simulation",
+   "title_ru": "Общеевропейское программное обеспечение Ausschreibung einer для обеспечения безопасности и моделирования фишинга",
    "summary_ru": "Германия – Пакет программного обеспечения и информационные системы – EU-weite Ausschreibung einer Software-Lösung für Security Awareness und Phishing-Simulation",
    "topics": [
     "cyber"
    ],
    "keywords": [
-    "phishing"
+    "phishing",
+    "фишинг"
    ],
    "country": "Германия",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -16511,7 +16346,7 @@
     "42997300"
    ],
    "title_ru": "Октаташный робот-клетка — это сотовый телефон Kitek",
-   "summary_ru": "Венгрия – Промышленные роботы – Oktási robotcellák é cellához tartozó Small",
+   "summary_ru": "Венгрия – Промышленный робот – Oktatási robotcellák és cellához gyógy Kitek",
    "topics": [
     "robotics"
    ],
@@ -16541,8 +16376,8 @@
    "cpv": [
     "64210000"
    ],
-   "title_ru": "„Осигуряване на комуникационна свързаност /IP VPN/ за обмен на данни в реално време, интернет мрежа в Централно управление и WiFi зони, свободни за използване от гражданите в центровете за административно обслужване на Агенцията за социално подпомагане и териториалните й структури“",
-   "summary_ru": "Bulgaria – Telephone and data transmission services – „Осигуряване на комуникационна свързаност /IP VPN/ за обмен на данни в реално време, интернет мрежа в Централно управление и WiFi зони, свободни за използване от гражданите в центровете за административно обслужване на Агенцията за социално подпомагане и териториалните й структури“",
+   "title_ru": "«Предоставление средств связи /IP VPN/ для обмена данными в реальном времени, сети Интернет в Центральном управлении и зон Wi-Fi, свободных для использования гражданами в центрах административного обслуживания Агентства социальной помощи и его территориальных структурах»",
+   "summary_ru": "Болгария – Услуги телефонной связи и передачи данных – «Предоставлены коммуникационное соединение /IP VPN/ для обмена данными в режиме реального времени, интернет-центр в центральной администрации и зоны Wi-Fi, свободные от эксплуатации гражданами за кулисами в социальных подпольных и территориальных структурах Министерства»",
    "topics": [
     "cyber"
    ],
@@ -17017,13 +16852,14 @@
     "42997300",
     "38112100"
    ],
-   "title_ru": "Нарвское колледже teaduslabori robotite ostmine",
+   "title_ru": "Нарва колейджиле теадуслабори роботит остмин",
    "summary_ru": "Эстония – Промышленные роботы – Нарвский колледж teaduslabori robotite ostmine",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Эстония",
    "first_seen": "2026-10-05T10:28:26+00:00"
@@ -17543,7 +17379,7 @@
     "75100000"
    ],
    "title_ru": "ПРОЦЕДУРА ДЕЙСТВИЯ СПЕЦИАЛИСТИЧЕСКОЙ СЛУЖБЫ, ОТВЕТСТВЕННОЙ ЗА ЗАЩИТУ ДАННЫХ (RPD/DPO) И ТЕХНИЧЕСКОЙ И ОРГАНИЗАЦИОННОЙ ПОДДЕРЖКИ В МАТЕРИАЛАХ ЗАЩИТЫ ДАННЫХ, ЛИЧНОЙ БЕЗОПАСНОСТИ ИНФОРМАЦИЯ, КИБЕРБЕЗОПАСНОСТЬ И НОРМАТИВНАЯ ДОПОЛНИТЕЛЬНОСТЬ ДЛЯ САНИТАРНОЙ ПРОВИНЦИИ КОЗЕНЦИИ.",
-   "summary_ru": "Италия – Административные услуги – PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO SPECIALISTICO DI RESPONSABILE DELLA PROTEZIONE DEI DATI (RPD/DPO) E DI SUPPORTO TECNICO-GIURIDICO E ORGANIZZATIVO IN MATERIA DI PROTEZIONE DEI DATI PERSONALI, SICUREZZA ИНФОРМАЦИЯ, КИБЕРБЕЗОПАСНОСТЬ И НОРМАТИВНОЕ СООТВЕТСТВИЕ ДЛЯ САНИТАРНОЙ ПРОВИНЦИИ КОЗЕНЦИИ.",
+   "summary_ru": "Италия – Административные услуги – ОТКРЫТАЯ ПРОЦЕДУРА ПРИЕМА СПЕЦИАЛИСТСКОЙ СЛУЖБЫ ОТДЕЛАТЕЛЯ ЗАЩИТЫ ДАННЫХ (RPD/DPO) И ПЕРСОНАЛА ТЕХНИЧЕСКОЙ, ЮРИДИЧЕСКОЙ И ОРГАНИЗАЦИОННОЙ ПОДДЕРЖКИ, ИНФОРМАЦИОННОЙ БЕЗОПАСНОСТИ, КИБЕРБЕЗОПАСНОСТИ И СОБЛЮДЕНИЯ НОРМАТИВНЫХ НОРМ ДЛЯ ПРОВИНЦИАЛЬНОЙ КОМПАНИИ ЗДРАВООХРАНЕНИЯ КОЗЕНЦЫ.",
    "topics": [
     "cyber"
    ],
@@ -18303,7 +18139,7 @@
     "38600000",
     "38400000"
    ],
-   "title_ru": "Laite- ja repertääpaketti, joka on comatibilitä ääður ölven Boston Dynamics Spot -robotin kanssa (Пакет оборудования и программного обеспечения, совместимый с существующим роботом Boston Dynamics Spot)",
+   "title_ru": "Пакет оборудования и программного обеспечения, совместимый с существующим роботом Boston Dynamics Spot.",
    "summary_ru": "Финляндия – Сканеры – Пакет оборудования и программного обеспечения, совместимый с существующим роботом Boston Dynamics Spot (Пакет оборудования и программного обеспечения, совместимый с существующим роботом Boston Dynamics Spot)",
    "topics": [
     "robotics"
@@ -18418,7 +18254,7 @@
     "48000000"
    ],
    "title_ru": "Автоматизированные методы критического тестирования и максимальная интеллектуальная работа с роботизированной системой управления системой",
-   "summary_ru": "Латвия – Промышленные роботы – Automatizētas atkritumu šķirošanas iekārtas ar mākslīgā intellect vadītu robotizētu satvērējroku sistēmu piegāde un uzstādīšana",
+   "summary_ru": "Латвия – Промышленный робот – Поставка и монтаж автоматизированного оборудования для сортировки мусора с роботизированными системами захвата, управляемыми искусственным интеллектом.",
    "topics": [
     "robotics"
    ],
@@ -18449,7 +18285,7 @@
     "73300000"
    ],
    "title_ru": "РАЗРАБОТКА ПРОМЫШЛЕННОЙ МИКРОЭЛЕКТРОНИКИ МАССОВОГО ПРОИЗВОДСТВА АТОМОВ ФРОИДОВ, ВКЛЮЧАЯ КОНЦЕПЦИЮ АВТОМАТИЗИРОВАННОЙ ЛИНИИ ПРОИЗВОДСТВА И АССОЦИЮ(И) РАЗРАБОТКИ ЛОГИИ",
-   "summary_ru": "Франция – Проектирование и проведение исследований и разработок – DEVELOPPEMENT DE PROCEDE INDUSTRIEL MICROELECTRONIQUE DE FABRICATION EN MASSE DE PUCES A ATOMES FROIDS, INCLUANT LA CONCEPTION DE LA LIGNE DE PRODUCTION AUTOMATISEE ET LE DEVELOPPEMENT DE LOGICIEL(S) ASSOCIE(S)",
+   "summary_ru": "Франция – РАЗРАБОТКА МИКРОЭЛЕКТРОННОГО ПРОМЫШЛЕННОГО ПРОЦЕССА МАССОВОГО ПРОИЗВОДСТВА ЧИПОВ ХОЛОДНЫХ АТОМОВ, ВКЛЮЧАЯ ПРОЕКТИРОВАНИЕ АВТОМАТИЧЕСКОЙ ПРОИЗВОДСТВЕННОЙ ЛИНИИ",
    "topics": [
     "materials"
    ],
@@ -18728,7 +18564,7 @@
    "status": "Закупка завершена",
    "law": "223-ФЗ",
    "procedure": "Иной способ",
-   "title_ru": "Робот-пылесоc Dolphin Dynamic Pro X2 7514050000",
+   "title_ru": "Робот-пылесос Dolphin Dynamic Pro X2 7514050000",
    "summary_ru": "",
    "topics": [
     "robotics"
@@ -18867,13 +18703,14 @@
     "42997300",
     "30200000"
    ],
-   "title_ru": "Dostawa stanowiska edukacyjnego z robotem 6-osiowym (8 sztuk) przeznaczonym do nauki programowania i symulacji procesów przemysłowych w zestawie z komputerem stacjonarnym I kompletem akcesoriów.",
-   "summary_ru": "Польша – Промышленные роботы – Dostawa stanowiska edukacyjnego z robotem 6-osiowym (8 sztuk) przeznaczonym do nauki programowania i symulacji procesów przemysłowych w zestawie z komputerem stacjonarnym I kompletem akcesoriów.",
+   "title_ru": "Достаточная учебная программа с 6-осевым роботом (8 классов) для научных программ и симуляций процессов, выполняемых с компьютером, стационарным и полным набором аксессуаров.",
+   "summary_ru": "Польша – Промышленные роботы – Обучение 6-осным (8-штук) роботам Dostawa stanowiska с новыми процессами программирования и моделирования для стационарных компьютеров и комплектных аксессуаров.",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Польша",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -20195,7 +20032,7 @@
     "32410000"
    ],
    "title_ru": "Модернизация радиосистемы на линиях метро",
-   "summary_ru": "Польша – Электромонтажные работы – Modernizacja systemu radiołączności na I linii metra",
+   "summary_ru": "Польша – Электромонтажные работы – Модернизация радиосистемы и линии метро",
    "topics": [
     "radio"
    ],
@@ -20639,7 +20476,7 @@
     "48000000"
    ],
    "title_ru": "«Автоматизация критического тестирования обеспечивает максимальное интеллектуальное управление роботизированной системой управления»",
-   "summary_ru": "Латвия - Промышленные роботы - «Automatizētas atkritumu šķirošanas iekārtas ar mākslīgā intelekta vadītu robotizētu satvērējroku sistēmu piegāde un uzstādīšana»",
+   "summary_ru": "Латвия – Промышленный робот – «Поставка и монтаж автоматизированного оборудования для сортировки мусора с роботизированными системами захвата, управляемыми искусственным интеллектом»",
    "topics": [
     "robotics"
    ],
@@ -20670,13 +20507,14 @@
     "42997300",
     "30200000"
    ],
-   "title_ru": "Dostawa stanowiska edukacyjnego z robotem 6-osiowym (8 sztuk) przeznaczonym do nauki programowania and symulacji procesów przemysłowych w zestawie z komputerem stacjonarnym I kompletem akcesoriów.",
-   "summary_ru": "Польша – Промышленные роботы – Dostawa edukasyjnego edukacyjnego z robotem 6-osiowym (8 sztku) przeznacznym do nauki programowania i simulacji procesów przemyslowych w setzą z komputerem stacjonarnym I kompletem aksesoriów.",
+   "title_ru": "Достаточная учебная программа с 6-осевым роботом (8 классов) для научных программ и симуляций процессов, выполняемых с компьютером, стационарным и полным набором аксессуаров.",
+   "summary_ru": "Польша – Промышленные роботы – Обучение 6-осным (8-штук) роботам Dostawa stanowiska с новыми процессами программирования и моделирования для стационарных компьютеров и комплектных аксессуаров.",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Польша",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -20704,7 +20542,7 @@
     "79000000"
    ],
    "title_ru": "Yleisradio Oy - Экспертные услуги по кибербезопасности и защите данных 2025 (00751) DPS - Экспертные услуги по кибербезопасности и кибербезопасности",
-   "summary_ru": "Финляндия – ИТ-услуги: консалтинг, разработка программного обеспечения, Интернет и поддержка – Yleisradio Oy - Kyberturvan ja Tietosuojan asiantuntijapalvelut 2025 (00751) DPS - Tieto- ja kyberturva-asiantuntijapalveluita",
+   "summary_ru": "Финляндия – ИТ-услуги: консалтинг, разработка программного обеспечения, Интернет и поддержка – Yleisradio Oy - Kyberturvan ja kyberturva-asiantuntijapalvelut 2025 (00751) DPS - Tieto- ja kyberturva-asiantuntijapalvelut",
    "topics": [
     "cyber"
    ],
@@ -20762,7 +20600,7 @@
     "35613000"
    ],
    "title_ru": "ΠΡΟΜΗΘΕΙΑ ΜΗ ΣΤΕΛΕΧΩΜΕΝΩΝ ΜΕΣΩΝ (ДРОНЫ) ΣΤΟ ΛΙΜΕΝΙΚΟ ΣΩΜΑ-ΕΛΛΗΝΙΚΗ ΑΚΤΟΦΥΛΑΚΗ ΚΑΙ ΣΥΝΑΦΕΙΣ ΥΠΗΡΕΣΙΕΣ",
-   "summary_ru": "Греция – Беспилотные летательные аппараты – ΠΡΟΜΗΘΕΙΑ ΜΗ ΣΤΕΛΕΧΩΜΕΝΩΝ ΜΕΣΩΝ (ДРОНЫ) ΣΤΟ ΛΙΜΕΝΙΚΟ ΣΩΜΑ-ΕΛΛΗΝΙΚΗ ΑΚΤΟΦΥΛΑΚΗ ΚΑΙ ΣΥΝΑΦΕΙΣ ΥΠΗΡΕΣΙΕΣ",
+   "summary_ru": "Греция – Беспилотные летательные аппараты – Летающие летательные аппараты",
    "topics": [
     "robotics"
    ],
@@ -21409,7 +21247,7 @@
     "38112100"
    ],
    "title_ru": "Нарвский колледж теадуслабори роботит остмине",
-   "summary_ru": "Эстония – Промышленные роботы – Narva kolledžile teaduslabori robotite ostmine",
+   "summary_ru": "Эстония – Промышленный робот – Нарвский колледж teaduslabori robotite ostmine",
    "topics": [
     "robotics"
    ],
@@ -21440,7 +21278,7 @@
     "38000000"
    ],
    "title_ru": "ОТКРЫТАЯ ПРОЦЕДУРА ВЫШЕ ПОРОГА СООБЩЕСТВА В СООТВЕТСТВИИ С СТ. 71 ЗАКОНОДАТЕЛЬНОГО ДЕКАТА № 36/2023 О ВЫДАЧЕ НА ПОСТАВКУ НАУЧНОГО ЛАБОРАТОРНОГО ОБОРУДОВАНИЯ, РАЗДЕЛЕННОГО НА 5 ФУНКЦИОНАЛЬНЫХ ЛОТОВ, В РАМКАХ ДЕЯТЕЛЬНОСТИ ИНИЦИАТИВЫ «ПОДГОДНО ДЛЯ МЕДИЦИНСКОЙ РОБОТИКИ» PNC0000007 CUP B53C22006960001",
-   "summary_ru": "Италия – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – ПРОЦЕДУРА APERTA SOPRA SOGLIA COMUNITARIA AI SENSI DELL’ART. 71 ЗАКОНОДАТЕЛЬСТВЕННОГО ДЕКРЕТА № 36/2023 PER L’AFFIDAMENTO DELLA FORNITURA DI ATTREZZATURE DI ATTREZZATURE DA LABORATORIO, SUDDIVISA IN 5 LOTTI FUNZIONALI, NELL’AMBITO DELLE ATTIVITÀ DELL’INIZIATIVA «ПРОДАНЫ ДЛЯ МЕДИЦИНСКИХ УСЛОВИЙ» РОБОТОТЕХНИКА» PNC0000007 ЧАШКА B53C22006960001",
+   "summary_ru": "Италия – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – PROCEDURA APERTA SOPRA SOGLIA COMUNITARIA AI SENSI DELL'ART. 71 ЗАКОНОДАТЕЛЬСТВЕННОГО ДЕКРЕТА № 36/2023 PER L’AFFIDAMENTO DELLA FORNITURA DI ATTREZZATURE DI ATTREZZATURE DA LABORATORIO, SUDDIVISA IN 5 LOTTI FUNZIONALI, NELL’AMBITO DELLE ATTIVITÀ DELL’INIZIATIVA «ПРОДАНЫ ДЛЯ МЕДИЦИНСКИХ УСЛОВИЙ» РОБОТОТЕХНИКА» PNC0000007 ЧАШКА B53C22006960001",
    "topics": [
     "robotics"
    ],
@@ -21771,8 +21609,8 @@
    "cpv": [
     "64200000"
    ],
-   "title_ru": "„Предоставяне на далекосъобщителни услуги - цифрови мобилни телефонни услуги по стандарт GSM/UMTS/LTE с национално покритие за нуждите на „Югоизточно държавно предприятие” ДП и териториалните му поделения за срок от 36 месеца”",
-   "summary_ru": "Bulgaria – Telecommunications services – „Предоставяне на далекосъобщителни услуги - цифрови мобилни телефонни услуги по стандарт GSM/UMTS/LTE с национално покритие за нуждите на „Югоизточно държавно предприятие” ДП и териториалните му поделения за срок от 36 месеца”",
+   "title_ru": "«Оказание услуг связи - услуг цифровой мобильной связи стандарта GSM/UMTS/LTE с национальным покрытием для нужд Государственного предприятия «Юго-Восточное государственное предприятие» и его территориальных подразделений сроком на 36 месяцев»",
+   "summary_ru": "Болгария – Телекоммуникационные услуги – «Предоставление на далексообщни услуги - услуги цифровой мобильной телефонной связи по стандарту GSM/UMTS/LTE с национальным покрытием для нужд «Югоизточно Джержавно Предприятие» ДП и его территориальных подразделений сроком на 36 месяцев»",
    "topics": [
     "radio"
    ],
@@ -22301,13 +22139,14 @@
     "35613000",
     "35100000"
    ],
-   "title_ru": "Drones και Κινητού Επιχειρησιακού Κέντρου στο πλαίσιο της Πολιτικής Προστασίας του Δήμου Θήρας",
-   "summary_ru": "Греция – Специализированные транспортные средства – Προμήθεια Συστημάτων Κέντρου Ελέγχου, Ασύρματης Επικοινωνίας, Drones και Κινητού Επιχειρησιακού Κέντρου στο πλαίσιο της Πολιτικής Προστασίας του Δήμου Θήρας",
+   "title_ru": "Закупка систем управления, беспроводной связи, дронов и мобильных оперативных центров в рамках Политической защиты муниципалитета Тира",
+   "summary_ru": "Греция – Специализированные транспортные средства – Προμήθεια Συστημάτων Κεντρου έλέγχου, Ασυρματης Κεντρους, Drones και Κινητού Επιχειρισιακό Κεντρου στο της Πολιτικής Κροστής του Θήρας Муниципалитет",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "drone"
+    "drone",
+    "дрон"
    ],
    "country": "Греция",
    "first_seen": "2026-10-05T08:59:53+00:00"
@@ -22931,14 +22770,16 @@
    "cpv": [
     "42997300"
    ],
-   "title_ru": "Lieferung von zwei humanoiden Robotersystemen und Option eines vierbeinigen Robotersystems",
+   "title_ru": "Поставка двух человекоподобных роботов и опция четвероногого робота.",
    "summary_ru": "Германия – Промышленные роботы – Lieferung von zwei humanoiden Robotersystemen und Option eines vierbeinigen Robotersystems",
    "topics": [
     "robotics"
    ],
    "keywords": [
     "humanoid",
-    "robot"
+    "robot",
+    "человекоподобный робот",
+    "четвероногий робот"
    ],
    "country": "Германия",
    "first_seen": "2026-10-05T12:35:43+00:00"
@@ -23315,13 +23156,14 @@
    "cpv": [
     "64212000"
    ],
-   "title_ru": "Предоставяне на далекосъобщителни услуги чрез обществена далекосъобщителна подвижна клетъчна мрежа по стандарт GSM/LTE/5G с национално покритие от лицензиран оператор",
-   "summary_ru": "Bulgaria – Mobile-telephone services – Предоставяне на далекосъобщителни услуги чрез обществена далекосъобщителна подвижна клетъчна мрежа по стандарт GSM/LTE/5G с национално покритие от лицензиран оператор",
+   "title_ru": "Оказание телекоммуникационных услуг через сеть мобильной сотовой связи общего пользования стандарта GSM/LTE/5G с национальным покрытием лицензированного оператора",
+   "summary_ru": "Болгария – Услуги мобильной телефонной связи – Предоставление удаленных государственных услуг через общедоступную удаленную сеть мобильной сотовой связи общего пользования стандарта GSM/LTE/5G с национальным покрытием лицензированным оператором",
    "topics": [
     "radio"
    ],
    "keywords": [
-    "LTE"
+    "LTE",
+    "телекоммуникации"
    ],
    "country": "Болгария",
    "first_seen": "2026-10-05T10:28:26+00:00"
@@ -24614,8 +24456,8 @@
    "cpv": [
     "64200000"
    ],
-   "title_ru": "„Избор на оператор за предоставяне за нуждите на - ЦУ на „СИДП” ДП - гр. Шумен и неговите ТП „ДГС/ДЛС” за срок от 36 месеца, на мобилни телефонни услуги чрез обществена далекосъобщителна подвижна клетъчна мрежа по стандарт GSM, UMTS и LTE с национално покритие, включващи 1279 броя SIM-карти, както и допълнителни доставки и услуги, свързани с тази дейност”",
-   "summary_ru": "Bulgaria – Telecommunications services – „Избор на оператор за предоставяне за нуждите на - ЦУ на „СИДП” ДП - гр. Шумен и неговите ТП „ДГС/ДЛС” за срок от 36 месеца, на мобилни телефонни услуги чрез обществена далекосъобщителна подвижна клетъчна мрежа по стандарт GSM, UMTS и LTE с национално покритие, включващи 1279 броя SIM-карти, както и допълнителни доставки и услуги, свързани с тази дейност”",
+   "title_ru": "«Выбор оператора для предоставления для нужд – Центрального офиса ДП «СИДП» – города Шумен и его ТП «ДГС/ДЛС» сроком на 36 месяцев услуг мобильной телефонной связи через сеть мобильной сотовой связи общего пользования по стандартам GSM, UMTS и LTE с национальным покрытием, в том числе 1279 SIM-карт, а также дополнительных поставок и услуг, связанных с данной деятельностью»",
+   "summary_ru": "Болгария - Телекоммуникационные услуги - \"Выбор оператора для предоставления для нужд - Центрального офиса \"СИДП\" ДП - города Шумен и его ТП \"ДГС/ДЛС\" сроком на 36 месяцев услуг мобильной телефонной связи через сеть мобильной сотовой связи общего пользования по стандартам GSM, UMTS и LTE с национальным покрытием, в том числе 1279 SIM-карт, а также дополнительных поставок и услуг, связанных с данной деятельностью\"",
    "topics": [
     "radio"
    ],
@@ -25292,13 +25134,14 @@
     "72260000",
     "48920000"
    ],
-   "title_ru": "EU-weite Ausschreibung einer Lieferung von Robotic Process Automation Software",
-   "summary_ru": "Германия – Услуги, связанные с программным обеспечением – EU-weite Ausschreibung einer Lieferung von Robotic Process Automation Software",
+   "title_ru": "Общеевропейский тендер на поставку программного обеспечения для автоматизации роботизированных процессов",
+   "summary_ru": "Германия – Услуги, связанные с программным обеспечением – Ausschreibung einer Lieferung von Robotic Process Automation Software по всему ЕС",
    "topics": [
     "robotics"
    ],
    "keywords": [
-    "robot"
+    "robot",
+    "робот"
    ],
    "country": "Германия",
    "first_seen": "2026-10-05T12:35:43+00:00"
@@ -27399,7 +27242,7 @@
     "80511000"
    ],
    "title_ru": "Обновление системы радиосвязи",
-   "summary_ru": "Словакия – Радиооборудование – Obnova záložného rádiokomunikačného systému",
+   "summary_ru": "Словакия – Радиооборудование – Obnova zálovného rádiokomunikačného systému",
    "topics": [
     "radio"
    ],
@@ -27767,7 +27610,7 @@
     "32236000"
    ],
    "title_ru": "Служба гибридных терминалов TETRA-LTE для зоны безопасности и экстренной помощи в Мурсии",
-   "summary_ru": "Испания – Радиотелефоны – Suministro de Terminales Hybridos TETRA-LTE par el Área de Seguridad y Emergencias del Ayuntamiento de Murcia",
+   "summary_ru": "Испания – Радиотелефоны – Поставка гибридных терминалов TETRA-LTE Отделом безопасности и чрезвычайных ситуаций городского совета Мурсии",
    "topics": [
     "radio"
    ],
@@ -27950,36 +27793,6 @@
     "персонализированная медицина"
    ],
    "country": "Румыния",
-   "first_seen": "2026-10-05T12:35:43+00:00"
-  },
-  {
-   "type": "tender",
-   "source": "TED (Евросоюз)",
-   "source_id": "545604-2026",
-   "url": "https://ted.europa.eu/en/notice/-/detail/545604-2026",
-   "title": "Beauftragung Umrüstung der ca. 25.000 Bestandsmodems von 2G auf Multibandmodem (4G / NB IoT / LTE-M / 5G)",
-   "summary": "Germany – Meters – Beauftragung Umrüstung der ca. 25.000 Bestandsmodems von 2G auf Multibandmodem (4G / NB IoT / LTE-M / 5G)",
-   "date": "2026-08-06",
-   "country_code": "DE",
-   "customer": "BEW Berliner Energie und Wärme GmbH",
-   "price": 7856000.0,
-   "currency": "EUR",
-   "deadline": null,
-   "status": "Итоги закупки",
-   "law": "TED",
-   "procedure": "",
-   "cpv": [
-    "38550000"
-   ],
-   "title_ru": "Beauftragung Umrüstung der ca. 25 000 лучших модемов 2G или многополосных модемов (4G / NB IoT / LTE-M / 5G)",
-   "summary_ru": "Германия – Метры – Beauftragung Umrüstung der ca. 25 000 лучших модемов 2G или многополосных модемов (4G / NB IoT / LTE-M / 5G)",
-   "topics": [
-    "radio"
-   ],
-   "keywords": [
-    "LTE"
-   ],
-   "country": "Германия",
    "first_seen": "2026-10-05T12:35:43+00:00"
   },
   {
@@ -28732,7 +28545,7 @@
     "71247000",
     "71540000"
    ],
-   "title_ru": "Проверка над реализацией робота или закрытие контракта, pn. «Budowa węzła drogowego w miejscowości Jawornik wągu DK7»",
+   "title_ru": "Контроль над реализацией робота или заключение контракта, pn. \"Будова въезда в дом с потерей Яворника в зоне DK7\"",
    "summary_ru": "Польша – Надзор за строительными работами – Pełnienie nadzoru nad realizacją Robot oraz przyszący Kontraktem pn. «Будова везла дроговего в город Яворник по маршруту DK7»",
    "topics": [
     "robotics"
@@ -29189,7 +29002,7 @@
     "48710000"
    ],
    "title_ru": "«Поднесение кибербезопасности и содействие в киберзагрожении в Закладе Господарки Коммунальной СП. з о. о. в Контахе Вроцлавских»",
-   "summary_ru": "Польша – Компьютерное оборудование и расходные материалы – «Podniesienie cyberbezpieczeństwa i zwiększenie odporności na cyberzagrożenia w Zakładzie Gospodarki Komunalnej Sp. z o. o. w Kątach Wrocławskich»",
+   "summary_ru": "Польша – Компьютерное оборудование и расходные материалы – «Podniesienie cyberbezpieczeństwa i odnościę powięcienie na cyberzagrożenia w Zakładzi Gospodarki Komunalnej Sp. z o. o. w Kątach Wrocławskich»",
    "topics": [
     "cyber"
    ],
@@ -30025,7 +29838,7 @@
     "42997300"
    ],
    "title_ru": "Работа роботов в кадре проекта PABLO - Роботические автономии Livrare Urbana",
-   "summary_ru": "Румыния – Промышленные роботы – Achiziția de roboti în cadrul proiectului PABLO - Autonomous Roboti Livrare Urbana",
+   "summary_ru": "Румыния – Промышленные роботы – Приобретение роботов в рамках проекта PABLO - Robośi Autonomi Livrare Urbana",
    "topics": [
     "robotics"
    ],
@@ -30277,7 +30090,7 @@
     "35613000"
    ],
    "title_ru": "Я руковожу установкой оборудования и датчиков для повышения производительности Периферийной службы дронов (SPID) Института морских исследований (INMAR) Университета Кадиса. Ссылка EQC2024-007920-P, финансируется MCIU/AEI/10.13039/501100011033/UE, FEDER. Desglosado в 6 партиях.",
-   "summary_ru": "Испания – Геодезические, гидрографические, океанографические и гидрологические приборы и приборы – Suministro con installación de Equipments y Sensores para mejora de la capacidad del Servicio Periférico de Drones (SPID) del Instituto de Investigaciones Marinas (INMAR) Университета Кадиса. Ссылка EQC2024-007920-P, финансируемая MCIU/AEI/10.13039/501100011033/UE, FEDER. Desglosado в 6 лотах.",
+   "summary_ru": "Испания – Геодезические, гидрографические, океанографические и гидрологические приборы и приборы – Suministro con installación de Equipments y Sensores para mejora de la capacidad del Servicio Periférico de Drones (SPID) del Instituto de Investigaciones Marinas (INMAR) Университета Кадиса. Ссылка EQC2024-007920-P, финансируется MCIU/AEI/10.13039/501100011033/UE, FEDER. Desglosado в 6 лотах.",
    "topics": [
     "robotics"
    ],
@@ -30660,7 +30473,7 @@
     "72267000"
    ],
    "title_ru": "Объявление (резюме объявления) о проведении международного электронного открытого тендера на право заключения договора на оказание услуг «РАЗРАБОТКА СИСТЕМЫ ИНФОРМАЦИОННОЙ БЕЗОПАСНОСТИ»",
-   "summary_ru": "Греция – Услуги в области информационных технологий – Προκήρυξη (περίληψη διακήρυξης) του διεθνούς, ηλεκτρονικού, ανοικτού διαμγωνισού για την σύμβαση παροχής υπηρεσίας με τίτλο «ΑΝΑΠΤΥΞΗ ΠΛΑΙΣΙΟΥ ΑΣΦΑΛΕΙΑΣ ΠΛΗΡΟΦΟΡΙΩΝ»",
+   "summary_ru": "Греция – Услуги в области информационных технологий – Тендер на международный электронный открытый тендер на контракт на оказание услуг под названием «ΑΝΑΠΤΥΞΗ ΠΛΑΙΣΙΟΥ ΑΣΦΑΛΕΙΑΣ ΠΛΗΡΟΤΟΡΙΩΝ»",
    "topics": [
     "cyber"
    ],
@@ -30744,7 +30557,7 @@
     "35613000"
    ],
    "title_ru": "ΠΡΟΜΗΘΕΙΑ ΜΗ ΣΤΕΛΕΧΩΜΕΝΩΝ ΜΕΣΩΝ (ДРОНЫ) ΣΤΟ ΛΙΜΕΝΙΚΟ ΣΩΜΑ-ΕΛΛΗΝΙΚΗ ΑΚΤΟΦΥΛΑΚΗ ΚΑΙ ΣΥΝΑΦΕΙΣ ΥΠΗΡΕΣΙΕΣ",
-   "summary_ru": "Греция – Беспилотные летательные аппараты – ΠΡΟΜΗΘΕΙΑ ΜΗ ΣΤΕΛΕΧΩΜΕΝΩΝ ΜΕΣΩΝ (ДРОНЫ) ΣΤΟ ΛΙΜΕΝΙΚΟ ΣΩΜΑ-ΕΛΛΗΝΙΚΗ ΑΚΤΟΦΥΛΑΚΗ ΚΑΙ ΣΥΝΑΦΕΙΣ ΥΠΗΡΕΣΙΕΣ",
+   "summary_ru": "Греция – Беспилотные летательные аппараты – ΠΡΟΜΘΘΕΙΑ ΜΗ ΣΤΕΛΕξΩΜΕΝΩΝ ΜΕΣΩΝ (ДРОНЫ) ΣΤΟ ΛΙΜΕΝΙΚΟ ΣΩΜΑ-ΕΛΛΗΝΙΚΗ ΑΚΤΟΦΥΛΑΚΗ ΚΑΙ ΣΙΝΑΦΕΙΣ ΥΠΗΡΕΣΙΕΣ",
    "topics": [
     "robotics"
    ],
@@ -31198,8 +31011,8 @@
    "cpv": [
     "64200000"
    ],
-   "title_ru": "Избор на оператор за предоставяне за нуждите на СИДП ДП - гр. Шумен - ЦУ и неговите ТП ДГС/ДЛС за срок от 36 месеца считано от датата на сключване на договор, на мобилни телефонни услуги чрез обществена далекосъобщителна подвижна клетъчна мрежа по стандарт GSM, UMTS и LTE с национално покритие, включващи 1175 броя SIM-карти, както и допълнителни доставки и услуги, свързани с тази дейност",
-   "summary_ru": "Bulgaria – Telecommunications services – Избор на оператор за предоставяне за нуждите на СИДП ДП - гр. Шумен - ЦУ и неговите ТП ДГС/ДЛС за срок от 36 месеца считано от датата на сключване на договор, на мобилни телефонни услуги чрез обществена далекосъобщителна подвижна клетъчна мрежа по стандарт GSM, UMTS и LTE с национално покритие, включващи 1175 броя SIM-карти, както и допълнителни доставки и услуги, свързани с тази дейност",
+   "title_ru": "Выбор оператора по оказанию услуг мобильной связи через сеть мобильной сотовой связи общего пользования по стандартам GSM, UMTS и LTE с национальным покрытием, в том числе 1175 SIM-карт, а также дополнительных поставок и услуг, связанных с данной деятельностью, для нужд ГРИД ДП - г. Шумен - ТГУ и его ТП ДГС/ДЛС на срок 36 месяцев со дня заключения договора",
+   "summary_ru": "Болгария – Телекоммуникационные услуги – Выбор оператора для предоставления для нужд ГИДП ДП – г. Шумен – КУ и его ТП ДГС/ДЛС на срок 36 месяцев с даты заключения договора услуг мобильной телефонной связи через сеть мобильной сотовой связи общего пользования по стандартам GSM, UMTS и LTE с национальным покрытием, в том числе 1175 SIM-карт, а также дополнительные поставки и услуги, связанные с данной деятельностью",
    "topics": [
     "radio"
    ],
@@ -31735,35 +31548,6 @@
   },
   {
    "type": "tender",
-   "source": "SAM.gov (США)",
-   "source_id": "70246b8e2f2146b49edb1a644b276466",
-   "url": "https://sam.gov/opp/70246b8e2f2146b49edb1a644b276466/view",
-   "title": "NOTICE OF INTENT TO AWARD SOLE SOURCE - QIAGEN Molecular Biology Reagents, Kits, and Consumables",
-   "summary": "NOTICE OF INTENT TO AWARD SOLE SOURCE Project: IDIQ for Purchase of QIAGEN Molecular Biology Reagents, Kits, and Consumables Announcement No.: FDA-26- 1289149 The U.S. Food and Drug Admin",
-   "date": "2026-07-20",
-   "deadline": "2026-07-29",
-   "country_code": "US",
-   "customer": "Health And Human Services, Department Of / Food And Drug Administration",
-   "price": null,
-   "currency": "USD",
-   "status": "Архив",
-   "law": "",
-   "procedure": "Special Notice",
-   "number": null,
-   "solicitation": "",
-   "title_ru": "NOTICE OF INTENT TO AWARD SOLE SOURCE - QIAGEN Molecular Biology Reagents, Kits, and Consumables",
-   "summary_ru": "УВЕДОМЛЕНИЕ О НАМЕРЕНИИ ВЫДАВАТЬ ЕДИНСТВЕННЫЙ ИСТОЧНИК проекта: IDIQ на закупку реагентов, наборов и расходных материалов для молекулярной биологии QIAGEN Номер объявления: FDA-26-1289149 Управление по контролю за продуктами и лекарствами США",
-   "topics": [
-    "biotech"
-   ],
-   "keywords": [
-    "molecular biology"
-   ],
-   "country": "США",
-   "first_seen": "2026-10-19T06:06:23+00:00"
-  },
-  {
-   "type": "tender",
    "source": "TED (Евросоюз)",
    "source_id": "496042-2026",
    "url": "https://ted.europa.eu/en/notice/-/detail/496042-2026",
@@ -31966,8 +31750,8 @@
    "cpv": [
     "64200000"
    ],
-   "title_ru": "\"Предоставяне на електронни съобщителни услуги, чрез обществена електронна съобщителна подвижна мобилна клетъчна мрежа по стандарт GSМ/UMTS/LTE/5G с оглед изпълнение на служебните задължения от служителите на „Напоителни системи” ЕАД\"",
-   "summary_ru": "Bulgaria – Telecommunications services – \"Предоставяне на електронни съобщителни услуги, чрез обществена електронна съобщителна подвижна мобилна клетъчна мрежа по стандарт GSМ/UMTS/LTE/5G с оглед изпълнение на служебните задължения от служителите на „Напоителни системи” ЕАД\"",
+   "title_ru": "«Оказание услуг электронной связи, посредством мобильной мобильной сотовой сети электронной связи общего пользования по стандарту GSM/UMTS/LTE/5G, в целях выполнения служебных обязанностей работниками ООО «Ирригационные Системы» ЕАД»",
+   "summary_ru": "Болгария – Телекоммуникационные услуги – «Предоставление услуг электронной связи через сеть мобильной сотовой связи общего пользования электронной связи по стандарту GSM/UMTS/LTE/5G с целью выполнения служебных обязанностей сотрудниками «Ирригационные системы» ЕАД»",
    "topics": [
     "radio"
    ],
@@ -32783,8 +32567,8 @@
    "cpv": [
     "64210000"
    ],
-   "title_ru": "„Предоставяне на електронни съобщителни услуги чрез обществена наземна мобилна мрежа по стандарт GSM/UMTS/LTE/5G с национално покритие“",
-   "summary_ru": "Bulgaria – Telephone and data transmission services – „Предоставяне на електронни съобщителни услуги чрез обществена наземна мобилна мрежа по стандарт GSM/UMTS/LTE/5G с национално покритие“",
+   "title_ru": "«Оказание услуг электронной связи через наземную мобильную сеть общего пользования по стандарту GSM/UMTS/LTE/5G с национальным покрытием»",
+   "summary_ru": "Болгария - Услуги телефонной связи и передачи данных - «Предоставление услуг электронной связи через наземную мобильную сеть общего пользования по стандарту GSM/UMTS/LTE/5G с национальным покрытием»",
    "topics": [
     "radio"
    ],
@@ -32925,7 +32709,7 @@
    "cpv": [
     "38000000"
    ],
-   "title_ru": "Fornitura di un systempleto da vuoto crogenico for un esperimento a ioni Intrappolati, nell'ambito del Programma di Ricerca dal the titolo «Центр квантовых вычислений и моделирования» для Отделения физики и астрономии Университета Падуи.",
+   "title_ru": "Предоставление полной системы криогенного вакуума для эксперимента с захваченными ионами в рамках исследовательской программы «Центр квантовых вычислений и моделирования» для факультета физики и астрономии Падуанского университета.",
    "summary_ru": "Италия – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – Fornitura di un sistema completo da vuoto criogenico per un esperimento a ioni Intrappolati, nell’ambito del Programma di Ricerca dal titolo «Центр квантовых вычислений и моделирования» для Отдела физики и астрономии Университета Падуи.",
    "topics": [
     "quantum"
@@ -34148,7 +33932,7 @@
     "72263000"
    ],
    "title_ru": "Защита от программ-вымогателей",
-   "summary_ru": "Словакия – Компьютерные серверы – Zálohovacie zariadenie s ochranou pre Ransomware",
+   "summary_ru": "Словакия – Компьютерные серверы – Защита от программ-вымогателей",
    "topics": [
     "cyber"
    ],
@@ -35004,37 +34788,6 @@
    ],
    "keywords": [
     "радиочастота"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPM:244443",
-   "number": "RU244443",
-   "kind": "Полезная модель",
-   "title": "Устройство для внутрикостной фиксации экзопротеза",
-   "date": "2026-06-30",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPM&DocNumber=244443&TypeFile=html",
-   "summary": "Полезная модель относится к медицине, а именно к травматологии, ортопедии и может применяться для фиксации экзопротеза бедра или голени у пациентов, перенесших ампутацию. Устройство для внутрикостной фиксации экзопротеза включает внутрикостный имплантат, представляющий собой канюлированный стержень, соединенный с чрескожным абатментом, изготовленные из титанового порошка ПТН-8.ВТ6 фракции 10-45 мкм методом SLM-печати с использованием 3D-моделирования по данным КТ. Корпус стержня в проксимальном отделе имеет продольные рёбра вдоль его оси. Поверхность корпуса представляет собой структуру в виде гексагональной решётки. Дистальная часть стержня расширена и имеет вид шайбы с высокополированной поверхностью с параметром шероховатости Ra 0,05 мкм. В дистальном отделе сквозной канал стержня имеет резьбу не менее чем на 1/3 длины стержня, соответствующую резьбе соединительного винта. Выше дистальной части сквозной канал стержня расширен и образует посадочное гнездо для проксимальной конической части абатмента. Абатмент имеет высокополированную поверхность с параметром шероховатости Ra 0,05 мкм, покрытую антибактериальной полимерной биоплёнкой пролонгированного действия. Проксимальная коническая и дистальная части абатмента имеют сквозной канал, соответствующий сквозному каналу стержня с резьбой, соответствующей резьбе соединительного винта, головка которого шире сквозного канала дистальной части абатмента, которая служит площадкой для фиксации модульных элементов экзопротеза . Достиг",
-   "applicants": [
-    "Федеральное государственное бюджетное образовательное учреждение высшего образования \"Самарский государственный медицинский университет\" Министерства здравоохранения Российской Федерации (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/78",
-    "A61F 2/28"
-   ],
-   "status": "действует",
-   "title_ru": "Устройство для внутрикостной фиксации экзопротеза",
-   "summary_ru": "Полезная модель относится к медицине, а именно к травматологии, ортопедии и может применяться для фиксации экзопротеза бедра или голени у пациентов, перенесших ампутацию. Устройство для внутрикостной фиксации экзопротеза включает внутрикостный имплантат, представляющий собой канюлированный стержень, соединенный с чрескожным абатментом, изготовленные из титанового порошка ПТН-8.ВТ6 фракции 10-45 мкм методом SLM-печати с использованием 3D-моделирования по данным КТ. Корпус стержня в проксимальном отделе имеет продольные рёбра вдоль его оси. Поверхность корпуса представляет собой структуру в виде",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
    ],
    "country": "Россия",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -36710,7 +36463,7 @@
     "72200000",
     "72210000"
    ],
-   "title_ru": "ОТКРЫТАЯ ПРОЦЕДУРА EX ART. 71 Д. ЛГС. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
+   "title_ru": "PROCEDURA APERTA EX ART. 71 Д. ЛГС. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
    "summary_ru": "Италия – Программирование программного обеспечения и консультационные услуги – PROCEDURA APERTA EX ART. 71 Д. ЛГС. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
    "topics": [
     "cyber"
@@ -37604,7 +37357,7 @@
     "66510000"
    ],
    "title_ru": "страховые услуги (полис ОСАГО и полис CYBER Risk)",
-   "summary_ru": "Италия – Страховые услуги – страховые услуги (polizza RCA libro matricola и polizza CYBER Risk)",
+   "summary_ru": "Италия – Страховые услуги – servizi assicurativi (polizza RCA libro matricola и polizza CYBER Risk)",
    "topics": [
     "cyber"
    ],
@@ -38334,7 +38087,7 @@
     "30213200"
    ],
    "title_ru": "Поднятие уровня кибербезопасности, шифрование медицинских документов, интеграция и контрольные системы информационных систем, а также решение проблем, связанных с профессиональными интеллектуальными учреждениями в Государственной специализированной больнице в Сталовее Воли.",
-   "summary_ru": "Польша – Пакет программного обеспечения и информационные системы – Podniesienie poziomu cyberbezpieczeństwa, Cyfryzacja Documentacji Medical, Integracja i Rozbudowa systemów Informationcznych oraz wdrożenie rozwiązań z zastosowań sztucznej inteligencji w Powiatowym Szpitalu Специализированным в Сталовой Воли.",
+   "summary_ru": "Польша – Пакет программного обеспечения и информационные системы – Podniesienie nywidow cyberbezpieczeństwa, Cyfryzacja dokumentacji medycznej, integracja i expogoza system informationatycznych, oraz implementie słowzej z przyżowie sztucznej inteligencji w Powiatowym Szpitalu Specialistycznym w Сталовей Воли.",
    "topics": [
     "cyber"
    ],
@@ -38780,7 +38533,7 @@
     "30233141"
    ],
    "title_ru": "Повышение уровня кибербезопасности за счет повышения устойчивости для эффективного предотвращения и реагирования на инциденты на SPWSZ в Щецине.",
-   "summary_ru": "Польша – Пакет программного обеспечения безопасности – Poprawa nivelo cyberbezpieczeństwa pozępznienie przybnienie do scutzego pobiegiebania i reagowania na Incident w SPWSZ w Szczecinie",
+   "summary_ru": "Польша – Пакет программного обеспечения безопасности – Poprawa nivolo cyberbezpieczeństwa poprzez zwicznienie przybnienie do skucznego pobiegiebania i reagowania na Incident w SPWSZ w Szczecinie",
    "topics": [
     "cyber"
    ],
@@ -40450,7 +40203,7 @@
     "72200000",
     "72210000"
    ],
-   "title_ru": "ОТКРЫТАЯ ПРОЦЕДУРА EX ART. 71 Д. ЛГС. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
+   "title_ru": "PROCEDURA APERTA EX ART. 71 Д. ЛГС. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
    "summary_ru": "Италия – Программирование программного обеспечения и консультационные услуги – ПРОЦЕДУРА APERTA EX ART. 71 Д. ЛГС. № 36/2023 PER L'AFFIDAMENTO IN SERVIZIO DI UNA PIATTAFORMA SOFTWARE IN AMBITO ЭТИЧЕСКИЙ ФИШИНГ PER IL GRUPPO CDP",
    "topics": [
     "cyber"
@@ -40721,7 +40474,7 @@
    "cpv": [
     "48000000"
    ],
-   "title_ru": "Лицензии Nabava Trend Micro XDR",
+   "title_ru": "Лицензия Nabava Trend Micro XDR",
    "summary_ru": "Хорватия – Пакет программного обеспечения и информационные системы – Лицензия Nabava Trend Micro XDR",
    "topics": [
     "cyber"
@@ -41387,14 +41140,17 @@
    "cpv": [
     "42418900"
    ],
-   "title_ru": "JKU Линц: 36/2025 Autonomer Mobiler Roboter und Cobot-Roboterarme",
+   "title_ru": "JKU Linz: 36/2025 Автономный мобильный робот и робот-кобот-манипулятор",
    "summary_ru": "Австрия – Погрузочно-разгрузочная техника – JKU Linz: 36/2025 Autonomer Mobiler Roboter und Cobot-Roboterarme",
    "topics": [
     "robotics"
    ],
    "keywords": [
     "robot",
-    "cobot"
+    "cobot",
+    "автономный мобильный робот",
+    "робот",
+    "кобот"
    ],
    "country": "Австрия",
    "first_seen": "2026-10-05T08:59:53+00:00"
@@ -41477,7 +41233,7 @@
     "48730000"
    ],
    "title_ru": "Поднятие уровня кибербезопасности, шифрование медицинских документов, интеграция и контрольные системы информационных систем, а также решение проблем, связанных с профессиональными интеллектуальными учреждениями в Государственной специализированной больнице в Сталовее Воли.",
-   "summary_ru": "Польша – Пакет программного обеспечения и информационные системы – Podniesienie poziomu cyberbezpieczeństwa, Cyfryzacja Documentacji Medical, Integracja i Rozbudowa systemów Informationcznych oraz wdrożenie rozwiązań z zastosowań sztucznej inteligencji w Powiatowym Szpitalu Специализированным в Сталовой Воли.",
+   "summary_ru": "Польша – Пакет программного обеспечения и информационные системы – Повышение уровня кибербезопасности, оцифровка медицинских карт, интеграция и расширение ИТ-систем и внедрение решений искусственного интеллекта в Окружной специализированной больнице в Сталовой Воле.",
    "topics": [
     "cyber"
    ],
@@ -44146,13 +43902,14 @@
    "cpv": [
     "48000000"
    ],
-   "title_ru": "EU-weite Ausschreibung einer Software-Lösung für Security Awareness und Phishing-Simulation",
+   "title_ru": "Общеевропейское программное обеспечение Ausschreibung einer для обеспечения безопасности и моделирования фишинга",
    "summary_ru": "Германия – Пакет программного обеспечения и информационные системы – EU-weite Ausschreibung einer Software-Lösung für Security Awareness und Phishing-Simulation",
    "topics": [
     "cyber"
    ],
    "keywords": [
-    "phishing"
+    "phishing",
+    "фишинг"
    ],
    "country": "Германия",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -45996,7 +45753,7 @@
     "32420000"
    ],
    "title_ru": "Повышение уровня кибербезопасности, оцифровка медицинских карт, интеграция и расширение ИТ-систем и внедрение решений искусственного интеллекта в Окружной специализированной больнице в Сталовой Воле.",
-   "summary_ru": "Польша – Пакеты программного обеспечения и информационные системы – Podniesienie poziomu cyberbezpieczeństwa, Cyfryzacja dokumentacji medycznej,integracja i rozbudowa systemów informationtycznych oraz wdrożenie rozwiązań z zastosowań sztucznej inteligencji w Powiatowym Szpitalu Специализированным в Сталовой Воли.",
+   "summary_ru": "Польша – Пакет программного обеспечения и информационные системы – Повышение уровня кибербезопасности, оцифровка медицинских карт, интеграция и расширение ИТ-систем и внедрение решений искусственного интеллекта в Окружной специализированной больнице в Сталовой Воле.",
    "topics": [
     "cyber"
    ],
@@ -48276,7 +48033,7 @@
     "48000000",
     "72000000"
    ],
-   "title_ru": "Awarenesstool IT Sicherheit (включая фишинг), Datenschutz und Compliance",
+   "title_ru": "Инструмент повышения осведомленности IT Sicherheit (включая фишинг), Datenschutz und Compliance",
    "summary_ru": "Германия – Пакет программного обеспечения и информационные системы – Awarenesstool IT Sicherheit (включая фишинг), Datenschutz und Compliance",
    "topics": [
     "cyber"
@@ -48998,7 +48755,7 @@
     "33100000",
     "48730000"
    ],
-   "title_ru": "Приобретение лицензий на решение TM V1 Cyber Risk Exposure Management (CREM) и TM V1 XDR.",
+   "title_ru": "Приобретение лицензий на решение TM V1 Cyber Risk Exposure Management (CREM) и TM V1 XDR",
    "summary_ru": "Испания – Медицинское оборудование – Приобретение лицензий на решение TM V1 Cyber ​​Risk Exposure Management (CREM) и TM V1 XDR.",
    "topics": [
     "cyber"
@@ -49151,7 +48908,7 @@
     "32420000"
    ],
    "title_ru": "Повышение уровня кибербезопасности, оцифровка медицинских карт, интеграция и расширение ИТ-систем и внедрение решений искусственного интеллекта в Окружной специализированной больнице в Сталовой Воле.",
-   "summary_ru": "Польша – Пакеты программного обеспечения и информационные системы – Podniesienie poziomu cyberbezpieczeństwa, Cyfryzacja dokumentacji medycznej,integracja i rozbudowa systemów informationtycznych oraz wdrożenie rozwiązań z zastosowań sztucznej inteligencji w Powiatowym Szpitalu Специализированным в Сталовой Воли.",
+   "summary_ru": "Польша – Пакет программного обеспечения и информационные системы – Повышение уровня кибербезопасности, оцифровка медицинских карт, интеграция и расширение ИТ-систем и внедрение решений искусственного интеллекта в Окружной специализированной больнице в Сталовой Воле.",
    "topics": [
     "cyber"
    ],
@@ -49245,7 +49002,7 @@
     "48732000"
    ],
    "title_ru": "Предварительное информационное уведомление: Управление уязвимостями для Helse Nord IKT HF",
-   "summary_ru": "Norway – Internet services – Prior information notice: Vulnerability management for Helse Nord IKT HF",
+   "summary_ru": "Норвегия – Интернет-услуги – Предварительное информационное уведомление: Управление уязвимостями для Helse Nord IKT HF",
    "topics": [
     "cyber"
    ],
@@ -49510,7 +49267,7 @@
     "51300000"
    ],
    "title_ru": "Информационный центр радиостанций Министерства информации ASTRO закрыт, аппараты и программируемые устройства с отдельным входом",
-   "summary_ru": "Латвия – Услуги по техническому обслуживанию оборудования радиосвязи – Iekšlietu ministrijas Informācijas centro radiosakaru sistēmas ASTRO uzturēšana, aparatūras un programmatūras piegāde uz septiņiem gadiem",
+   "summary_ru": "Латвия – Услуги по техническому обслуживанию оборудования радиосвязи – Iekšlietu ministrijas Informācijas centrum radiosakaru sistēmas ASTRO uzturēšana, apartment un programmatūras piegāde uz septiņiem gadiem",
    "topics": [
     "radio"
    ],
@@ -50407,7 +50164,7 @@
    "cpv": [
     "48000000"
    ],
-   "title_ru": "Лицензии Nabava Trend Micro XDR",
+   "title_ru": "Лицензия Nabava Trend Micro XDR",
    "summary_ru": "Хорватия – Пакет программного обеспечения и информационные системы – Лицензия Nabava Trend Micro XDR",
    "topics": [
     "cyber"
@@ -50574,7 +50331,7 @@
     "71242000"
    ],
    "title_ru": "Услуги редактирования антепроекта, базового проекта и проекта внедрения расширения отделения Института биомедицинских технологий Университета Лагуны",
-   "summary_ru": "Испания – Архитектурные, инженерные и планировочные услуги – Servicios de redacción del Anteporyecto, Proyecto Básico y Proyecto de Ejecución de la Ampliación de la Sede del Instituto de Tecnologias Biomedicas de la Universidad de La Laguna",
+   "summary_ru": "Испания – Архитектурные, инженерные и планировочные услуги – Servicios de redacción del Anteproyecto, Proyecto Básico y Proyecto de Ejecución de la Ampliación de la Sede del Instituto de Tecnologias Biomedicas de la Universidad de La Laguna",
    "topics": [
     "biotech"
    ],
@@ -50929,7 +50686,7 @@
     "48761000"
    ],
    "title_ru": "Повышение уровня кибербезопасности, оцифровка медицинских карт, интеграция и расширение ИТ-систем и внедрение решений искусственного интеллекта в Окружной специализированной больнице в Сталовой Воле.",
-   "summary_ru": "Польша – Пакеты программного обеспечения и информационные системы – Podniesienie poziomu cyberbezpieczeństwa, Cyfryzacja dokumentacji medycznej,integracja i rozbudowa systemów informationtycznych oraz wdrożenie rozwiązań z zastosowań sztucznej inteligencji w Powiatowym Szpitalu Специализированным в Сталовой Воли.",
+   "summary_ru": "Польша – Пакет программного обеспечения и информационные системы – Повышение уровня кибербезопасности, оцифровка медицинских карт, интеграция и расширение ИТ-систем и внедрение решений искусственного интеллекта в Окружной специализированной больнице в Сталовой Воле.",
    "topics": [
     "cyber"
    ],
@@ -51187,8 +50944,8 @@
    "cpv": [
     "48000000"
    ],
-   "title_ru": "„Осигуряване на платформа за разузнаване и проактивно откриване на киберзаплахи в реално време (Threat Intelligence Solution) в сектор „Здравеопазване“ за нуждите на Министерство на здравеопазването“",
-   "summary_ru": "Bulgaria – Software package and information systems – „Осигуряване на платформа за разузнаване и проактивно откриване на киберзаплахи в реално време (Threat Intelligence Solution) в сектор „Здравеопазване“ за нуждите на Министерство на здравеопазването“",
+   "title_ru": "«Предоставление платформы разведки и превентивного обнаружения киберугроз в режиме реального времени (Threat Intelligence Solution) в секторе «Здравоохранение» для нужд Минздрава»",
+   "summary_ru": "массовое открытие в киберпространстве в режиме реального времени (Threat Intelligence Solution) в секторе «Здравеопазване» для нужд Министерства на исцеление",
    "topics": [
     "cyber"
    ],
@@ -51479,7 +51236,7 @@
     "32422000"
    ],
    "title_ru": "Закупка и поставка оборудования КВ радиосвязи (радиостанция, система электропитания, антенная система, дополнительное оборудование)",
-   "summary_ru": "Польша – Радиосеть – Zakup i dostawa urządzeń do łączności radiowej KF (radiostacja, system zasilania, system antenowy, wyposażenie dodatkowe)",
+   "summary_ru": "Польша – Радиосеть – Закупка и поставка оборудования КВ радиосвязи (радиостанция, система электропитания, антенная система, дополнительное оборудование)",
    "topics": [
     "radio"
    ],
@@ -51759,7 +51516,7 @@
     "48517000",
     "48730000"
    ],
-   "title_ru": "Info zum vergebenen Auftrag - EDR Software-Sicherheitslizenzen",
+   "title_ru": "Информация о награжденном заказе - Лицензии на обеспечение безопасности программного обеспечения EDR",
    "summary_ru": "Германия – Программный комплекс и информационные системы – Информация о присужденном заказе – Лицензии на обеспечение безопасности программного обеспечения EDR",
    "topics": [
     "cyber"
@@ -52181,7 +51938,7 @@
     "38433000",
     "38511000"
    ],
-   "title_ru": "2η ΠΡΟΜΗΘΕΙΑ ΕΠΙΣΤΗΜΟΝΙΚΟΥ ΕΞΟΠΛΙΣΜΟΥ ΣΤΟ ΠΛΑΙΣΙΟ ΤΟΥ ΕΡΓΟΥ ΜΕ К.А. 12055 ΚΑΙ ΤΙΤΛΟ «ОБЪЕДИНЕННЫЙ МАСТЕР: «ПЕРЕДОВЫЕ МАТЕРИАЛЫ ДЛЯ УСТОЙЧИВОГО РАЗВИТИЯ»»",
+   "title_ru": "2. 12055 ΚΑΙ ΤΙΤΛΟ «ОБЪЕДИНЕННЫЙ МАСТЕР: «ПЕРЕДОВЫЕ МАТЕРИАЛЫ ДЛЯ УСТОЙЧИВОГО РАЗВИТИЯ»»",
    "summary_ru": "Греция – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – 2-я ПОСТАВКА НАУЧНОГО ОБОРУДОВАНИЯ В КОНТЕКСТЕ ПРОЕКТА С К.А. 12055 И ЗВАНИЕ «ОБЪЕДИНЕННЫЙ МАСТЕР: «ПЕРЕДОВЫЕ МАТЕРИАЛЫ ДЛЯ УСТОЙЧИВОГО РАЗВИТИЯ»»",
    "topics": [
     "materials"
@@ -53128,7 +52885,7 @@
     "71242000"
    ],
    "title_ru": "Услуги редактирования антепроекта, базового проекта и проекта внедрения расширения отделения Института биомедицинских технологий Университета Лагуны",
-   "summary_ru": "Испания – Архитектурные, инженерные и планировочные услуги – Servicios de redacción del Anteporyecto, Proyecto Básico y Proyecto de Ejecución de la Ampliación de la Sede del Instituto de Tecnologias Biomedicas de la Universidad de La Laguna",
+   "summary_ru": "Испания – Архитектурные, инженерные и планировочные услуги – Servicios de redacción del Anteproyecto, Proyecto Básico y Proyecto de Ejecución de la Ampliación de la Sede del Instituto de Tecnologias Biomedicas de la Universidad de La Laguna",
    "topics": [
     "biotech"
    ],
@@ -54301,7 +54058,7 @@
     "33100000",
     "48730000"
    ],
-   "title_ru": "Получение лицензий для решения TM V1 Cyber Risk Exposure Management (CREM) и TM V1 XDR",
+   "title_ru": "Приобретение лицензий на решение TM V1 Cyber Risk Exposure Management (CREM) и TM V1 XDR",
    "summary_ru": "Испания – Медицинское оборудование – Приобретение лицензий на решение TM V1 Cyber ​​Risk Exposure Management (CREM) и TM V1 XDR.",
    "topics": [
     "cyber"
@@ -54434,7 +54191,7 @@
     "50324100"
    ],
    "title_ru": "Повысьте кибербезопасность города Ловосице",
-   "summary_ru": "Чехия – Информационные системы и серверы – Zvýšení kybernetické bezpečnosti města Lovosice",
+   "summary_ru": "Чехия – Информационные системы и серверы – Информационные системы и услуги безопасности в Ловосице",
    "topics": [
     "cyber"
    ],
@@ -55909,7 +55666,7 @@
     "33100000",
     "48730000"
    ],
-   "title_ru": "Получение лицензий для решения TM V1 Cyber Risk Exposure Management (CREM) и TM V1 XDR",
+   "title_ru": "Приобретение лицензий на решение TM V1 Cyber Risk Exposure Management (CREM) и TM V1 XDR",
    "summary_ru": "Испания – Медицинское оборудование – Приобретение лицензий на решение TM V1 Cyber Risk Exposure Management (CREM) и TM V1 XDR",
    "topics": [
     "cyber"
@@ -61162,35 +60919,6 @@
   },
   {
    "type": "tender",
-   "source": "SAM.gov (США)",
-   "source_id": "d0d936ddf2c343e1a80094833c152949",
-   "url": "https://sam.gov/opp/d0d936ddf2c343e1a80094833c152949/view",
-   "title": "R426--VHA HF Radio Network Design and Assessment",
-   "summary": "Attachment 1: Request for SDVOSB/VOSB Sole Source Justification Format IAW VAAR 819.7008/9 VHAPG Part 819.7008/7009 Sole Source Awards to SDVOSB/VOSB Page 1 of 6 Revision: 04 Effective Date: 11/15/2024 DEPARTMENT OF VETERANS AFFAIRS Justificatio",
-   "date": "2025-10-14",
-   "deadline": null,
-   "country_code": "US",
-   "customer": "Veterans Affairs, Department Of / Veterans Affairs, Department Of",
-   "price": null,
-   "currency": "USD",
-   "status": "Архив",
-   "law": "",
-   "procedure": "Award Notice",
-   "number": null,
-   "solicitation": "36C25925Q0824",
-   "title_ru": "R426--VHA HF Radio Network Design and Assessment",
-   "summary_ru": "Приложение 1: Запрос на получение SDVOSB/VOSB формата обоснования единственного источника IAW VAAR 819.7008/9 VHAPG Part 819.7008/7009 Единственного источника вознаграждения SDVOSB/VOSB Страница 1 из 6 Редакция: 04 Дата вступления в силу: 15.11.2024 ДЕПАРТАМЕНТ ПО ДЕЛАМ ВЕТЕРАНОВ Обоснование",
-   "topics": [
-    "radio"
-   ],
-   "keywords": [
-    "radio network"
-   ],
-   "country": "США",
-   "first_seen": "2026-10-19T06:06:23+00:00"
-  },
-  {
-   "type": "tender",
    "source": "TED (Евросоюз)",
    "source_id": "666726-2025",
    "url": "https://ted.europa.eu/en/notice/-/detail/666726-2025",
@@ -63462,41 +63190,6 @@
   },
   {
    "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPAT:2846300",
-   "number": "RU2846300",
-   "kind": "Патент на изобретение",
-   "title": "Способ профилактики риска развития осложнений в области культи конечности при экзопротезировании",
-   "date": "2025-09-03",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2846300&TypeFile=html",
-   "summary": "Изобретение относится к медицине, а именно к хирургии и может быть использовано для профилактики риска развития осложнений в области культи конечности при экзопротезировании. За 3 дня до начала постоянного ношения экзопротеза на область культи проводят процедуру электрофореза с 2,5% водным раствором калия йодида и с 2,5% водным раствором натрия бромида на катоде и с 40 мг водного раствора хлоропирамина на аноде. При этом катод выполнен изогнутой по ширине пластины площадью не менее 50 см 2 , которая укладывается с ежедневным смещением на 1/3 своей ширины, а анод, равной с катодом по площади, укладывается на поверхность культи противоположную поверхности на которой находится катод. Сила тока равна 5мА, длительность лечения по 7 минут ежедневно в течение 14 дней. Способ обеспечивает нормализацию обменных процессов в соединительной ткани культи конечности в период активной адаптации к гильзе протеза. 2 пр.",
-   "applicants": [
-    "Федеральное государственное бюджетное образовательное учреждение высшего образования \"Тверской государственный университет\" (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61N 1/00",
-    "A61N 1/30",
-    "A61K 31/00",
-    "A61K 33/00",
-    "A61P 3/00",
-    "A61P 3/12"
-   ],
-   "status": "действует",
-   "title_ru": "Способ профилактики риска развития осложнений в области культи конечности при экзопротезировании",
-   "summary_ru": "Изобретение относится к медицине, а именно к хирургии и может быть использовано для профилактики риска развития осложнений в области культи конечности при экзопротезировании. За 3 дня до начала постоянного ношения экзопротеза на область культи проводят процедуру электрофореза с 2,5% водным раствором калия йодида и с 2,5% водным раствором натрия бромида на катоде и с 40 мг водного раствора хлоропирамина на аноде. При этом катод выполнен изогнутой по ширине пластины площадью не менее 50 см 2 , которая укладывается с ежедневным смещением на 1/3 своей ширины, а анод, равной с катодом по площади, у",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
    "source": "EPO (европейские патенты)",
    "source_id": "EP4609997A2",
    "number": "EP4609997A2",
@@ -63825,7 +63518,7 @@
    "cpv": [
     "72000000"
    ],
-   "title_ru": "Offenes Verfahren nach der VgV zur Beschaffung der Managed-SOC-Dienstleistungen für Crowdstrike Falcon Plattform durch die BITMARCK Technik GmbH",
+   "title_ru": "Открытая процедура согласно VgV на закупку управляемых услуг SOC для платформы Crowdstrike Falcon от BITMARCK Technik GmbH",
    "summary_ru": "Германия – ИТ-услуги: консалтинг, разработка программного обеспечения, Интернет и поддержка – Offenes Verfahren nach der VgV zur Beschaffung der Managed-SOC-Dienstleistungen für Crowdstrike Falcon Plattform durch die BITMARCK Technik GmbH",
    "topics": [
     "cyber"
@@ -64798,36 +64491,6 @@
     "кибербезопасность"
    ],
    "country": "Central African Republic",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPAT:2845358",
-   "number": "RU2845358",
-   "kind": "Патент на изобретение",
-   "title": "Способ изготовления индивидуальной культеприемной гильзы первичного экзопротеза голени",
-   "date": "2025-08-18",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2845358&TypeFile=html",
-   "summary": "Изобретение относится к медицине, в частности к травматологии и ортопедии, и касается способа изготовления индивидуальной культеприемной гильзы первичного экзопротеза голени с применением 3D-печати у пациентов с постампутационными дефектами голени. При этом проводят сканирование культи в лайнере с помощью 3D-сканера, полученную модель обрабатывают в программах САПР с использованием виртуальных инструментов. Создают 3D-модель тестовой культеприемной гильзы экзопротеза голени с последующей её печатью на 3D-принтере. Проводят оценку состояния культи голени в тестовой культеприемной гильзе, предварительно надев на усеченную конечность чулок, оснащенный резистивными датчиками давления, выполненными с возможностью получения информации о наиболее нагружаемых и ненагружаемых участках культи в индивидуальной тестовой гильзе под осевой нагрузкой. Изготавливают первичную культеприемную гильзу с учетом данных о распределении давления культи голени в тестовой гильзе, полученных при использовании чулка с резистивными датчиками давления, при этом изменяют объемные характеристики 3D-модели гильзы в ненагружаемых и наиболее нагружаемых участках культи. Достигается нивелирование возможных проблем «порочной» культи и обеспечение активизации пациента в протезе в кратчайшие сроки с момента обращения в протезно-ортопедические предприятия. 3 пр.",
-   "applicants": [
-    "Федеральное государственное бюджетное образовательное учреждение высшего образования \"Самарский государственный медицинский университет\" Министерства здравоохранения Российской Федерации (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/80"
-   ],
-   "status": "действует",
-   "title_ru": "Способ изготовления индивидуальной культеприемной гильзы первичного экзопротеза голени",
-   "summary_ru": "Изобретение относится к медицине, в частности к травматологии и ортопедии, и касается способа изготовления индивидуальной культеприемной гильзы первичного экзопротеза голени с применением 3D-печати у пациентов с постампутационными дефектами голени. При этом проводят сканирование культи в лайнере с помощью 3D-сканера, полученную модель обрабатывают в программах САПР с использованием виртуальных инструментов. Создают 3D-модель тестовой культеприемной гильзы экзопротеза голени с последующей её печатью на 3D-принтере. Проводят оценку состояния культи голени в тестовой культеприемной гильзе, предва",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
    "first_seen": "2026-10-05T11:17:02+00:00"
   },
   {
@@ -69159,7 +68822,7 @@
    "cpv": [
     "72000000"
    ],
-   "title_ru": "Offenes Verfahren nach der VgV zur Beschaffung der Managed-SOC-Dienstleistungen für Crowdstrike Falcon Plattform durch die BITMARCK Technik GmbH",
+   "title_ru": "Открытая процедура согласно VgV на закупку управляемых услуг SOC для платформы Crowdstrike Falcon от BITMARCK Technik GmbH",
    "summary_ru": "Германия – ИТ-услуги: консалтинг, разработка программного обеспечения, Интернет и поддержка – Offenes Verfahren nach der VgV zur Beschaffung der Managed-SOC-Dienstleistungen für Crowdstrike Falcon Plattform durch die BITMARCK Technik GmbH",
    "topics": [
     "cyber"
@@ -72944,36 +72607,6 @@
    ],
    "keywords": [
     "радиочастотные технологии"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPAT:2837471",
-   "number": "RU2837471",
-   "kind": "Патент на изобретение",
-   "title": "Экзопротез молочной железы",
-   "date": "2025-03-31",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2837471&TypeFile=html",
-   "summary": "Изобретение относится к медицинской технике. Экзопротез молочной железы содержит оболочку с разрезом, внутри которой размещен весообразующий и формообразующий наполнитель. Оболочка выполнена из текстильного перфорированного материала. Весообразующий наполнитель выполнен в виде силиконовой вставки, объем которой составляет от 40 до 70% от объема внутренней полости оболочки. Формообразующий наполнитель выполнен из гипоаллергенного синтетического волокнистого материала. Оболочка выполнена с возможностью добавления и/или удаления гипоаллергенного синтетического волокнистого материала через разрез в ее тыльной стороне Тыльная сторона оболочки имеет точечное биоактивное покрытие. Технический результат состоит в обеспечении индивидуальной коррекции объема, веса и формы экзопротеза молочной железы и исключении раздражающих воздействий на кожу пациента. 2 з.п. ф-лы, 3 ил.",
-   "applicants": [
-    "Волкова Екатерина Маевна (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/52"
-   ],
-   "status": "действует",
-   "title_ru": "Экзопротез молочной железы",
-   "summary_ru": "Изобретение относится к медицинской технике. Экзопротез молочной железы содержит оболочку с разрезом, внутри которой размещен весообразующий и формообразующий наполнитель. Оболочка выполнена из текстильного перфорированного материала. Весообразующий наполнитель выполнен в виде силиконовой вставки, объем которой составляет от 40 до 70% от объема внутренней полости оболочки. Формообразующий наполнитель выполнен из гипоаллергенного синтетического волокнистого материала. Оболочка выполнена с возможностью добавления и/или удаления гипоаллергенного синтетического волокнистого материала через разрез ",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
    ],
    "country": "Россия",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -79070,39 +78703,6 @@
    "first_seen": "2026-10-05T12:35:43+00:00"
   },
   {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPAT:2831488",
-   "number": "RU2831488",
-   "kind": "Патент на изобретение",
-   "title": "Экзопротез для предупреждения дилатации аутовенозных и ксеношунтов",
-   "date": "2024-12-09",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2831488&TypeFile=html",
-   "summary": "Изобретение относится к медицине, а именно к сосудистой хирургии, и может применяться при хирургическом лечении окклюзии артерий методом аутовенозного шунтирования, или шунтирования с помощью ксенотрансплантатов, а также для лечения истинных аневризм нативного постоянного сосудистого доступа, у пациентов с терминальной почечной недостаточностью на программном гемодиализе. Экзопротез для предупреждения дилатации аутовенозных и ксеношунтов включает трубчатую сетчатую структуру, а именно полый протез, с толщиной стенки 0,15-0,20 мм, состоит из четырех слоев, предварительно растянутой на 1400% в продольном направлении и разрезанной на ленты, пленки из политетрафторэтилена (ПТФЭ). Структура материала выполнена в виде элементов узлов, связанных фибриллами, и элементов пространства пустот, с соединением элементов в трехмерную сеть, включает тело протеза, образованное крестообразной намоткой ленты, предварительно растянутого слоя материала, на формообразующий тело протеза сердечник, позволяющий получить экзопротез с внутренним диаметром от 6 до 12 мм и использовать его, в зависимости от назначения, при различных исходных диаметрах аутовены и/или ксенопротеза. Направление фибрилл в соседних слоях перпендикулярно друг другу. Протез выполнен из материала, имеющего объемную долю пространства пустот от 30 до 90%, удельную поверхность пространства пустот от 0,1 до 0,9 мкм 2 /мкм 3 , среднее расстояние между пустотами в объеме от 1,5 до 50 мкм, среднюю хорду объемную от 0,4 до 30 мкм. Сетча",
-   "applicants": [
-    "Государственное автономное учреждение здравоохранения \"Республиканская клиническая больница Министерства здравоохранения Республики Татарстан\" (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/02",
-    "A61F 2/06",
-    "A61L 27/14",
-    "A61L 27/56"
-   ],
-   "status": "действует",
-   "title_ru": "Экзопротез для предупреждения дилатации аутовенозных и ксеношунтов",
-   "summary_ru": "Изобретение относится к медицине, а именно к сосудистой хирургии, и может применяться при хирургическом лечении окклюзии артерий методом аутовенозного шунтирования, или шунтирования с помощью ксенотрансплантатов, а также для лечения истинных аневризм нативного постоянного сосудистого доступа, у пациентов с терминальной почечной недостаточностью на программном гемодиализе. Экзопротез для предупреждения дилатации аутовенозных и ксеношунтов включает трубчатую сетчатую структуру, а именно полый протез, с толщиной стенки 0,15-0,20 мм, состоит из четырех слоев, предварительно растянутой на 1400% в п",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
    "type": "tender",
    "source": "TED (Евросоюз)",
    "source_id": "745667-2024",
@@ -80188,36 +79788,6 @@
    ],
    "country": "США",
    "first_seen": "2026-10-08T06:46:34+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPAT:2830151",
-   "number": "RU2830151",
-   "kind": "Патент на изобретение",
-   "title": "Способ выбора мест расположения тензорезисторов силомоментного датчика экзопротеза конечности",
-   "date": "2024-11-14",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2830151&TypeFile=html",
-   "summary": "Изобретение относится к медицинской технике, а именно к средствам управления мехатронными устройствами, такими как экзопротезы конечностей. Способ определения мест расположения тензорезисторов силомоментного датчика экзопротеза конечности, в котором выбирают значения действующих на экзопротез сил, определяют моменты сил и строят матрицы их корреляции. Выбирают допустимую погрешность измерения восстанавливаемых нагружений, расчетные значения которых обусловлены системой управления экзопротезом . Выбирают допустимые габариты силомоментного датчика. Выбирают допускаемые напряжения и испытательные нагружения, которые должен выдерживать экзопротез . Затем строят на основе полученных данных геометрию несущих элементов силомоментного датчика, строят матрицы откликов для всех возможных комбинаций расположения тензорезисторов с учетом скалирования тестовых нагружений под требования допустимой погрешности измерения восстанавливаемых нагружений и определяют для полученной геометрии силомоментного датчика количество и схему расположения тензорезисторов. Затем посредством тензорезисторов измеряют упругие деформации материала датчика и определяют базис нагружения в декартовой системе координат, связанной с датчиком. Базис нагружения состоит из трех сил Fx, Fy, Fz в направлении осей координат и трех моментов сил Mx, My, Mz вокруг осей координат. Техническим результатом является повышение точности восстановления сил и моментов, действующих на протез, с реализацией модели нагружения, максимал",
-   "applicants": [
-    "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТИЗ ПРОИЗВОДСТВО\" (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/68"
-   ],
-   "status": "действует",
-   "title_ru": "Способ выбора мест расположения тензорезисторов силомоментного датчика экзопротеза конечности",
-   "summary_ru": "Изобретение относится к медицинской технике, а именно к средствам управления мехатронными устройствами, такими как экзопротезы конечностей. Способ определения мест расположения тензорезисторов силомоментного датчика экзопротеза конечности, в котором выбирают значения действующих на экзопротез сил, определяют моменты сил и строят матрицы их корреляции. Выбирают допустимую погрешность измерения восстанавливаемых нагружений, расчетные значения которых обусловлены системой управления экзопротезом . Выбирают допустимые габариты силомоментного датчика. Выбирают допускаемые напряжения и испытательные",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
   },
   {
    "type": "tender",
@@ -82494,36 +82064,6 @@
    ],
    "keywords": [
     "радиосистема"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPM:229121",
-   "number": "RU229121",
-   "kind": "Полезная модель",
-   "title": "Переходник от имплантата к экзопротезу бедра, плеча и голени",
-   "date": "2024-09-23",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPM&DocNumber=229121&TypeFile=html",
-   "summary": "Полезная модель относится к области медицины протезирования конечностей, а именно к вспомогательным устройствам, предназначенным для фиксации протезов к телу человека. Универсальный переходник остеоинтегративной системы экзопротезирования бедра, плеча и голени состоит из трех функциональных модулей: модуль фиксации, модуль шарнира и модуль соединительный. Использование переходника возможно в остеоинтегративной системе экзопротезирования бедра, плеча и голени за счет использования единого присоединительного интерфейса со стороны имплантата и изменяемой конструкции соединительного модуля со стороны используемого протеза. Технический результат - переходник, обладающий совокупностью технических решений, позволяющих использовать его в остеоинтегративных системах бедра, голени и плеча без адаптации его конструкции.",
-   "applicants": [
-    "ООО \"НьюСтеп\" (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/78"
-   ],
-   "status": "действует",
-   "title_ru": "Переходник от имплантата к экзопротезу бедра, плеча и голени",
-   "summary_ru": "Полезная модель относится к области медицины протезирования конечностей, а именно к вспомогательным устройствам, предназначенным для фиксации протезов к телу человека. Универсальный переходник остеоинтегративной системы экзопротезирования бедра, плеча и голени состоит из трех функциональных модулей: модуль фиксации, модуль шарнира и модуль соединительный. Использование переходника возможно в остеоинтегративной системе экзопротезирования бедра, плеча и голени за счет использования единого присоединительного интерфейса со стороны имплантата и изменяемой конструкции соединительного модуля со стор",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
    ],
    "country": "Россия",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -86361,37 +85901,6 @@
    "first_seen": "2026-10-08T06:46:34+00:00"
   },
   {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPM:227394",
-   "number": "RU227394",
-   "kind": "Полезная модель",
-   "title": "Имплантат для фиксации экзопротеза бедра",
-   "date": "2024-07-18",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPM&DocNumber=227394&TypeFile=html",
-   "summary": "Полезная модель относится к области медицины протезирования конечностей, а именно к устройствам для фиксации протезов к телу человека, и может быть использована в составе остеоинтегративной системы экзопротезирования бедра, плеча или голени, а также для возможности организации нейромышечного интерфейса. Задача, на решение которой направлена заявляемая полезная модель, состоит в разработке имплантата с прочным механическим соединением остеоинтегрируемого имплантата и абатмента для фиксации протеза с защитой от самопроизвольного развинчивания, что позволяет выполнить центральный канал сквозным и обеспечивает возможность проведения нейромышечного интерфейса, лишенного вышеперечисленных недостатков. Технический результат полезной модели состоит в обеспечении прочного и однозначного соединения остеоинтегрируемого имплантата и абатмента с защитой от самопроизвольного отвинчивания с возможностью организации нейромышечного интерфейса. Результат полезной модели достигается за счет того, что имплантат для фиксации экзопротеза бедра включает внутрикостную и чрескожную части, согласно полезной модели, имплантат имеет продольный сквозной канал и содержит ответные установочные конусы на сопрягаемых концах внутрикостной и чрескожной частей; на вершине установочного конуса внутрикостной части выполнена резьба, а основание конуса имеет установочные радиальные отверстия для штифтов, причем оси радиальных отверстий расположены по касательной к наружной поверхности чрескожной части; на вершине у",
-   "applicants": [
-    "Общество с ограниченной ответственностью \"НьюСтеп\" (ООО \"НьюСтеп\") (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/28",
-    "A61F 2/78"
-   ],
-   "status": "действует",
-   "title_ru": "Имплантат для фиксации экзопротеза бедра",
-   "summary_ru": "Полезная модель относится к области медицины протезирования конечностей, а именно к устройствам для фиксации протезов к телу человека, и может быть использована в составе остеоинтегративной системы экзопротезирования бедра, плеча или голени, а также для возможности организации нейромышечного интерфейса. Задача, на решение которой направлена заявляемая полезная модель, состоит в разработке имплантата с прочным механическим соединением остеоинтегрируемого имплантата и абатмента для фиксации протеза с защитой от самопроизвольного развинчивания, что позволяет выполнить центральный канал сквозным и",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
    "type": "tender",
    "source": "TED (Евросоюз)",
    "source_id": "430075-2024",
@@ -86625,7 +86134,7 @@
    "cpv": [
     "79900000"
    ],
-   "title_ru": "Rahmenvertrag Auditunterstützung InfoSec",
+   "title_ru": "Рамочный договор на аудиторское сопровождение InfoSec",
    "summary_ru": "Германия – Прочие деловые и связанные с бизнесом услуги – Rahmenvertrag Auditunterstützung InfoSec",
    "topics": [
     "cyber"
@@ -86927,7 +86436,7 @@
    "cpv": [
     "38000000"
    ],
-   "title_ru": "Multi-Material Lithography-based Metal and Ceramic Manufacturing (MM-LMCM) System",
+   "title_ru": "Система производства металлов и керамики на основе мультиматериальной литографии (MM-LMCM)",
    "summary_ru": "Швеция – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – Система производства металлов и керамики на основе литографии из нескольких материалов (MM-LMCM)",
    "topics": [
     "materials"
@@ -89768,13 +89277,14 @@
    "cpv": [
     "30236000"
    ],
-   "title_ru": "Fornitura in Opera di Data Center в сборном убежище - PNRR МИССИЯ 4 - КОМПОНЕНТ 2 ИНВЕСТИЦИИ «1.4 Centro Nazionale HPC Big Data e Quantum Computing» (ID) 210 CUP I53C21000340006",
+   "title_ru": "Поставка центров обработки данных в сборных убежищах - МИССИЯ 4 PNRR - КОМПОНЕНТ 2 ИНВЕСТИЦИИ «1.4 Национальный центр высокопроизводительных вычислений больших данных и квантовых вычислений» (ID) 210 CUP I53C21000340006",
    "summary_ru": "Италия – Разное компьютерное оборудование – Поставка центров обработки данных в сборных убежищах – МИССИЯ 4 PNRR – КОМПОНЕНТ 2 ИНВЕСТИЦИИ «1.4 Национальный центр высокопроизводительных больших данных и квантовых вычислений» (ID) 210 CUP I53C21000340006",
    "topics": [
     "quantum"
    ],
    "keywords": [
-    "quantum computing"
+    "quantum computing",
+    "квантовые вычисления"
    ],
    "country": "Италия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -90129,13 +89639,14 @@
    "cpv": [
     "30236000"
    ],
-   "title_ru": "Fornitura in Opera di Data Center в сборном убежище - PNRR МИССИЯ 4 - КОМПОНЕНТ 2 ИНВЕСТИЦИИ «1.4 Centro Nazionale HPC Big Data e Quantum Computing» (ID) 210 CUP I53C21000340006",
+   "title_ru": "Поставка центров обработки данных в сборных убежищах - МИССИЯ 4 PNRR - КОМПОНЕНТ 2 ИНВЕСТИЦИИ «1.4 Национальный центр высокопроизводительных вычислений больших данных и квантовых вычислений» (ID) 210 CUP I53C21000340006",
    "summary_ru": "Италия – Разное компьютерное оборудование – Fornitura in Opera di Data Center в сборном убежище – PNRR МИССИЯ 4 – КОМПОНЕНТ 2 ИНВЕСТИЦИИ «1.4 Centro Nazionale HPC Big Data e Quantum Computing» (ID) 210 CUP I53C21000340006",
    "topics": [
     "quantum"
    ],
    "keywords": [
-    "quantum computing"
+    "quantum computing",
+    "квантовые вычисления"
    ],
    "country": "Италия",
    "first_seen": "2026-10-19T06:06:23+00:00"
@@ -94107,7 +93618,7 @@
     "42990000"
    ],
    "title_ru": "Мобильные автономные роботизированные системы для изучения сценариев подключения в государственных и частных сетях 5G.",
-   "summary_ru": "Германия – Разная спецтехника – Мобильная автономная Robotersysteme zur Erforschung von Konnektivitätsszenarien in Public- und Private-5G-Netzen",
+   "summary_ru": "Германия – Разная спецтехника – Мобильные автономные роботизированные комплексы для исследования сценариев подключения в государственных и частных сетях 5G.",
    "topics": [
     "robotics",
     "radio"
@@ -94204,7 +93715,7 @@
     "72315000"
    ],
    "title_ru": "Auftrag 1 Информационные и коммуникационные технологии",
-   "summary_ru": "Германия – Услуги по обработке данных – Auftrag 1 Information- und Kommunikationstechnologie",
+   "summary_ru": "Германия – Услуги по обработке данных – Заказ 1 Информационные и коммуникационные технологии",
    "topics": [
     "radio"
    ],
@@ -94263,7 +93774,7 @@
     "72315000"
    ],
    "title_ru": "Auftrag 1 Информационные и коммуникационные технологии",
-   "summary_ru": "Германия – Услуги по обработке данных – Auftrag 1 Information- und Kommunikationstechnologie",
+   "summary_ru": "Германия – Услуги по обработке данных – Заказ 1 Информационные и коммуникационные технологии",
    "topics": [
     "radio"
    ],
@@ -96600,7 +96111,7 @@
    "cpv": [
     "38000000"
    ],
-   "title_ru": "Retender - Three-dimensional (3D) laser printer for bioprinting and nanoprinting for SDU",
+   "title_ru": "Retender - Трехмерный (3D) лазерный принтер для биопечати и нанопечати для СДУ",
    "summary_ru": "Дания – Лабораторное, оптическое и прецизионное оборудование (кроме очков) – Retender – Трехмерный (3D) лазерный принтер для биопечати и нанопечати для SDU",
    "topics": [
     "biotech"
@@ -97589,7 +97100,7 @@
     "33100000"
    ],
    "title_ru": "Робототехническая реабилитация без проблем",
-   "summary_ru": "Венгрия – Медицинское оборудование – Robotasszisztált rehabilitációs észálló szállás",
+   "summary_ru": "Венгрия – Медицинское оборудование – Robotasszisztált rehabilitációs eszközök beszerzés",
    "topics": [
     "robotics"
    ],
@@ -107491,69 +107002,6 @@
    "first_seen": "2026-10-05T11:17:02+00:00"
   },
   {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPAT:2796783",
-   "number": "RU2796783",
-   "kind": "Патент на изобретение",
-   "title": "Способ изготовления гильзы экзопротеза голени",
-   "date": "2023-05-29",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2796783&TypeFile=html",
-   "summary": "Изобретение относится к медицине, а именно к технической ортопедии, и предназначено для изготовления приемной гильзы при экзопротезировании. Способ изготовления гильзы протеза голени заключается в том, что на культю голени надевают силиконовый лайнер, пациента размещают сидя на стуле таким образом, чтобы нижняя часть бедра не была прижата к поверхности, а культя голени находилась в воздухе. Проводят пальпацию культи. На культю пациента в силиконовом лайнере наносят выступающую кайму из пластилина в проекции костных ориентиров, требующих дальнейших модификаций на цифровой модели. Наносят выступающую кайму из пластилина в области надколенника и мыщелков бедренной кости в зоне предполагаемого верхнего контура гильзы. Просят пациента согнуть и разогнуть ногу в коленном суставе и убеждаются в корректности нанесенных обозначений. Проводят запись массива 3D данных с поверхности культи с помощью бесконтактных методов измерения в трех положениях культи: полное разгибание в коленном суставе, сгибание под углом 90°, в расслабленном положении. Проводят сканирование контралатеральной конечности в вертикальном положении. Полученные в результате сканирования изображения поступают в мобильное устройство, сопряженное с 3D сканером через мобильное приложение, рекомендованное производителем оборудования. Затем данные передают на персональный компьютер для дальнейшей обработки. В программном пакете, поддерживающем полигональное моделирование, придерживаются последовательности этапов преобразован",
-   "applicants": [
-    "Федеральное государственное бюджетное образовательное учреждение высшего образования \"Самарский государственный медицинский университет\" Министерства здравоохранения Российской Федерации (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/76",
-    "A61F 2/80"
-   ],
-   "status": "может прекратить свое действие",
-   "title_ru": "Способ изготовления гильзы экзопротеза голени",
-   "summary_ru": "Изобретение относится к медицине, а именно к технической ортопедии, и предназначено для изготовления приемной гильзы при экзопротезировании. Способ изготовления гильзы протеза голени заключается в том, что на культю голени надевают силиконовый лайнер, пациента размещают сидя на стуле таким образом, чтобы нижняя часть бедра не была прижата к поверхности, а культя голени находилась в воздухе. Проводят пальпацию культи. На культю пациента в силиконовом лайнере наносят выступающую кайму из пластилина в проекции костных ориентиров, требующих дальнейших модификаций на цифровой модели. Наносят выступ",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPAT:2796784",
-   "number": "RU2796784",
-   "kind": "Патент на изобретение",
-   "title": "Способ изготовления гильзы экзопротеза бедра",
-   "date": "2023-05-29",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2796784&TypeFile=html",
-   "summary": "Изобретение относится к медицине. Способ изготовления гильзы протеза бедра заключается в том, что надевают на культю бедра силиконовый лайнер, надевают на пациента кольца из тканой резины через промежность и надплечье для обозначения промежности. Закрепляют в аппарате для гипсования жесткое лекало с изменяемой геометрией. Просят пациента в положении стоя завести культю во внутренний контур лекала. Регулируют застежку-гребенку, добиваясь прилегания мягких тканей культи к поверхности лекала. Просят пациента опереться на верхний контур лекала - посадочное кольцо и убеждаются в корректности расположения бугра седалищной кости на специально предназначенной для этого наклонной площадке. Наносят две выступающие над поверхностью контрольные метки из пластилина между лекалом и силиконовым лайнером по передней и задней поверхности бедра. Проводят пальпацию культи. Наносят выступающую кайму из пластилина в проекции костных ориентиров и в зоне предполагаемого верхнего контура гильзы. Просят пациента убрать культю из внутреннего контура лекала. Выполняют запись массива 3D данных с помощью бесконтактных методов измерения инфракрасного 3D сканера с поверхности культи, жесткого лекала и контралатеральной конечности. Осуществляют регистрацию в положении пациента стоя. Также проводят сканирование контралатеральной конечности в вертикальном положении. Выполняют считывание конфигурации жесткого лекала. Полученные в результате сканирования изображения поступают в мобильное устройство, сопряженное",
-   "applicants": [
-    "Федеральное государственное бюджетное образовательное учреждение высшего образования \"Самарский государственный медицинский университет\" Министерства здравоохранения Российской Федерации (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/76",
-    "A61F 2/80",
-    "A61F 2/60"
-   ],
-   "status": "может прекратить свое действие",
-   "title_ru": "Способ изготовления гильзы экзопротеза бедра",
-   "summary_ru": "Изобретение относится к медицине. Способ изготовления гильзы протеза бедра заключается в том, что надевают на культю бедра силиконовый лайнер, надевают на пациента кольца из тканой резины через промежность и надплечье для обозначения промежности. Закрепляют в аппарате для гипсования жесткое лекало с изменяемой геометрией. Просят пациента в положении стоя завести культю во внутренний контур лекала. Регулируют застежку-гребенку, добиваясь прилегания мягких тканей культи к поверхности лекала. Просят пациента опереться на верхний контур лекала - посадочное кольцо и убеждаются в корректности распол",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
    "type": "tender",
    "source": "SAM.gov (США)",
    "source_id": "e6dbbd5c57a3401b87d1ab0d381fe9bc",
@@ -113621,39 +113069,6 @@
   {
    "type": "patent",
    "source": "ФИПС (Роспатент)",
-   "source_id": "RUPM:215784",
-   "number": "RU215784",
-   "kind": "Полезная модель",
-   "title": "Корректирующий бюстгальтер для фиксации экзопротеза молочной железы",
-   "date": "2022-12-26",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPM&DocNumber=215784&TypeFile=html",
-   "summary": "Полезная модель относится к легкой промышленности, специальной одежде для инвалидов, и может быть использована для женщин после мастэктомии для фиксации экзопротеза молочной железы. Технической задачей и техническим результатом заявляемой полезной модели является достижение высокого эргономического эффекта реабилитации женщины после мастэктомии, основанного на коррекции пространственной формы тела и постоперационного весового дисбаланса на участке грудных желез за счет эффективного конструктивно-технологического решения корректирующего ортопедического бюстгальтера, включающего дополнительный съемный чехол для надежной фиксации экзопротеза грудной железы и дополнительных вкладышей в виде формозадающих прокладок и утяжелителей. Указанная задача и технический результат достигается тем, что корректирующий ортопедический бюстгальтер выполнен в виде антропометрически соответствующего трехмерной конфигурации грудных желез прилегающего бескаркасного многослойного бюстгальтера, конструктивно состоящего из одной верхней, двух нижних и одной боковой деталей чашек, отрезных бочков, пояса, регулируемых по длине бретелей, с эластичными лентами по верхнему и нижнему краям, с застежкой спереди на крючки и многорядные петли для регулировки степени компрессии изделия, с расположенными по изнаночной стороне чашек симметричными выпуклыми втачными карманами для фиксации экзопротезов грудной железы, с прикрепленным между слоями материалов карманов каждой чашки бюстгальтера посредством крючков и пе",
-   "applicants": [
-    "федеральное государственное бюджетное образовательное учреждение высшего образования \"Российский государственный университет им. А.Н. Косыгина (Технологии. Дизайн. Искусство)\" (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/52",
-    "A41C 3/02",
-    "A41C 3/10",
-    "A41C 3/14"
-   ],
-   "status": "прекратил действие, но может быть восстановлен",
-   "title_ru": "Корректирующий бюстгальтер для фиксации экзопротеза молочной железы",
-   "summary_ru": "Полезная модель относится к легкой промышленности, специальной одежде для инвалидов, и может быть использована для женщин после мастэктомии для фиксации экзопротеза молочной железы. Технической задачей и техническим результатом заявляемой полезной модели является достижение высокого эргономического эффекта реабилитации женщины после мастэктомии, основанного на коррекции пространственной формы тела и постоперационного весового дисбаланса на участке грудных желез за счет эффективного конструктивно-технологического решения корректирующего ортопедического бюстгальтера, включающего дополнительный с",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
    "source_id": "RUPATAP:2021118340",
    "number": "RU2021118340",
    "kind": "Заявка на изобретение",
@@ -115272,39 +114687,6 @@
   },
   {
    "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPM:214659",
-   "number": "RU214659",
-   "kind": "Полезная модель",
-   "title": "Лечебно-бандажное изделие для экзопротезирования женщин после мастэктомии",
-   "date": "2022-11-09",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPM&DocNumber=214659&TypeFile=html",
-   "summary": "Полезная модель относится к легкой промышленности, специальной одежде для инвалидов и может быть использована для женщин после мастэктомии для фиксации экзопротеза молочной железы. Технической задачей и техническим результатом заявляемой полезной модели является достижение высокого эргономического эффекта реабилитации женщины после мастэктомии и лучевой терапии, основанного на коррекции пространственной формы тела за счет эффективного конструктивно-технологического решения лечебно-бандажного изделия с экзопротезом молочной железы, обеспечивающего антропометрическое соответствие и компрессионное давление, что минимизирует вероятность возникновения побочных осложнений. Указанная задача и технический результат достигаются тем, что лечебно-бандажное изделие для экзопротезирования женщин после мастэктомии выполнено в виде прилегающего бюстгальтера, антропометрически соответствует трехмерной конфигурации грудных желез и прилегающих к ним участков тела женщины, с одной центральной, одной верхней, двумя нижними и одной боковой деталями чашек, с втачными карманами и фиксирующими элементами для экзопротезов по изнаночной стороне, на поясе, с отрезным бочком, с регулирующимися по длине бретелями, изделие бескаркасное, многослойное, из эластичных материалов с эффектом компрессии, с эластичной отделочной лентой по верхнему и нижнему краям, с застежкой сзади.",
-   "applicants": [
-    "Загурская Юлия Анатольевна (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A41C 3/00",
-    "A41C 1/06",
-    "A61F 2/52",
-    "A41D 1/22"
-   ],
-   "status": "прекратил действие, но может быть восстановлен",
-   "title_ru": "Лечебно-бандажное изделие для экзопротезирования женщин после мастэктомии",
-   "summary_ru": "Полезная модель относится к легкой промышленности, специальной одежде для инвалидов и может быть использована для женщин после мастэктомии для фиксации экзопротеза молочной железы. Технической задачей и техническим результатом заявляемой полезной модели является достижение высокого эргономического эффекта реабилитации женщины после мастэктомии и лучевой терапии, основанного на коррекции пространственной формы тела за счет эффективного конструктивно-технологического решения лечебно-бандажного изделия с экзопротезом молочной железы, обеспечивающего антропометрическое соответствие и компрессионно",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
    "source": "EPO (европейские патенты)",
    "source_id": "EP3346899B1",
    "number": "EP3346899B1",
@@ -115515,37 +114897,6 @@
    "keywords": [
     "робот",
     "экзоскелет"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPAT:2782486",
-   "number": "RU2782486",
-   "kind": "Патент на изобретение",
-   "title": "Переходник остеоинтегративной системы экзопротезирования бедра",
-   "date": "2022-10-28",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2782486&TypeFile=html",
-   "summary": "Изобретение относится к медицине. Переходник остеоинтегративной системы экзопротезирования бедра содержит корпус с глухим отверстием для соединения имплантата и пирамидальный адаптер для соединения с экзопротезом . Переходник имеет четыре модуля - замковый модуль, модуль для предотвращения чрезмерных скручивающих нагрузок на имплантат, модуль для предотвращения чрезмерных изгибающих нагрузок и модуль для демпфирования ударных нагрузок при ходьбе, которые располагаются внутри корпуса один над другим. Корпус состоит из проксимальной и дистальной частей, соединенных между собой осью вращения, которая работает по оси сгибания коленного сустава и представляет собой цилиндрический шарнир с амплитудой вращения 60 градусов. В проксимальной части корпуса снизу выполнен выступ, а в дистальной части сверху выполнена ответная часть для выступа проксимальной части, при этом на наружной поверхности выступа выполнены углубления. В стенках глухого отверстия выполнен паз. Пирамидальный адаптер для соединения с экзопротезом выполнен на нижней поверхности дистальной части корпуса со стороны соединения с протезом. Замковый модуль состоит из замка для осевой фиксации имплантата в корпусе, установочных винтов, пружин и регулировочных винтов для пружин. Замок для осевой фиксации имплантата в корпусе содержит наружную скобу, параллельные пазы и цилиндрическую прорезь. Округлая часть прорези совпадает по диаметру с упомянутым глухим отверстием. Наружная нажимная скоба имеет возможность выхода из упом",
-   "applicants": [
-    "Общество с ограниченной ответственностью \"НьюСтеп\" (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/78",
-    "A61F 2/76"
-   ],
-   "status": "действует",
-   "title_ru": "Переходник остеоинтегративной системы экзопротезирования бедра",
-   "summary_ru": "Изобретение относится к медицине. Переходник остеоинтегративной системы экзопротезирования бедра содержит корпус с глухим отверстием для соединения имплантата и пирамидальный адаптер для соединения с экзопротезом . Переходник имеет четыре модуля - замковый модуль, модуль для предотвращения чрезмерных скручивающих нагрузок на имплантат, модуль для предотвращения чрезмерных изгибающих нагрузок и модуль для демпфирования ударных нагрузок при ходьбе, которые располагаются внутри корпуса один над другим. Корпус состоит из проксимальной и дистальной частей, соединенных между собой осью вращения, кот",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
    ],
    "country": "Россия",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -120527,37 +119878,6 @@
    "first_seen": "2026-10-05T11:17:02+00:00"
   },
   {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPM:212481",
-   "number": "RU212481",
-   "kind": "Полезная модель",
-   "title": "Имплантат для фиксации экзопротеза бедра",
-   "date": "2022-07-25",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPM&DocNumber=212481&TypeFile=html",
-   "summary": "Полезная модель относится к области протезирования конечностей, а именно к устройствам, выполняющим функции фиксации экзопротезов к телу человека. Технический результат полезной модели состоит в обеспечении механической стабильности имплантата остеоинтегративной системы экзопротезирования бедра при снижении риска периимплантных переломов. Результат достигается за счет того, что имплантат для фиксации экзопротеза бедра содержит внутрикостную и чрескожную части и соединительный винт. Внутрикостная часть выполнена в виде остеоинтегрируемого винта, имеющего центральный слепой канал, начинающийся открыто с дистального конца стержня для ответного соединения с чрескожной частью. Между витками резьбы остеоинтегрируемого винта выполнена ячеистая структура. Чрескожная часть выполнена с дистальной частью для соединения с экзопротезом бедра, а проксимальный конец – для остеоинтегрируемого винта. Соединение остеоинтегрируемого винта с чрескожной частью закрепляется при помощи соединительного винта, введенного в центральный канал чрескожной части со стороны ее дистальной части.",
-   "applicants": [
-    "Общество с ограниченной ответственностью \"НьюСтеп\" (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/28",
-    "A61F 2/78"
-   ],
-   "status": "действует",
-   "title_ru": "Имплантат для фиксации экзопротеза бедра",
-   "summary_ru": "Полезная модель относится к области протезирования конечностей, а именно к устройствам, выполняющим функции фиксации экзопротезов к телу человека. Технический результат полезной модели состоит в обеспечении механической стабильности имплантата остеоинтегративной системы экзопротезирования бедра при снижении риска периимплантных переломов. Результат достигается за счет того, что имплантат для фиксации экзопротеза бедра содержит внутрикостную и чрескожную части и соединительный винт. Внутрикостная часть выполнена в виде остеоинтегрируемого винта, имеющего центральный слепой канал, начинающийся о",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
    "type": "tender",
    "source": "SAM.gov (США)",
    "source_id": "1357fc4d533a42859bed76fb09ace5b0",
@@ -121522,39 +120842,6 @@
    "keywords": [
     "полупроводники",
     "перовскиты"
-   ],
-   "country": "Россия",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPM:211923",
-   "number": "RU211923",
-   "kind": "Полезная модель",
-   "title": "Экзопротез-каркас для укрепления стенки дилатированной аорты",
-   "date": "2022-06-28",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPM&DocNumber=211923&TypeFile=html",
-   "summary": "Полезная модель относится к области сердечно-сосудистой хирургии, в частности к способу хирургического лечения дилатации аорты, может быть использована в специализированных отделениях сердечно-сосудистой хирургии. Предлагается экзопротез -каркас для укрепления стенки дилатированной аорты, представляющий собой сетчатый цилиндр диаметром 40 мм, длиной 108 мм, состоящий из 9 циркулярно расположенных сегментов с запаянными с двух сторон концами образующими незамкнутый цилиндр из нитиноловых проволок диаметром 0,3 мм изломанной треугольной формы, зеркально расположенных друг к другу с образованием ромбовидных фигур, повторяющихся 6 раз длиной 22 мм и шириной 12 мм, фиксированных на стыках 3 и 4 ромбовидных фигур по окружности каждого сегмента, пропускающий по свободным краям устья ветвей аорты и позволяющий восстанавливать непрерывность каркаса, изменять свой диаметр и достигать оптимального моделирования в соответствии с анатомическими особенностями аорты и ее ветвей за счет соединения ромбовидных фигур дополнительными лигатурами.",
-   "applicants": [
-    "Федеральное государственное бюджетное научное учреждение \"Российский научный центр хирургии имени академика Б.В. Петровского\" (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61B 17/12",
-    "A61F 2/82",
-    "A61F 2/86",
-    "A61F 2/90"
-   ],
-   "status": "действует",
-   "title_ru": "Экзопротез-каркас для укрепления стенки дилатированной аорты",
-   "summary_ru": "Полезная модель относится к области сердечно-сосудистой хирургии, в частности к способу хирургического лечения дилатации аорты, может быть использована в специализированных отделениях сердечно-сосудистой хирургии. Предлагается экзопротез -каркас для укрепления стенки дилатированной аорты, представляющий собой сетчатый цилиндр диаметром 40 мм, длиной 108 мм, состоящий из 9 циркулярно расположенных сегментов с запаянными с двух сторон концами образующими незамкнутый цилиндр из нитиноловых проволок диаметром 0,3 мм изломанной треугольной формы, зеркально расположенных друг к другу с образованием ",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
    ],
    "country": "Россия",
    "first_seen": "2026-10-05T11:17:02+00:00"
@@ -123244,36 +122531,6 @@
     "робототехника"
    ],
    "country": "Дания",
-   "first_seen": "2026-10-05T11:17:02+00:00"
-  },
-  {
-   "type": "patent",
-   "source": "ФИПС (Роспатент)",
-   "source_id": "RUPM:211084",
-   "number": "RU211084",
-   "kind": "Полезная модель",
-   "title": "Остеоинтегрируемый эндопротез для экзопротеза",
-   "date": "2022-05-19",
-   "inventors": [],
-   "url": "https://www1.fips.ru/registers-doc-view/fips_servlet?DB=RUPM&DocNumber=211084&TypeFile=html",
-   "summary": "Полезная модель относится к медицине и ветеринарии, а именно к ортопедии, травматологии и трансплантологии, и может быть использована в случае имплантации остеинтегрируемого протеза у человека и животных для замещения костных дефектов. Также возможно применение в персонифицированной медицине в виде индивидуальных имплантируемых устройств. Технический результат заключается в улучшении остеинтеграции за счет возможности более плотного прилегания поверхности эндопротеза к костному ложу при прорастании костной ткани в поры покрытий и отверстия, и при предотвращении отторжения в области пришеечной части из-за возможности воспаления. Технический результат обеспечивается тем, что остеоинтегрируемый эндопротез для экзопротеза содержит внекостную часть, пришеечную часть с бактерицидным покрытием и апикальную часть с биоактивным покрытием и изготовлен путем печати металлическим порошком по 3D-модели, полученной в результате компьютерной томографии, при этом апикальная часть имеет сквозные отверстия, а покрытия сформированы по аддитивной технологии путем послойного наращивания биоактивного слоя на основе пористой гидроксиапатитовой керамики и бактерицидного слоя на основе сереброзамещенного гидроксиапатита. Задачей заявляемого технического решения является создание остеоинтегрируемого имплантата для экзопротеза с персонифицированными характеристиками и упрощенной конструкцией для медицины и ветеринарии. Сущность полезной модели заключается в том, что остеоинтегрируемый эндопротез для эк",
-   "applicants": [
-    "федеральное государственное бюджетное образовательное учреждение высшего образования \"Донской государственный технический университет\" (ДГТУ) (RU)"
-   ],
-   "country_code": "RU",
-   "ipc": [
-    "A61F 2/28"
-   ],
-   "status": "прекратил действие, но может быть восстановлен",
-   "title_ru": "Остеоинтегрируемый эндопротез для экзопротеза",
-   "summary_ru": "Полезная модель относится к медицине и ветеринарии, а именно к ортопедии, травматологии и трансплантологии, и может быть использована в случае имплантации остеинтегрируемого протеза у человека и животных для замещения костных дефектов. Также возможно применение в персонифицированной медицине в виде индивидуальных имплантируемых устройств. Технический результат заключается в улучшении остеинтеграции за счет возможности более плотного прилегания поверхности эндопротеза к костному ложу при прорастании костной ткани в поры покрытий и отверстия, и при предотвращении отторжения в области пришеечной ",
-   "topics": [
-    "exoskeletons"
-   ],
-   "keywords": [
-    "экзопротез"
-   ],
-   "country": "Россия",
    "first_seen": "2026-10-05T11:17:02+00:00"
   },
   {
@@ -132621,7 +131878,7 @@
    "procedure": "Combined Synopsis/Solicitation",
    "number": null,
    "solicitation": "N0018921QQ052",
-   "title_ru": "Робот Otto 100 от Sole Source Clearpath Robotics",
+   "title_ru": "Единственный источник Clearpath Robotics Восемь 100 роботов",
    "summary_ru": "Это действие единственного источника. Штаб-квартира N65 командования систем снабжения ВМС (NAVSUP) требует, чтобы два автономных мобильных робота (AMR) были спроектированы, модифицированы и доставлены к июлю 2021 года для испытаний и демонстрации в августе 2021 года.",
    "topics": [
     "robotics"

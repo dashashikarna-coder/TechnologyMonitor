@@ -178,6 +178,14 @@
   }
 
   // ---------- карточки ----------
+  // цвет полоски: выбранная в фильтре тема, иначе первая тема в фиксированном порядке списка тем
+  function cardColor(d) {
+    const sel = $("#topic").value;
+    const id = (sel && d.topics.includes(sel) ? sel : null)
+      || D.topics.map((t) => t.id).find((id) => d.topics.includes(id))
+      || d.topics[0];
+    return topicInfo[id]?.color || "";
+  }
   function topicPills(d) {
     return d.topics.slice(0, 3).map((t) => topicInfo[t] ? `<span class="pill topic" style="--tc:${topicInfo[t].color}">${esc(topicInfo[t].name)}</span>` : "").join("");
   }
@@ -197,7 +205,7 @@
       const left = daysLeft(d);
       status = `<span class="pill ${left <= 5 ? "soon" : "open"}">Приём заявок · осталось ${left} дн.</span>`;
     }
-    return `<article class="card ${stars[keyOf(d)] ? "starred" : ""}" style="--c:${topicInfo[d.topics[0]]?.color}">
+    return `<article class="card ${stars[keyOf(d)] ? "starred" : ""}" style="--c:${cardColor(d)}">
       <div class="card-main">
         <div class="meta">${isNew(d) ? '<span class="pill new">Новое</span>' : ""}${status}<span>${esc(d.country)}</span>·<span>${esc(d.law || "")} ${esc(d.procedure || "")}</span></div>
         <h3><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title_ru || d.title)}</a></h3>
@@ -214,7 +222,7 @@
   }
 
   function patentCard(d) {
-    return `<article class="card ${stars[keyOf(d)] ? "starred" : ""}" style="--c:${topicInfo[d.topics[0]]?.color}">
+    return `<article class="card ${stars[keyOf(d)] ? "starred" : ""}" style="--c:${cardColor(d)}">
       <div class="card-main">
         <div class="meta">${isNew(d) ? '<span class="pill new">Новое</span>' : ""}${d.status ? `<span class="pill ${/^действ/i.test(d.status) ? "open" : ""}">${esc(d.status)}</span>` : ""}<span class="pill">${esc(d.number || d.source_id)}</span>${d.kind ? `<span>${esc(d.kind)}</span>·` : ""}<span>заявитель: ${esc(d.country)}</span>·<span>опубликован ${fmtDate(d.date)}</span></div>
         <h3><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title_ru || d.title)}</a></h3>
@@ -338,8 +346,11 @@
       .map(([k, v]) => [monthly ? `${MONTHS[+k.slice(5) - 1]} ${k.slice(2, 4)}` : k, v]);
 
     const rub = T.filter((d) => d.currency === "RUB" && d.price);
-    const money = D.topics.map((t) => [t.name, rub.filter((d) => d.topics.includes(t.id)).reduce((s, d) => s + d.price, 0)])
-      .filter(([, v]) => v).sort((a, b) => b[1] - a[1]);
+    const selTopic = $("#topic").value;
+    // сумма только по одной выбранной теме — иначе одни и те же закупки считаются в нескольких темах
+    const money = selTopic && topicInfo[selTopic]
+      ? [[topicInfo[selTopic].name, rub.filter((d) => d.topics.includes(selTopic)).reduce((s, d) => s + d.price, 0)]].filter(([, v]) => v)
+      : [];
     const totalRub = rub.reduce((s, d) => s + d.price, 0);
     const dyn = monthly ? "Динамика по месяцам" : "Динамика по годам";
     const switcher = `<div class="an-switch">${[["all", "Общая"], ["tender", `Тендеры (${T.length})`], ["patent", `Патенты (${P.length})`]]
@@ -354,7 +365,7 @@
           ${columns(dyn, buckets, ["tender"])}
           ${topicPanel("Тендеры по темам", byTopicCount(T))}
           ${bars("Самые активные заказчики", top(T, (d) => shortOrg(d.customer)))}
-          ${bars("Сумма закупок в РФ по темам", money, { fmt: (v) => fmtMoney(v, "RUB"), note: "Начальные цены тендеров ЕИС в рублях" })}
+          ${money.length ? bars(`Сумма закупок в РФ: ${topicInfo[selTopic].name}`, money, { fmt: (v) => fmtMoney(v, "RUB"), note: "Только выбранная тема · начальные цены тендеров ЕИС в рублях" }) : (selTopic ? "" : `<section class="panel"><h3>Сумма закупок в РФ</h3><p class="muted">Выберите одну тему в фильтре — иначе одни и те же закупки пересекаются между темами.</p></section>`)}
           <section class="panel wide"><h3>Крупнейшие закупки</h3>${biggest.length ? biggest.map((d) =>
             `<div class="bar-row"><span class="bar-label wide-label"><a href="${esc(d.url)}" target="_blank" rel="noopener" title="${esc(d.title_ru || d.title)}">${esc(d.title_ru || d.title)}</a></span><b>${fmtMoney(d.price, d.currency)}</b></div>`).join("") : '<div class="muted">Нет данных</div>'}</section>
           ${bars("Частые ключевые слова в тендерах", top(T, (d) => d.keywords, 12), { color: "#7c3aed" })}

@@ -32,6 +32,7 @@ JUNK = re.compile(r"что такое|это$|what is|definition|fundamentals|о
 TOO_GENERIC = {"радио", "радиосвязь", "robots", "роботы", "радиостанция", "безопасность", "security"}
 # в листе «Робототехника» из таблицы иногда лежат слова про экзоскелеты — их оставляем только теме «Экзоскелеты»
 EXO = re.compile(r"экзоскелет|exoskeleton|wearable robotics|assistive robotics", re.I)
+EXO_PROSTH = re.compile(r"экзопротез|экзопротезир|exoprosthes", re.I)
 CJK = re.compile(r"[\u4e00-\u9fff]")
 CYR = re.compile(r"[а-яё]", re.I)
 
@@ -89,6 +90,8 @@ def main():
             continue
         if tid == "robotics":
             kws = [w for w in kws if not EXO.search(w)]
+        if tid == "exoskeletons":
+            kws = [w for w in kws if not EXO_PROSTH.search(w)]
         ru = [w for w in kws if CYR.search(w)]
         en = [w for w in kws if not CYR.search(w) and not CJK.search(w)]
         zh = [w for w in kws if CJK.search(w)]
