@@ -11,6 +11,17 @@ CYR_ENDING_RE = re.compile(r"[аеёиийоуыьэюя]{1,2}$", re.I)
 EXO_RE = re.compile(r"экзоскелет|exoskeleton|wearable robotics|assistive robotics|носим\w*\s+робот", re.I)
 # экзопротез (протез после ампутации) ≠ экзоскелет — убираем из темы, даже если слово есть в таблице
 EXO_PROSTH = re.compile(r"экзопротез|экзопротезир|exoprosthes|exo-?prosthes", re.I)
+# слова, которых может не быть в Google-таблице, но они нужны в теме (БПЛА / дронопорты)
+EXTRA_KW = {
+    "robotics": ["дронопорт", "дронпорт", "дрон-порт", "droneport", "drone port", "UAV hangar", "drone hangar",
+                 "вертикальный порт для БПЛА", "порт для БПЛА"],
+}
+EXTRA_QUERIES = {
+    "robotics": {
+        "ru": ["дронопорт", "дронпорт"],
+        "en": ["droneport", "drone port", "UAV hangar"],
+    },
+}
 
 
 def _word(word: str) -> str:
@@ -65,6 +76,13 @@ class Topics:
                         item[key] = [k for k in item[key] if not EXO_PROSTH.search(str(k))]
                 qs = item.get("queries") or {}
                 item["queries"] = {lang: [q for q in qs.get(lang, []) if not EXO_PROSTH.search(str(q))] for lang in qs}
+            for key, extra in (("keywords", EXTRA_KW.get(tid, [])), ("patent_words", EXTRA_KW.get(tid, [])),
+                               ("patent_words_en", [k for k in EXTRA_KW.get(tid, []) if not CYR_RE.search(k)])):
+                if extra:
+                    item[key] = list(dict.fromkeys((item.get(key) or []) + extra))
+            for lang, qs in (EXTRA_QUERIES.get(tid) or {}).items():
+                item.setdefault("queries", {}).setdefault(lang, [])
+                item["queries"][lang] = list(dict.fromkeys(item["queries"][lang] + qs))
             self.items.append(item)
         self._kw = {t["id"]: Matcher([k for k in t.get("keywords") or [] if str(k).lower() not in ignore])
                     for t in self.items}
