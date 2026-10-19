@@ -12,14 +12,14 @@ EXO_RE = re.compile(r"экзоскелет|exoskeleton|wearable robotics|assisti
 # экзопротез (протез после ампутации) ≠ экзоскелет — убираем из темы, даже если слово есть в таблице
 EXO_PROSTH = re.compile(r"экзопротез|экзопротезир|exoprosthes|exo-?prosthes", re.I)
 # слова, которых может не быть в Google-таблице, но они нужны в теме (БПЛА / дронопорты)
+# только цельные слова: «дрон-порт» нельзя — матчер режет по дефису и получается «дрон»+«порт»
 EXTRA_KW = {
-    "robotics": ["дронопорт", "дронпорт", "дрон-порт", "droneport", "drone port", "UAV hangar", "drone hangar",
-                 "вертикальный порт для БПЛА", "порт для БПЛА"],
+    "robotics": ["дронопорт", "дронпорт", "droneport"],
 }
 EXTRA_QUERIES = {
     "robotics": {
         "ru": ["дронопорт", "дронпорт"],
-        "en": ["droneport", "drone port", "UAV hangar"],
+        "en": ["droneport"],
     },
 }
 

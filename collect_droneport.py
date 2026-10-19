@@ -12,10 +12,10 @@ from tm.topics import Topics
 from tm.translate import is_russian, translate
 from collect import classify, doc_key, SITE_DATA, DATA_FILE
 
-RU = [("robotics", "дронопорт"), ("robotics", "дронпорт"), ("robotics", "порт для БПЛА")]
-EN = [("robotics", "droneport"), ("robotics", "drone port"), ("robotics", "UAV hangar"), ("robotics", "drone hangar")]
-PAT_RU = [("robotics", ["дронопорт", "дронпорт", "дрон-порт", "порт для БПЛА"])]
-PAT_EN = [("robotics", ["droneport", "drone port", "UAV hangar", "drone hangar", "drone nest"])]
+RU = [("robotics", "дронопорт"), ("robotics", "дронпорт")]
+EN = [("robotics", "droneport")]
+PAT_RU = [("robotics", ["дронопорт", "дронпорт"])]
+PAT_EN = [("robotics", ["droneport"])]
 
 
 def main():

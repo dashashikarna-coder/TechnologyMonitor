@@ -124,7 +124,9 @@
     return tokens.every((t) => {
       if (blob.includes(t)) return true;
       const s = stem(t);
-      return words.some((w) => w.startsWith(s) || stem(w).startsWith(s) || s.startsWith(stem(w)) && stem(w).length >= 4);
+      // только «слово начинается с основы запроса» (медицинский→медицинская).
+      // обратное нельзя: иначе «дронопорт» находит все «дрон*»
+      return words.some((w) => w.startsWith(s) || stem(w).startsWith(s));
     });
   }
 
