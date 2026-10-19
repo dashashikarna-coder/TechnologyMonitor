@@ -89,7 +89,7 @@
     return [$("#dateFrom").value, $("#dateTo").value];
   }
 
-  // усечение окончаний: «медицинский» → «медицин» → находит медицинская / медицинских / medicine…
+  // усечение окончаний: «медицинский» → «медицин»
   function stem(w) {
     let s = w.toLowerCase();
     if (/^[a-z]+$/i.test(s)) {
@@ -110,7 +110,7 @@
     return s.length >= 4 ? s : w.toLowerCase();
   }
 
-  // синонимы: «дрон» = «БПЛА» = «UAV» и т.п. — одна выдача
+  // синонимы: «дрон» = «БПЛА» = «UAV»
   const SYNONYMS = [
     ["дрон", "дроны", "дрона", "дронов", "дроном", "бпла", "бвс", "бас", "uav", "uas", "rpas",
       "беспилотник", "беспилотники", "беспилотный", "беспилотная", "беспилотное", "беспилотные",
@@ -118,38 +118,44 @@
     ["экзоскелет", "экзоскелеты", "exoskeleton", "exoskeletons"],
     ["робот", "роботы", "робототехника", "robot", "robots", "robotics", "роботизированный", "роботизированная"],
   ];
+  const SYNONYM_STEMS = SYNONYMS.map((g) => g.map((s) => ({ raw: s, st: stem(s) })));
 
   function expandToken(t) {
     const low = t.toLowerCase();
     const st = stem(low);
-    // дронопорт ≠ дрон — не раскрываем в группу БПЛА
     if (/^дронопорт|^дронпорт|^droneport/.test(low)) return [st, low];
-    for (const group of SYNONYMS) {
-      const hit = group.some((s) => {
-        const ss = stem(s);
-        return low === s || st === ss || (st.length >= 3 && ss.startsWith(st));
-      });
-      if (hit) return [...new Set(group.map((s) => stem(s)).concat(group.map((s) => s.toLowerCase())))];
+    for (const group of SYNONYM_STEMS) {
+      if (group.some(({ raw, st: ss }) => low === raw || st === ss || (st.length >= 3 && ss.startsWith(st)))) {
+        return [...new Set(group.flatMap(({ raw, st: ss }) => [ss, raw]))];
+      }
     }
     return [st, low];
   }
 
-  // поиск по тексту + теме + ключевым словам; формы слов + синонимы
-  function textHit(d, q) {
+  // индекс поиска один раз — иначе на каждую букву заново склеивается текст тысяч документов
+  D.docs.forEach((d) => {
     const blob = [
       d.title, d.title_ru, d.summary, d.summary_ru, d.customer, d.number, d.source_id, d.status,
       (d.applicants || []).join(" "), (d.ipc || []).join(" "), (d.keywords || []).join(" "),
       (d.topics || []).map((t) => topicInfo[t]?.name || t).join(" "),
     ].join(" ").toLowerCase();
+    const words = blob.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+    d._blob = blob;
+    d._words = words;
+    d._stems = words.map(stem);
+  });
+
+  function textHit(d, q) {
+    const blob = d._blob || "";
     if (blob.includes(q)) return true;
     const tokens = q.split(/[^\p{L}\p{N}]+/u).filter((t) => t.length >= 2);
     if (!tokens.length) return true;
-    const words = blob.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+    const words = d._words || [];
+    const stems = d._stems || [];
     return tokens.every((t) => {
       const variants = expandToken(t);
       if (variants.some((v) => v.length >= 2 && blob.includes(v))) return true;
-      // основа запроса/синонима — префикс слова в карточке (не наоборот: дронопорт ≠ дрон)
-      return variants.some((v) => v.length >= 2 && words.some((w) => w.startsWith(v) || stem(w).startsWith(v)));
+      return variants.some((v) => v.length >= 2 && words.some((w, i) => w.startsWith(v) || stems[i].startsWith(v)));
     });
   }
 
@@ -485,14 +491,23 @@
   $("#csv").onclick = exportCsv;
 
   // ---------- события ----------
-  ["#q", "#topic", "#country", "#source", "#dateFrom", "#dateTo", "#sort"].forEach((s) =>
-    $(s).addEventListener("input", () => { state.shown = PAGE; render(); }));
+  // поиск — с паузой 280 мс, чтобы набор букв не блокировался пересчётом тысяч карточек
+  let renderTimer = 0;
+  function requestRender(delay = 0) {
+    state.shown = PAGE;
+    clearTimeout(renderTimer);
+    if (delay <= 0) { render(); return; }
+    renderTimer = setTimeout(render, delay);
+  }
+  $("#q").addEventListener("input", () => requestRender(280));
+  ["#topic", "#country", "#source", "#dateFrom", "#dateTo", "#sort"].forEach((s) =>
+    $(s).addEventListener("input", () => requestRender(0)));
   document.querySelectorAll("#tabs button").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
   $("#more").onclick = () => { state.shown += PAGE; render(); };
   $("#reset").onclick = () => {
     ["#q", "#topic", "#country", "#source"].forEach((s) => ($(s).value = ""));
     $("#dateFrom").value = $("#dateTo").value = "";
-    render();
+    requestRender(0);
   };
   $("#stats").addEventListener("click", (e) => {
     const go = e.target.closest("[data-go]")?.dataset.go;
