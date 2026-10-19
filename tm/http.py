@@ -1,5 +1,6 @@
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import TimeoutError as FutureTimeout
+import os
 
 import requests
 import urllib3
@@ -15,6 +16,9 @@ _pool = ThreadPoolExecutor(max_workers=4)
 def session(**headers) -> requests.Session:
     s = requests.Session()
     s.headers.update({"User-Agent": UA, "Accept-Language": "ru-RU,ru;q=0.9,en;q=0.8", **headers})
+    # NO_PROXY=* в update.bat: VPN-клиент выключен — не цепляемся к мёртвому системному прокси Windows
+    if os.environ.get("NO_PROXY") == "*":
+        s.trust_env = False
     # 429 не повторяем: сервер может попросить ждать часами (Retry-After), источник просто пропускается
     retry = Retry(total=2, backoff_factor=1.5, status_forcelist=[500, 502, 504], allowed_methods=None,
                   respect_retry_after_header=False)

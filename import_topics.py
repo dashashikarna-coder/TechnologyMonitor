@@ -30,6 +30,8 @@ IDS = {
 # поисковые фразы-«вопросы» и слишком общие слова дают мусор в закупках и патентах
 JUNK = re.compile(r"что такое|это$|what is|definition|fundamentals|основы ", re.I)
 TOO_GENERIC = {"радио", "радиосвязь", "robots", "роботы", "радиостанция", "безопасность", "security"}
+# в листе «Робототехника» из таблицы иногда лежат слова про экзоскелеты — их оставляем только теме «Экзоскелеты»
+EXO = re.compile(r"экзоскелет|exoskeleton|wearable robotics|assistive robotics", re.I)
 CJK = re.compile(r"[\u4e00-\u9fff]")
 CYR = re.compile(r"[а-яё]", re.I)
 
@@ -38,7 +40,12 @@ N_PATENT_WORDS = 40    # слов на тему для ФИПС (группам�
 
 
 def download():
-    r = requests.get(f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=xlsx", timeout=60)
+    # trust_env=False: не цепляемся к системному VPN-прокси Windows, если он указан, но клиент выключен
+    r = requests.get(
+        f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=xlsx",
+        timeout=60,
+        proxies={"http": None, "https": None},
+    )
     r.raise_for_status()
     SRC.write_bytes(r.content)
     print(f"Скачано {len(r.content) // 1024} КБ")
@@ -64,7 +71,13 @@ def sheet_keywords(ws) -> list[str]:
 
 def main():
     if "--local" not in sys.argv:
-        download()
+        try:
+            download()
+        except Exception as e:
+            if not SRC.exists():
+                raise
+            # VPN/прокси выключен или Google недоступен — обновляем по уже скачанной таблице
+            print(f"Таблица недоступна ({type(e).__name__}: {e}), беру локальную {SRC.name}")
     wb = openpyxl.load_workbook(SRC, read_only=True)
     topics = {}
     for ws in wb.worksheets:
@@ -74,6 +87,8 @@ def main():
         if not kws:
             print(f"  лист «{ws.title}»: ключевых слов не найдено — пропущен")
             continue
+        if tid == "robotics":
+            kws = [w for w in kws if not EXO.search(w)]
         ru = [w for w in kws if CYR.search(w)]
         en = [w for w in kws if not CYR.search(w) and not CJK.search(w)]
         zh = [w for w in kws if CJK.search(w)]

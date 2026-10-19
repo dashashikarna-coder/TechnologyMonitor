@@ -268,7 +268,6 @@
   const kpi = (n, label) => `<div class="kpi"><b>${typeof n === "number" ? n.toLocaleString("ru-RU") : n}</b><span>${label}</span></div>`;
   const byTopicCount = (list) => D.topics.map((t) => [t.name, list.filter((d) => d.topics.includes(t.id)).length])
     .filter(([, n]) => n).sort((a, b) => b[1] - a[1]);
-  const ipcClass = (code) => (code || "").replace(/\s.*$/, "").slice(0, 4);
 
   // при выбранной теме показываем, с какими ещё темами пересекаются её документы
   function topicPanel(title, rows, opts = {}) {
@@ -314,14 +313,12 @@
 
     let html;
     if (view === "tender") {
-      const open = T.filter(isOpen);
       const biggest = [...rub].sort((a, b) => b.price - a.price).slice(0, 8);
       html = `
         <div class="kpis">${kpi(T.length, "тендеров")}</div>
         <div class="panels">
           ${columns(dyn, buckets, ["tender"])}
           ${topicPanel("Тендеры по темам", byTopicCount(T))}
-          ${bars("Открытый приём заявок по темам", byTopicCount(open), { color: "#0f9960" })}
           ${bars("Самые активные заказчики", top(T, (d) => shortOrg(d.customer)))}
           ${bars("Сумма закупок в РФ по темам", money, { fmt: (v) => fmtMoney(v, "RUB"), note: "Начальные цены тендеров ЕИС в рублях" })}
           <section class="panel wide"><h3>Крупнейшие закупки</h3>${biggest.length ? biggest.map((d) =>
@@ -336,7 +333,6 @@
           ${topicPanel("Патенты по темам", byTopicCount(P), { color: TC.patent })}
           ${bars("Статус", top(P, (d) => { const s = d.status || d.kind || "не указан"; return s[0].toUpperCase() + s.slice(1); }, 8), { color: TC.patent })}
           ${bars("Самые активные патентообладатели", top(P, (d) => shortOrg((d.applicants || [])[0])), { color: TC.patent })}
-          ${bars("Частые классы МПК", top(P, (d) => [...new Set((d.ipc || []).map(ipcClass))], 10), { color: "#0e7490", note: "Подкласс Международной патентной классификации, например G06F — обработка данных" })}
           ${bars("Частые ключевые слова в патентах", top(P, (d) => d.keywords, 12), { color: "#7c3aed" })}
         </div>`;
     } else {

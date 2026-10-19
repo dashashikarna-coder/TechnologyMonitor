@@ -7,6 +7,8 @@ import yaml
 CJK_RE = re.compile(r"[\u4e00-\u9fff]")
 CYR_RE = re.compile(r"[а-яё]", re.I)
 CYR_ENDING_RE = re.compile(r"[аеёиийоуыьэюя]{1,2}$", re.I)
+# экзоскелеты — отдельная тема: эти слова не должны тянуть документ ещё и в «Робототехнику»
+EXO_RE = re.compile(r"экзоскелет|exoskeleton|wearable robotics|assistive robotics|носим\w*\s+робот", re.I)
 
 
 def _word(word: str) -> str:
@@ -46,7 +48,16 @@ class Topics:
         flt = yaml.safe_load(flt_path.read_text(encoding="utf-8")) if flt_path.exists() else {}
         ignore = {str(k).lower() for k in flt.get("ignore_keywords") or []}
         self.tender_exclude = re.compile("|".join(flt.get("tender_exclude") or ["(?!x)x"]), re.I)
-        self.items = [{"id": tid, **cfg} for tid, cfg in raw.items()]
+        self.items = []
+        for tid, cfg in raw.items():
+            item = {"id": tid, **cfg}
+            if tid == "robotics":  # вычищаем слова про экзоскелеты из робототехники (поиск и разметка)
+                for key in ("keywords", "patent_words", "patent_words_en"):
+                    if item.get(key):
+                        item[key] = [k for k in item[key] if not EXO_RE.search(str(k))]
+                qs = item.get("queries") or {}
+                item["queries"] = {lang: [q for q in qs.get(lang, []) if not EXO_RE.search(str(q))] for lang in qs}
+            self.items.append(item)
         self._kw = {t["id"]: Matcher([k for k in t.get("keywords") or [] if str(k).lower() not in ignore])
                     for t in self.items}
         self._ex = {t["id"]: Matcher(t.get("exclude")) for t in self.items}
@@ -76,4 +87,7 @@ class Topics:
             if hits and not self._ex[t["id"]].find(f"{title} {body}"):
                 topics.append(t["id"])
                 keywords += hits
+        # документ про экзоскелет не дублируем в робототехнику
+        if "exoskeletons" in topics and "robotics" in topics:
+            topics = [t for t in topics if t != "robotics"]
         return topics, list(dict.fromkeys(keywords))
