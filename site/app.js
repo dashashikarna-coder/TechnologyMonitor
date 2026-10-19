@@ -224,7 +224,7 @@
   function patentCard(d) {
     return `<article class="card ${stars[keyOf(d)] ? "starred" : ""}" style="--c:${cardColor(d)}">
       <div class="card-main">
-        <div class="meta">${isNew(d) ? '<span class="pill new">Новое</span>' : ""}${d.status ? `<span class="pill ${/^действ/i.test(d.status) ? "open" : ""}">${esc(d.status)}</span>` : ""}<span class="pill">${esc(d.number || d.source_id)}</span>${d.kind ? `<span>${esc(d.kind)}</span>·` : ""}<span>заявитель: ${esc(d.country)}</span>·<span>опубликован ${fmtDate(d.date)}</span></div>
+        <div class="meta">${isNew(d) ? '<span class="pill new">Новое</span>' : ""}${d.status ? `<span class="pill ${/^действ/i.test(d.status) ? "open" : ""}">${esc(d.status)}</span>` : ""}<span class="pill">${esc(d.number || d.source_id)}</span>${d.kind && !/^европейск/i.test(d.kind) ? `<span>${esc(d.kind)}</span>·` : ""}<span>заявитель: ${esc(d.country)}</span>·<span>опубликован ${fmtDate(d.date)}</span></div>
         <h3><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title_ru || d.title)}</a></h3>
         ${origLine(d)}
         ${d.applicants?.length ? `<div class="who"><b>Заявитель:</b> ${esc(d.applicants.slice(0, 3).join("; "))}</div>` : ""}
@@ -376,7 +376,7 @@
         <div class="panels">
           ${columns(dyn, buckets, ["patent"])}
           ${topicPanel("Патенты по темам", byTopicCount(P), { color: TC.patent })}
-          ${bars("Статус", top(P, (d) => { const s = d.status || d.kind || "не указан"; return s[0].toUpperCase() + s.slice(1); }, 8), { color: TC.patent })}
+          ${bars("Статус охраны", top(P.filter((d) => d.status), (d) => d.status[0].toUpperCase() + d.status.slice(1), 8), { color: TC.patent, note: "По данным реестра (ФИПС). У европейских патентов EPO отдельный статус охраны здесь не указан." })}
           ${bars("Самые активные патентообладатели", top(P, (d) => shortOrg((d.applicants || [])[0])), { color: TC.patent })}
           ${bars("Частые ключевые слова в патентах", top(P, (d) => d.keywords, 12), { color: "#7c3aed" })}
         </div>`;
