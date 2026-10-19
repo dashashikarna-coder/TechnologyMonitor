@@ -110,7 +110,31 @@
     return s.length >= 4 ? s : w.toLowerCase();
   }
 
-  // поиск по тексту + теме + ключевым словам; слова — с учётом разных форм
+  // синонимы: «дрон» = «БПЛА» = «UAV» и т.п. — одна выдача
+  const SYNONYMS = [
+    ["дрон", "дроны", "дрона", "дронов", "дроном", "бпла", "бвс", "бас", "uav", "uas", "rpas",
+      "беспилотник", "беспилотники", "беспилотный", "беспилотная", "беспилотное", "беспилотные",
+      "квадрокоптер", "мультикоптер", "коптер", "fpv"],
+    ["экзоскелет", "экзоскелеты", "exoskeleton", "exoskeletons"],
+    ["робот", "роботы", "робототехника", "robot", "robots", "robotics", "роботизированный", "роботизированная"],
+  ];
+
+  function expandToken(t) {
+    const low = t.toLowerCase();
+    const st = stem(low);
+    // дронопорт ≠ дрон — не раскрываем в группу БПЛА
+    if (/^дронопорт|^дронпорт|^droneport/.test(low)) return [st, low];
+    for (const group of SYNONYMS) {
+      const hit = group.some((s) => {
+        const ss = stem(s);
+        return low === s || st === ss || (st.length >= 3 && ss.startsWith(st));
+      });
+      if (hit) return [...new Set(group.map((s) => stem(s)).concat(group.map((s) => s.toLowerCase())))];
+    }
+    return [st, low];
+  }
+
+  // поиск по тексту + теме + ключевым словам; формы слов + синонимы
   function textHit(d, q) {
     const blob = [
       d.title, d.title_ru, d.summary, d.summary_ru, d.customer, d.number, d.source_id, d.status,
@@ -122,11 +146,10 @@
     if (!tokens.length) return true;
     const words = blob.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
     return tokens.every((t) => {
-      if (blob.includes(t)) return true;
-      const s = stem(t);
-      // только «слово начинается с основы запроса» (медицинский→медицинская).
-      // обратное нельзя: иначе «дронопорт» находит все «дрон*»
-      return words.some((w) => w.startsWith(s) || stem(w).startsWith(s));
+      const variants = expandToken(t);
+      if (variants.some((v) => v.length >= 2 && blob.includes(v))) return true;
+      // основа запроса/синонима — префикс слова в карточке (не наоборот: дронопорт ≠ дрон)
+      return variants.some((v) => v.length >= 2 && words.some((w) => w.startsWith(v) || stem(w).startsWith(v)));
     });
   }
 
