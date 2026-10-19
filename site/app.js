@@ -89,6 +89,17 @@
     return [$("#dateFrom").value, $("#dateTo").value];
   }
 
+  // поиск по тексту + по названию темы и ключевым словам разметки
+  // (иначе «экзоскелет» не находит заявки, где в оригинале только exoskeleton, а тема уже стоит)
+  function textHit(d, q) {
+    const blob = [
+      d.title, d.title_ru, d.summary, d.summary_ru, d.customer, d.number, d.source_id, d.status,
+      (d.applicants || []).join(" "), (d.ipc || []).join(" "), (d.keywords || []).join(" "),
+      (d.topics || []).map((t) => topicInfo[t]?.name || t).join(" "),
+    ].join(" ").toLowerCase();
+    return blob.includes(q);
+  }
+
   function filtered(tab, skip = "") {
     const q = $("#q").value.trim().toLowerCase();
     const [since, until] = periodRange(tab);
@@ -100,8 +111,7 @@
       (!topic || d.topics.includes(topic)) &&
       (!country || d.country === country) &&
       (!source || d.source === source) &&
-      (!q || [d.title, d.title_ru, d.customer, d.number, d.source_id, (d.applicants || []).join(" "), d.summary_ru, (d.ipc || []).join(" ")]
-        .join(" ").toLowerCase().includes(q))
+      (!q || textHit(d, q))
     );
   }
 
