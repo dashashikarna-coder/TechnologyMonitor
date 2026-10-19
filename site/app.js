@@ -110,7 +110,7 @@
     return s.length >= 4 ? s : w.toLowerCase();
   }
 
-  // синонимы: «дрон» = «БПЛА» = «UAV»
+  // синонимы: «дрон» = «БПЛА» = «UAV». Короткие аббревиатуры — только целое слово (иначе «бас»→«базовый»)
   const SYNONYMS = [
     ["дрон", "дроны", "дрона", "дронов", "дроном", "бпла", "бвс", "бас", "uav", "uas", "rpas",
       "беспилотник", "беспилотники", "беспилотный", "беспилотная", "беспилотное", "беспилотные",
@@ -118,6 +118,7 @@
     ["экзоскелет", "экзоскелеты", "exoskeleton", "exoskeletons"],
     ["робот", "роботы", "робототехника", "robot", "robots", "robotics", "роботизированный", "роботизированная"],
   ];
+  const ABBR = new Set(["бпла", "бвс", "бас", "uav", "uas", "rpas", "fpv", "ртк"]);
   const SYNONYM_STEMS = SYNONYMS.map((g) => g.map((s) => ({ raw: s, st: stem(s) })));
 
   function expandToken(t) {
@@ -143,20 +144,22 @@
     d._blob = blob;
     d._words = words;
     d._stems = words.map(stem);
+    d._wordSet = new Set(words);
   });
 
+  function variantHit(d, v) {
+    if (v.length < 2) return false;
+    // аббревиатуры и очень короткие основы — только точное слово, не «бас» внутри «базовый»
+    if (ABBR.has(v) || v.length <= 3) return d._wordSet.has(v);
+    if (d._blob.includes(v)) return true;
+    return d._words.some((w, i) => w.startsWith(v) || d._stems[i].startsWith(v));
+  }
+
   function textHit(d, q) {
-    const blob = d._blob || "";
-    if (blob.includes(q)) return true;
+    if ((d._blob || "").includes(q)) return true;
     const tokens = q.split(/[^\p{L}\p{N}]+/u).filter((t) => t.length >= 2);
     if (!tokens.length) return true;
-    const words = d._words || [];
-    const stems = d._stems || [];
-    return tokens.every((t) => {
-      const variants = expandToken(t);
-      if (variants.some((v) => v.length >= 2 && blob.includes(v))) return true;
-      return variants.some((v) => v.length >= 2 && words.some((w, i) => w.startsWith(v) || stems[i].startsWith(v)));
-    });
+    return tokens.every((t) => expandToken(t).some((v) => variantHit(d, v)));
   }
 
   function filtered(tab, skip = "") {
