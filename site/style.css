@@ -140,3 +140,28 @@ main { padding-top: 18px; padding-bottom: 40px; }
 .bar-label.wide-label { flex: 1; max-width: none; }
 .bar-label a { color: inherit; text-decoration: none; }
 .bar-label a:hover { text-decoration: underline; }
+
+/* дашборд: круговая, сигналы, рост тем */
+.donut-wrap { display: flex; gap: 20px; align-items: center; }
+.donut { width: 140px; height: 140px; border-radius: 50%; flex-shrink: 0;
+  mask: radial-gradient(circle at center, transparent 48%, #000 49%);
+  -webkit-mask: radial-gradient(circle at center, transparent 48%, #000 49%); }
+.donut-legend { list-style: none; margin: 0; padding: 0; flex: 1; min-width: 0; }
+.donut-legend li { display: grid; grid-template-columns: 12px 1fr auto 42px; gap: 8px; align-items: center;
+  font-size: 13px; padding: 3px 0; }
+.donut-legend i { width: 10px; height: 10px; border-radius: 2px; }
+.donut-legend span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.donut-legend em { color: var(--muted); font-style: normal; text-align: right; }
+.signals .signal { display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; margin: 0 0 8px;
+  background: #f8fafc; border-radius: 10px; border-left: 4px solid var(--sc, var(--accent)); font-size: 14px; line-height: 1.4; }
+.signal-mark { display: none; }
+.grow-row { display: grid; grid-template-columns: 1fr auto 48px; gap: 10px; align-items: center;
+  font-size: 13.5px; padding: 5px 0; border-bottom: 1px solid #f1f5f9; }
+.grow-row:last-child { border-bottom: 0; }
+.grow-name { font-weight: 600; color: var(--tc, var(--text)); }
+.grow-row b.up { color: #0f9960; }
+.grow-row b.down { color: #d13b3b; }
+.grow-row b { text-align: right; }
+@media (max-width: 700px) {
+  .donut-wrap { flex-direction: column; align-items: flex-start; }
+}

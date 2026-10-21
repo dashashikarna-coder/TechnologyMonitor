@@ -346,6 +346,7 @@
   const kpi = (n, label) => `<div class="kpi"><b>${typeof n === "number" ? n.toLocaleString("ru-RU") : n}</b><span>${label}</span></div>`;
   const byTopicCount = (list) => D.topics.map((t) => [t.name, list.filter((d) => d.topics.includes(t.id)).length])
     .filter(([, n]) => n).sort((a, b) => b[1] - a[1]);
+  const daysAgo = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);
 
   // при выбранной теме показываем, с какими ещё темами пересекаются её документы
   function topicPanel(title, rows, opts = {}) {
@@ -353,6 +354,111 @@
     if (!sel) return bars(title, rows, opts);
     return bars(`Пересечения темы «${sel.name}» с другими темами`, rows.filter(([name]) => name !== sel.name),
       { ...opts, note: "Сколько документов выбранной темы одновременно относятся и к другой теме (например, радиосвязь для БПЛА — это и радиосвязь, и робототехника)" });
+  }
+
+  // круговая диаграмма долей
+  function donut(title, rows, opts = {}) {
+    const total = Math.max(1, rows.reduce((s, [, n]) => s + n, 0));
+    let acc = 0;
+    const stops = rows.map(([, n], i) => {
+      const a = acc;
+      acc += (n / total) * 360;
+      return `${COLORS[i % COLORS.length]} ${a}deg ${acc}deg`;
+    }).join(", ");
+    const legend = rows.map(([name, n], i) =>
+      `<li><i style="background:${COLORS[i % COLORS.length]}"></i><span title="${esc(name)}">${esc(name)}</span><b>${n.toLocaleString("ru-RU")}</b><em>${Math.round(n / total * 100)}%</em></li>`).join("");
+    return `<section class="panel ${opts.wide ? "wide" : ""}"><h3>${title}</h3>
+      ${rows.length ? `<div class="donut-wrap"><div class="donut" style="background:conic-gradient(${stops})"></div><ul class="donut-legend">${legend}</ul></div>` : '<div class="muted">Нет данных</div>'}</section>`;
+  }
+
+  // кто сколько закупил (сумма НМЦК в рублях)
+  function topSpend(list, n = 10) {
+    const m = new Map();
+    list.forEach((d) => {
+      if (d.currency !== "RUB" || !d.price) return;
+      const org = shortOrg(d.customer);
+      if (!org) return;
+      m.set(org, (m.get(org) || 0) + d.price);
+    });
+    return [...m].sort((a, b) => b[1] - a[1]).slice(0, n);
+  }
+
+  // «опа, активно закупают»: заказчик × тема за последние N дней
+  function buyerSignals(tenders, days = 30, minN = 2) {
+    const since = daysAgo(days);
+    const recent = tenders.filter((d) => docDate(d) >= since);
+    const m = new Map();
+    recent.forEach((d) => {
+      const org = shortOrg(d.customer);
+      if (!org) return;
+      (d.topics.length ? d.topics : [""]).forEach((tid) => {
+        const key = org + "|" + tid;
+        const v = m.get(key) || { org, tid, n: 0, sum: 0 };
+        v.n++;
+        if (d.currency === "RUB" && d.price) v.sum += d.price;
+        m.set(key, v);
+      });
+    });
+    return [...m.values()]
+      .filter((v) => v.n >= minN)
+      .sort((a, b) => b.n - a.n || b.sum - a.sum)
+      .slice(0, 8);
+  }
+
+  function applicantSignals(patents, days = 90, minN = 2) {
+    const since = daysAgo(days);
+    const recent = patents.filter((d) => docDate(d) >= since);
+    const m = new Map();
+    recent.forEach((d) => {
+      const org = shortOrg((d.applicants || [])[0]);
+      if (!org) return;
+      const tid = d.topics[0] || "";
+      const key = org + "|" + tid;
+      const v = m.get(key) || { org, tid, n: 0 };
+      v.n++;
+      m.set(key, v);
+    });
+    return [...m.values()].filter((v) => v.n >= minN).sort((a, b) => b.n - a.n).slice(0, 8);
+  }
+
+  function signalsPanel(title, note, items, kind) {
+    if (!items.length) {
+      return `<section class="panel wide"><h3>${title}</h3><p class="muted">${note} Пока нет явных всплесков — попробуйте сменить период или тему.</p></section>`;
+    }
+    const rows = items.map((v) => {
+      const topic = topicInfo[v.tid]?.name || "без темы";
+      const color = topicInfo[v.tid]?.color || "#64748b";
+      const money = v.sum ? ` · ${fmtMoney(v.sum, "RUB")}` : "";
+      const what = kind === "tender"
+        ? `<b>${esc(v.org)}</b> — ${v.n} закупок по теме «${esc(topic)}»${money}`
+        : `<b>${esc(v.org)}</b> — ${v.n} патентов/заявок по теме «${esc(topic)}»`;
+      return `<div class="signal" style="--sc:${color}"><span class="signal-mark"></span><div>${what}</div></div>`;
+    }).join("");
+    return `<section class="panel wide signals"><h3>${title}</h3><p class="muted">${note}</p>${rows}</section>`;
+  }
+
+  // рост темы: сравнение последних 30 дней с предыдущими 30
+  function topicGrowth(list) {
+    const a0 = daysAgo(30), a1 = daysAgo(60);
+    return D.topics.map((t) => {
+      const now = list.filter((d) => d.topics.includes(t.id) && docDate(d) >= a0).length;
+      const prev = list.filter((d) => d.topics.includes(t.id) && docDate(d) >= a1 && docDate(d) < a0).length;
+      const delta = now - prev;
+      return { name: t.name, color: topicInfo[t.id].color, now, prev, delta };
+    }).filter((x) => x.now + x.prev > 0).sort((a, b) => b.delta - a.delta || b.now - a.now);
+  }
+
+  function growthPanel(title, list) {
+    const rows = topicGrowth(list);
+    if (!rows.length) return "";
+    const body = rows.map((r) => {
+      const sign = r.delta > 0 ? `+${r.delta}` : String(r.delta);
+      const cls = r.delta > 0 ? "up" : r.delta < 0 ? "down" : "";
+      return `<div class="grow-row"><span class="grow-name" style="--tc:${r.color}">${esc(r.name)}</span>
+        <span class="muted">было ${r.prev} → стало ${r.now}</span>
+        <b class="${cls}">${sign}</b></div>`;
+    }).join("");
+    return `<section class="panel"><h3>${title}</h3><p class="muted">Последние 30 дней против предыдущих 30</p>${body}</section>`;
   }
 
   function renderAnalytics() {
@@ -381,48 +487,67 @@
 
     const rub = T.filter((d) => d.currency === "RUB" && d.price);
     const selTopic = $("#topic").value;
-    // сумма только по одной выбранной теме — иначе одни и те же закупки считаются в нескольких темах
-    const money = selTopic && topicInfo[selTopic]
+    const moneyTopic = selTopic && topicInfo[selTopic]
       ? [[topicInfo[selTopic].name, rub.filter((d) => d.topics.includes(selTopic)).reduce((s, d) => s + d.price, 0)]].filter(([, v]) => v)
       : [];
     const totalRub = rub.reduce((s, d) => s + d.price, 0);
+    const openN = T.filter(isOpen).length;
     const dyn = monthly ? "Динамика по месяцам" : "Динамика по годам";
     const switcher = `<div class="an-switch">${[["all", "Общая"], ["tender", `Тендеры (${T.length})`], ["patent", `Патенты (${P.length})`]]
       .map(([v, l]) => `<button data-an="${v}" class="${view === v ? "active" : ""}">${l}</button>`).join("")}</div>`;
+    const topicShare = byTopicCount(view === "patent" ? P : view === "tender" ? T : list);
 
     let html;
     if (view === "tender") {
       const biggest = [...rub].sort((a, b) => b.price - a.price).slice(0, 8);
+      const spend = topSpend(selTopic ? rub.filter((d) => d.topics.includes(selTopic)) : rub);
       html = `
-        <div class="kpis">${kpi(T.length, "тендеров")}</div>
+        <div class="kpis">${kpi(T.length, "тендеров")}${kpi(openN, "с открытым приёмом")}${kpi(fmtMoney(totalRub, "RUB") || "—", "сумма закупок в РФ")}${kpi(spend[0] ? spend[0][0].slice(0, 28) : "—", "топ-заказчик по сумме")}</div>
+        ${signalsPanel("На что обратить внимание · последние 30 дней",
+          "Заказчики, у которых несколько закупок по одной теме за месяц — возможный сигнал интереса к технологии.",
+          buyerSignals(T, 30, 2), "tender")}
         <div class="panels">
           ${columns(dyn, buckets, ["tender"])}
+          ${donut("Доли тем в тендерах", topicShare)}
           ${topicPanel("Тендеры по темам", byTopicCount(T))}
-          ${bars("Самые активные заказчики", top(T, (d) => shortOrg(d.customer)))}
-          ${money.length ? bars(`Сумма закупок в РФ: ${topicInfo[selTopic].name}`, money, { fmt: (v) => fmtMoney(v, "RUB"), note: "Только выбранная тема · начальные цены тендеров ЕИС в рублях" }) : (selTopic ? "" : `<section class="panel"><h3>Сумма закупок в РФ</h3><p class="muted">Выберите одну тему в фильтре — иначе одни и те же закупки пересекаются между темами.</p></section>`)}
+          ${growthPanel("Какие темы ускорились", T)}
+          ${bars("Кто сколько закупил (₽)", spend, { fmt: (v) => fmtMoney(v, "RUB"), note: selTopic ? `Тема: ${topicInfo[selTopic].name}` : "Сумма начальных цен ЕИС в рублях по заказчику", wide: true })}
+          ${bars("Самые активные заказчики (по числу закупок)", top(T, (d) => shortOrg(d.customer)))}
+          ${moneyTopic.length ? bars(`Сумма по выбранной теме`, moneyTopic, { fmt: (v) => fmtMoney(v, "RUB") }) : ""}
           <section class="panel wide"><h3>Крупнейшие закупки</h3>${biggest.length ? biggest.map((d) =>
-            `<div class="bar-row"><span class="bar-label wide-label"><a href="${esc(d.url)}" target="_blank" rel="noopener" title="${esc(d.title_ru || d.title)}">${esc(d.title_ru || d.title)}</a></span><b>${fmtMoney(d.price, d.currency)}</b></div>`).join("") : '<div class="muted">Нет данных</div>'}</section>
+            `<div class="bar-row"><span class="bar-label wide-label"><a href="${esc(d.url)}" target="_blank" rel="noopener" title="${esc(d.title_ru || d.title)}">${esc(shortOrg(d.customer) || "—")}: ${esc(d.title_ru || d.title)}</a></span><b>${fmtMoney(d.price, d.currency)}</b></div>`).join("") : '<div class="muted">Нет данных</div>'}</section>
           ${bars("Частые ключевые слова в тендерах", top(T, (d) => d.keywords, 12), { color: "#7c3aed" })}
         </div>`;
     } else if (view === "patent") {
       html = `
-        <div class="kpis">${kpi(P.length, "патентов")}</div>
+        <div class="kpis">${kpi(P.length, "патентов и заявок")}${kpi(P.filter((d) => /^действ/i.test(d.status || "")).length, "действуют (ФИПС)")}${kpi(P.filter((d) => d.source.startsWith("ФИПС")).length, "российских")}${kpi(P.filter((d) => d.source.startsWith("EPO")).length, "европейских")}</div>
+        ${signalsPanel("На что обратить внимание · последние 90 дней",
+          "Заявители, у которых несколько публикаций по одной теме за квартал — возможный сигнал активной разработки.",
+          applicantSignals(P, 90, 2), "patent")}
         <div class="panels">
           ${columns(dyn, buckets, ["patent"])}
+          ${donut("Доли тем в патентах", topicShare)}
           ${topicPanel("Патенты по темам", byTopicCount(P), { color: TC.patent })}
-          ${bars("Статус охраны", top(P.filter((d) => d.status), (d) => d.status[0].toUpperCase() + d.status.slice(1), 8), { color: TC.patent, note: "По данным реестра (ФИПС). У европейских патентов EPO отдельный статус охраны здесь не указан." })}
-          ${bars("Самые активные патентообладатели", top(P, (d) => shortOrg((d.applicants || [])[0])), { color: TC.patent })}
+          ${growthPanel("Какие темы ускорились", P)}
+          ${bars("Статус охраны", top(P.filter((d) => d.status), (d) => d.status[0].toUpperCase() + d.status.slice(1), 8), { color: TC.patent, note: "По данным реестра ФИПС" })}
+          ${bars("Самые активные патентообладатели", top(P, (d) => shortOrg((d.applicants || [])[0])), { color: TC.patent, wide: true })}
           ${bars("Частые ключевые слова в патентах", top(P, (d) => d.keywords, 12), { color: "#7c3aed" })}
         </div>`;
     } else {
       html = `
-        <div class="kpis">${kpi(T.length, "тендеров")}${kpi(P.length, "патентов")}</div>
+        <div class="kpis">${kpi(T.length, "тендеров")}${kpi(P.length, "патентов")}${kpi(openN, "тендеров с открытым приёмом")}${kpi(fmtMoney(totalRub, "RUB") || "—", "сумма закупок в РФ")}</div>
+        ${signalsPanel("Сигналы за последний месяц",
+          "Кто активно закупает какую технологию — удобная точка входа: «почему именно сейчас?»",
+          buyerSignals(T, 30, 2), "tender")}
         <div class="legend"><span><i style="background:${TC.tender}"></i>Тендеры</span><span><i style="background:${TC.patent}"></i>Патенты</span></div>
         <div class="panels">
           ${columns(dyn, buckets)}
+          ${donut("Доли тем (всё вместе)", topicShare)}
           ${topicPanel("По темам", byTopic, { wide: true })}
+          ${growthPanel("Темы: ускорение / замедление", list)}
           ${bars("Самые активные заказчики", top(T, (d) => shortOrg(d.customer)))}
           ${bars("Самые активные патентообладатели", top(P, (d) => shortOrg((d.applicants || [])[0])), { color: TC.patent })}
+          ${bars("Кто сколько закупил (₽)", topSpend(rub), { fmt: (v) => fmtMoney(v, "RUB"), note: "Начальные цены тендеров ЕИС в рублях", wide: true })}
           ${bars("Частые ключевые слова", top(list, (d) => d.keywords, 12), { color: "#7c3aed", wide: true })}
         </div>`;
     }
