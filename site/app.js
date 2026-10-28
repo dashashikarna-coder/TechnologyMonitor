@@ -360,7 +360,7 @@
         ? `<i style="width:${(r[1] / max) * 100}%;background:${opts.color || TC.tender}"></i>`
         : ["tender", "patent"].map((t) => r[1][t] ? `<i style="width:${(r[1][t] / max) * 100}%;background:${TC[t]}" title="${t === "tender" ? "Тендеры" : "Патенты"}: ${r[1][t]}"></i>` : "").join("");
       const label = opts.fmt ? opts.fmt(val(r)) : val(r).toLocaleString("ru-RU");
-      const clickable = typeof opts.click === "function";
+      const clickable = !!opts.click;
       const attrs = clickable ? ` class="bar-row clickable" role="button" tabindex="0" data-bar="${idx}"` : ` class="bar-row"`;
       return `<div${attrs}><span class="bar-label" title="${esc(r[0])}">${esc(r[0])}</span><span class="bar-track">${segs}</span><b>${label}</b></div>`;
     }).join("") : `<div class="muted">Нет данных</div>`;
@@ -397,8 +397,18 @@
   // при выбранной теме показываем, с какими ещё темами пересекаются её документы
   function topicPanel(title, rows, opts = {}) {
     const sel = topicInfo[$("#topic").value];
-    if (!sel) return bars(title, rows, opts);
-    return bars(`Пересечения темы «${sel.name}» с другими темами`, rows.filter(([name]) => name !== sel.name),
+    const shown = sel ? rows.filter(([name]) => name !== sel.name) : rows;
+    if (opts.kind && opts.click && state._barClicks?.[opts.kind]) {
+      // индексы строк после фильтрации должны совпадать с картой кликов
+      state._barClicks[opts.kind] = shown.map(([name]) => {
+        const tid = D.topics.find((t) => t.name === name)?.id || "";
+        const tab = (opts.kind || "").includes("patent") ? "patent"
+          : (opts.kind || "").includes("tender") ? "tender" : "tender";
+        return { tab, topic: tid, label: name };
+      });
+    }
+    if (!sel) return bars(title, shown, opts);
+    return bars(`Пересечения темы «${sel.name}» с другими темами`, shown,
       { ...opts, note: "Нажмите тему — откроется список. Показано, с какими ещё темами пересекаются документы." });
   }
 
@@ -509,7 +519,7 @@
     const body = rows.map((r) => {
       const cls = r.delta > 0 ? "up" : r.delta < 0 ? "down" : "";
       const sign = r.delta > 0 ? `+${r.delta}` : String(r.delta);
-      return `<div class="grow-row clickable" role="button" tabindex="0" data-drill-tab="stats" data-drill-topic="${esc(r.id)}"
+      return `<div class="grow-row clickable" role="button" tabindex="0" data-drill-topic="${esc(r.id)}"
         data-drill-label="${esc(r.name)}">
         <span class="grow-name" style="--tc:${r.color}">${esc(r.name)}</span>
         <span class="grow-detail">
