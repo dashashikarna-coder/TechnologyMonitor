@@ -16,9 +16,9 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const topicInfo = Object.fromEntries(D.topics.map((t, i) => [t.id, { ...t, color: COLORS[i % COLORS.length] }]));
   const today = new Date().toISOString().slice(0, 10);
-  const daysAgo = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);
 
-  const state = { tab: "stats", an: "all", shown: PAGE, drill: null }; // drill: { customer|applicant|topic }
+  // drill — переход из аналитики: заказчик/заявитель/тема/период
+  const state = { tab: "stats", an: "all", shown: PAGE, drill: null };
   let stars = JSON.parse(localStorage.getItem(STAR_KEY) || "{}");
   const keyOf = (d) => `${d.type}:${d.source}:${d.source_id}`;
 
@@ -46,6 +46,32 @@
   const isNew = (d) => D.meta.updated && d.first_seen >= D.meta.updated;
   const isOpen = (d) => d.type === "tender" && d.deadline && d.deadline >= today && !/заверш|отмен|итоги/i.test(d.status || "");
   const daysLeft = (d) => Math.ceil((new Date(d.deadline) - new Date(today)) / 864e5);
+
+  const ORG_FORMS = [
+    [/федеральное государственное бюджетное образовательное учреждение высшего образования/gi, "ФГБОУ ВО"],
+    [/федеральное государственное автономное образовательное учреждение высшего образования/gi, "ФГАОУ ВО"],
+    [/федеральное государственное бюджетное учреждение науки/gi, "ФГБУН"],
+    [/федеральное государственное бюджетное учреждение/gi, "ФГБУ"],
+    [/федеральное государственное казенное учреждение/gi, "ФГКУ"],
+    [/федеральное государственное унитарное предприятие/gi, "ФГУП"],
+    [/федеральное государственное автономное учреждение/gi, "ФГАУ"],
+    [/государственное бюджетное учреждение здравоохранения/gi, "ГБУЗ"],
+    [/государственное бюджетное общеобразовательное учреждение/gi, "ГБОУ"],
+    [/государственное бюджетное профессиональное образовательное учреждение/gi, "ГБПОУ"],
+    [/государственное автономное учреждение/gi, "ГАУ"],
+    [/государственное бюджетное учреждение/gi, "ГБУ"],
+    [/государственное казенное учреждение/gi, "ГКУ"],
+    [/государственное учреждение/gi, "ГУ"],
+    [/муниципальное бюджетное общеобразовательное учреждение/gi, "МБОУ"],
+    [/муниципальное автономное общеобразовательное учреждение/gi, "МАОУ"],
+    [/муниципальное унитарное предприятие/gi, "МУП"],
+    [/муниципальное казенное учреждение/gi, "МКУ"],
+    [/публичное акционерное общество/gi, "ПАО"],
+    [/акционерное общество/gi, "АО"],
+    [/общество с ограниченной ответственностью/gi, "ООО"],
+    [/индивидуальный предприниматель/gi, "ИП"],
+  ];
+  const shortOrg = (s) => ORG_FORMS.reduce((t, [re, abbr]) => t.replace(re, abbr), String(s || "")).replace(/\s*\((RU|[A-Z]{2})\)\s*$/, "").trim();
 
   function fmtDate(iso) {
     if (!iso) return "";
@@ -165,43 +191,58 @@
 
   function filtered(tab, skip = "") {
     const q = $("#q").value.trim().toLowerCase();
-    const [since, until] = periodRange(tab);
-    const topic = skip === "topic" ? "" : ($("#topic").value || state.drill?.topic || "");
+    let [since, until] = periodRange(tab);
+    const topic = skip === "topic" ? "" : $("#topic").value;
     const country = skip === "country" ? "" : $("#country").value;
     const source = skip === "source" ? "" : $("#source").value;
-    const drillCust = state.drill?.customer || "";
-    const drillApp = state.drill?.applicant || "";
+    const dr = state.drill;
+    if (dr?.since && (!since || dr.since > since)) since = dr.since;
+    if (dr?.until && (!until || dr.until < until)) until = dr.until;
     return base(tab).filter((d) =>
       (!since || docDate(d) >= since) && (!until || docDate(d) <= until) &&
       (!topic || d.topics.includes(topic)) &&
       (!country || d.country === country) &&
       (!source || d.source === source) &&
-      (!drillCust || shortOrg(d.customer) === drillCust) &&
-      (!drillApp || shortOrg((d.applicants || [])[0]) === drillApp) &&
+      (!dr?.customer || shortOrg(d.customer) === dr.customer) &&
+      (!dr?.applicant || shortOrg((d.applicants || [])[0]) === dr.applicant) &&
+      (!dr?.keyword || (d.keywords || []).some((k) => k.toLowerCase() === dr.keyword.toLowerCase()) || textHit(d, dr.keyword.toLowerCase())) &&
       (!q || textHit(d, q))
     );
   }
 
-  // переход из аналитики: вкладка + фильтр по заказчику / заявителю / теме / слову
-  function drillTo({ tab, topic, customer, applicant, q, days }) {
-    state.drill = { topic: topic || "", customer: customer || "", applicant: applicant || "" };
-    $("#q").value = q || "";
-    if (days) {
-      $("#dateFrom").value = daysAgo(days);
-      $("#dateTo").value = today;
-    }
-    state.tab = tab || "tender";
-    document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("active", b.dataset.tab === state.tab));
-    $("#sort").innerHTML = (SORTS[state.tab] || SORTS.tender).map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
-    state.shown = PAGE;
+  function clearDrill() {
+    state.drill = null;
     render();
-    if (topic && topicInfo[topic]) {
-      $("#topic").value = topic;
-      render();
+  }
+
+  function drillTo(opts) {
+    state.drill = {
+      customer: opts.customer || "",
+      applicant: opts.applicant || "",
+      keyword: opts.keyword || "",
+      since: opts.since || "",
+      until: opts.until || "",
+      label: opts.label || "",
+    };
+    if (opts.topic) $("#topic").value = opts.topic;
+    if (opts.clearDates) { $("#dateFrom").value = ""; $("#dateTo").value = ""; }
+    if (opts.since && opts.until) {
+      $("#dateFrom").value = opts.since;
+      $("#dateTo").value = opts.until;
     }
-    const bits = [customer && `заказчик: ${customer}`, applicant && `заявитель: ${applicant}`,
-      topic && topicInfo[topic] && `тема: ${topicInfo[topic].name}`, q && `«${q}»`].filter(Boolean);
-    if (bits.length) toast(bits.join(" · "));
+    setTab(opts.tab || "tender");
+    toast(opts.label || "Фильтр из аналитики");
+  }
+
+  function drillChip() {
+    if (!state.drill || state.tab === "stats") return "";
+    const parts = [
+      state.drill.customer && `заказчик: ${state.drill.customer}`,
+      state.drill.applicant && `заявитель: ${state.drill.applicant}`,
+      state.drill.keyword && `слово: ${state.drill.keyword}`,
+      state.drill.label,
+    ].filter(Boolean);
+    return `<div class="drill-chip">Фильтр аналитики: ${esc(parts[0] || "выборка")} <button type="button" id="clearDrill">✕ сбросить</button></div>`;
   }
 
   function sorted(list) {
@@ -311,32 +352,20 @@
 
   function bars(title, rows, opts = {}) {
     // rows: [[подпись, {tender: n, patent: n}] | [подпись, n]]
-    // opts.hit(row) -> { tab, topic, customer, applicant, q, days } для клика
+    // opts.click: (label) => ({ tab, customer, applicant, topic, keyword, label })
     const val = (r) => (typeof r[1] === "number" ? r[1] : (r[1].tender || 0) + (r[1].patent || 0));
     const max = Math.max(1, ...rows.map(val));
-    const body = rows.length ? rows.map((r) => {
+    const body = rows.length ? rows.map((r, idx) => {
       const segs = typeof r[1] === "number"
         ? `<i style="width:${(r[1] / max) * 100}%;background:${opts.color || TC.tender}"></i>`
         : ["tender", "patent"].map((t) => r[1][t] ? `<i style="width:${(r[1][t] / max) * 100}%;background:${TC[t]}" title="${t === "tender" ? "Тендеры" : "Патенты"}: ${r[1][t]}"></i>` : "").join("");
       const label = opts.fmt ? opts.fmt(val(r)) : val(r).toLocaleString("ru-RU");
-      const hit = opts.hit ? opts.hit(r) : null;
-      const name = hit
-        ? `<button type="button" class="hit" title="Открыть список" ${drillData(hit)}>${esc(r[0])}</button>`
-        : esc(r[0]);
-      return `<div class="bar-row"><span class="bar-label" title="${esc(r[0])}">${name}</span><span class="bar-track">${segs}</span><b>${label}</b></div>`;
+      const clickable = typeof opts.click === "function";
+      const attrs = clickable ? ` class="bar-row clickable" role="button" tabindex="0" data-bar="${idx}"` : ` class="bar-row"`;
+      return `<div${attrs}><span class="bar-label" title="${esc(r[0])}">${esc(r[0])}</span><span class="bar-track">${segs}</span><b>${label}</b></div>`;
     }).join("") : `<div class="muted">Нет данных</div>`;
-    return `<section class="panel ${opts.wide ? "wide" : ""}"><h3>${title}</h3>${opts.note ? `<p class="muted">${opts.note}</p>` : ""}${body}</section>`;
-  }
-
-  function drillData(hit) {
-    return [
-      hit.tab && `data-go-tab="${esc(hit.tab)}"`,
-      hit.topic && `data-go-topic="${esc(hit.topic)}"`,
-      hit.customer && `data-go-customer="${esc(hit.customer)}"`,
-      hit.applicant && `data-go-applicant="${esc(hit.applicant)}"`,
-      hit.q && `data-go-q="${esc(hit.q)}"`,
-      hit.days && `data-go-days="${esc(hit.days)}"`,
-    ].filter(Boolean).join(" ");
+    const id = opts.id ? ` id="${esc(opts.id)}"` : "";
+    return `<section class="panel ${opts.wide ? "wide" : ""}"${id} data-bar-kind="${esc(opts.kind || "")}"><h3>${title}</h3>${opts.note ? `<p class="muted">${opts.note}</p>` : ""}${body}</section>`;
   }
 
   function columns(title, buckets, types = ["tender", "patent"]) {
@@ -354,32 +383,6 @@
     return `<section class="panel wide"><h3>${title}</h3><div class="cols">${cols || '<div class="muted">Нет данных</div>'}</div></section>`;
   }
 
-  const ORG_FORMS = [
-    [/федеральное государственное бюджетное образовательное учреждение высшего образования/gi, "ФГБОУ ВО"],
-    [/федеральное государственное автономное образовательное учреждение высшего образования/gi, "ФГАОУ ВО"],
-    [/федеральное государственное бюджетное учреждение науки/gi, "ФГБУН"],
-    [/федеральное государственное бюджетное учреждение/gi, "ФГБУ"],
-    [/федеральное государственное казенное учреждение/gi, "ФГКУ"],
-    [/федеральное государственное унитарное предприятие/gi, "ФГУП"],
-    [/федеральное государственное автономное учреждение/gi, "ФГАУ"],
-    [/государственное бюджетное учреждение здравоохранения/gi, "ГБУЗ"],
-    [/государственное бюджетное общеобразовательное учреждение/gi, "ГБОУ"],
-    [/государственное бюджетное профессиональное образовательное учреждение/gi, "ГБПОУ"],
-    [/государственное автономное учреждение/gi, "ГАУ"],
-    [/государственное бюджетное учреждение/gi, "ГБУ"],
-    [/государственное казенное учреждение/gi, "ГКУ"],
-    [/государственное учреждение/gi, "ГУ"],
-    [/муниципальное бюджетное общеобразовательное учреждение/gi, "МБОУ"],
-    [/муниципальное автономное общеобразовательное учреждение/gi, "МАОУ"],
-    [/муниципальное унитарное предприятие/gi, "МУП"],
-    [/муниципальное казенное учреждение/gi, "МКУ"],
-    [/публичное акционерное общество/gi, "ПАО"],
-    [/акционерное общество/gi, "АО"],
-    [/общество с ограниченной ответственностью/gi, "ООО"],
-    [/индивидуальный предприниматель/gi, "ИП"],
-  ];
-  const shortOrg = (s) => ORG_FORMS.reduce((t, [re, abbr]) => t.replace(re, abbr), String(s || "")).replace(/\s*\((RU|[A-Z]{2})\)\s*$/, "").trim();
-
   function top(list, fn, n = 10) {
     const m = new Map();
     list.forEach((d) => [].concat(fn(d)).forEach((v) => v && m.set(v, (m.get(v) || 0) + 1)));
@@ -389,6 +392,15 @@
   const kpi = (n, label) => `<div class="kpi"><b>${typeof n === "number" ? n.toLocaleString("ru-RU") : n}</b><span>${label}</span></div>`;
   const byTopicCount = (list) => D.topics.map((t) => [t.name, list.filter((d) => d.topics.includes(t.id)).length])
     .filter(([, n]) => n).sort((a, b) => b[1] - a[1]);
+  const daysAgo = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);
+
+  // при выбранной теме показываем, с какими ещё темами пересекаются её документы
+  function topicPanel(title, rows, opts = {}) {
+    const sel = topicInfo[$("#topic").value];
+    if (!sel) return bars(title, rows, opts);
+    return bars(`Пересечения темы «${sel.name}» с другими темами`, rows.filter(([name]) => name !== sel.name),
+      { ...opts, note: "Нажмите тему — откроется список. Показано, с какими ещё темами пересекаются документы." });
+  }
 
   // круговая диаграмма долей
   function donut(title, rows, opts = {}) {
@@ -459,58 +471,55 @@
     if (!items.length) {
       return `<section class="panel wide"><h3>${title}</h3><p class="muted">${note} Пока нет явных всплесков — попробуйте сменить период или тему.</p></section>`;
     }
+    const since = kind === "tender" ? daysAgo(30) : daysAgo(90);
     const rows = items.map((v) => {
       const topic = topicInfo[v.tid]?.name || "без темы";
       const color = topicInfo[v.tid]?.color || "#64748b";
       const money = v.sum ? ` · ${fmtMoney(v.sum, "RUB")}` : "";
-      const hit = kind === "tender"
-        ? { tab: "tender", customer: v.org, topic: v.tid || "", days: 30 }
-        : { tab: "patent", applicant: v.org, topic: v.tid || "", days: 90 };
       const what = kind === "tender"
         ? `<b>${esc(v.org)}</b> — ${v.n} закупок по теме «${esc(topic)}»${money}`
         : `<b>${esc(v.org)}</b> — ${v.n} патентов/заявок по теме «${esc(topic)}»`;
-      return `<button type="button" class="signal hit-block" style="--sc:${color}" ${drillData(hit)} title="Показать список">
-        <div>${what}</div><span class="signal-go">открыть →</span></button>`;
+      return `<div class="signal clickable" style="--sc:${color}" role="button" tabindex="0"
+        data-drill-tab="${kind}" data-drill-org="${esc(v.org)}" data-drill-topic="${esc(v.tid || "")}"
+        data-drill-since="${since}" data-drill-label="${esc(v.org)} · ${esc(topic)}">
+        <div>${what}<div class="signal-hint">нажмите, чтобы открыть список</div></div></div>`;
     }).join("");
-    return `<section class="panel wide signals"><h3>${title}</h3><p class="muted">${note} Нажмите на строку, чтобы открыть список.</p>${rows}</section>`;
+    return `<section class="panel wide signals"><h3>${title}</h3><p class="muted">${note}</p>${rows}</section>`;
   }
 
-  // рост темы: последние 30 дней vs предыдущие 30 — отдельно тендеры и патенты
-  function topicGrowth(list, mode = "both") {
+  // рост темы: отдельно тендеры и патенты, 30 vs предыдущие 30
+  function topicGrowthSplit(T, P) {
     const a0 = daysAgo(30), a1 = daysAgo(60);
-    const inPrev = (d) => docDate(d) >= a1 && docDate(d) < a0;
-    const inNow = (d) => docDate(d) >= a0;
+    const count = (list, tid, from, to) => list.filter((d) => d.topics.includes(tid) && docDate(d) >= from && (!to || docDate(d) < to)).length;
     return D.topics.map((t) => {
-      const of = (pred) => list.filter((d) => d.topics.includes(t.id) && pred(d));
-      const tPrev = of((d) => d.type === "tender" && inPrev(d)).length;
-      const tNow = of((d) => d.type === "tender" && inNow(d)).length;
-      const pPrev = of((d) => d.type === "patent" && inPrev(d)).length;
-      const pNow = of((d) => d.type === "patent" && inNow(d)).length;
-      const delta = mode === "tender" ? tNow - tPrev : mode === "patent" ? pNow - pPrev : (tNow + pNow) - (tPrev + pPrev);
-      return { id: t.id, name: t.name, color: topicInfo[t.id].color, tPrev, tNow, pPrev, pNow, delta };
-    }).filter((x) => mode === "tender" ? x.tPrev + x.tNow > 0
-      : mode === "patent" ? x.pPrev + x.pNow > 0
-      : x.tPrev + x.tNow + x.pPrev + x.pNow > 0)
+      const tPrev = count(T, t.id, a1, a0), tNow = count(T, t.id, a0, "");
+      const pPrev = count(P, t.id, a1, a0), pNow = count(P, t.id, a0, "");
+      return {
+        id: t.id, name: t.name, color: topicInfo[t.id].color,
+        tPrev, tNow, pPrev, pNow,
+        delta: (tNow + pNow) - (tPrev + pPrev),
+      };
+    }).filter((x) => x.tPrev + x.tNow + x.pPrev + x.pNow > 0)
       .sort((a, b) => b.delta - a.delta || (b.tNow + b.pNow) - (a.tNow + a.pNow));
   }
 
-  function growthPanel(title, list, mode = "both") {
-    const rows = topicGrowth(list, mode);
+  function growthPanel(T, P) {
+    const rows = topicGrowthSplit(T, P);
     if (!rows.length) return "";
     const body = rows.map((r) => {
-      const sign = r.delta > 0 ? `+${r.delta}` : String(r.delta);
       const cls = r.delta > 0 ? "up" : r.delta < 0 ? "down" : "";
-      let detail;
-      if (mode === "tender") detail = `было ${r.tPrev} за прошлые 30 дн. → стало ${r.tNow} за последние 30 дн.`;
-      else if (mode === "patent") detail = `было ${r.pPrev} за прошлые 30 дн. → стало ${r.pNow} за последние 30 дн.`;
-      else detail = `тендеры: ${r.tPrev}→${r.tNow} · патенты: ${r.pPrev}→${r.pNow} (прошлые → последние 30 дн.)`;
-      const tab = mode === "patent" ? "patent" : mode === "tender" ? "tender" : "tender";
-      return `<button type="button" class="grow-row hit-block" ${drillData({ tab, topic: r.id, days: 30 })} title="Открыть за последние 30 дней">
+      const sign = r.delta > 0 ? `+${r.delta}` : String(r.delta);
+      return `<div class="grow-row clickable" role="button" tabindex="0" data-drill-tab="stats" data-drill-topic="${esc(r.id)}"
+        data-drill-label="${esc(r.name)}">
         <span class="grow-name" style="--tc:${r.color}">${esc(r.name)}</span>
-        <span class="muted">${detail}</span>
-        <b class="${cls}">${sign}</b></button>`;
+        <span class="grow-detail">
+          <span>тендеры: было ${r.tPrev} → стало ${r.tNow}</span>
+          <span>патенты: было ${r.pPrev} → стало ${r.pNow}</span>
+        </span>
+        <b class="${cls}">${sign}</b></div>`;
     }).join("");
-    return `<section class="panel wide"><h3>${title}</h3><p class="muted">Последние 30 дней против предыдущих 30. Нажмите тему — откроется список.</p>${body}</section>`;
+    return `<section class="panel wide"><h3>Динамика изменения количества патентов и тендеров по темам</h3>
+      <p class="muted">Последние 30 дней против предыдущих 30. Нажмите тему — откроется список.</p>${body}</section>`;
   }
 
   function renderAnalytics() {
@@ -547,61 +556,98 @@
     const dyn = monthly ? "Динамика по месяцам" : "Динамика по годам";
     const switcher = `<div class="an-switch">${[["all", "Общая"], ["tender", `Тендеры (${T.length})`], ["patent", `Патенты (${P.length})`]]
       .map(([v, l]) => `<button data-an="${v}" class="${view === v ? "active" : ""}">${l}</button>`).join("")}</div>`;
-    const topicIdByName = Object.fromEntries(D.topics.map((t) => [t.name, t.id]));
-    const hitCustomer = (r) => ({ tab: "tender", customer: r[0] });
-    const hitApplicant = (r) => ({ tab: "patent", applicant: r[0] });
-    const hitTopic = (tab) => (r) => ({ tab, topic: topicIdByName[r[0]] || "" });
-    const hitKeyword = (tab) => (r) => ({ tab, q: r[0] });
+
+    // сохраняем данные для кликов по строкам (индексы → параметры drill)
+    state._barClicks = {};
+
+    const clickCustomers = (rows) => {
+      state._barClicks.customers = rows.map(([org]) => ({ tab: "tender", customer: org, label: org }));
+      return true;
+    };
+    const clickApplicants = (rows) => {
+      state._barClicks.applicants = rows.map(([org]) => ({ tab: "patent", applicant: org, label: org }));
+      return true;
+    };
+    const clickSpend = (rows) => {
+      state._barClicks.spend = rows.map(([org]) => ({ tab: "tender", customer: org, label: org }));
+      return true;
+    };
+    const clickKeywords = (rows, tab) => {
+      state._barClicks["kw-" + tab] = rows.map(([kw]) => ({ tab, keyword: kw, label: kw }));
+      return true;
+    };
+    const clickTopics = (rows, tab) => {
+      // rows may be [name, n] or [name, {tender,patent}]
+      state._barClicks["topics-" + tab] = rows.map(([name]) => {
+        const tid = D.topics.find((t) => t.name === name)?.id || "";
+        return { tab: tab === "all" ? "tender" : tab, topic: tid, label: name };
+      });
+      return true;
+    };
 
     let html;
     if (view === "tender") {
       const biggest = [...rub].sort((a, b) => b.price - a.price).slice(0, 8);
       const spend = topSpend(selTopic ? rub.filter((d) => d.topics.includes(selTopic)) : rub);
+      const cust = top(T, (d) => shortOrg(d.customer));
+      const kws = top(T, (d) => d.keywords, 12);
+      const tTopics = byTopicCount(T);
+      clickSpend(spend); clickCustomers(cust); clickKeywords(kws, "tender"); clickTopics(tTopics, "tender");
       html = `
         <div class="kpis">${kpi(T.length, "тендеров")}${kpi(openN, "с открытым приёмом")}${kpi(fmtMoney(totalRub, "RUB") || "—", "сумма закупок в РФ")}${kpi(spend[0] ? spend[0][0].slice(0, 28) : "—", "топ-заказчик по сумме")}</div>
         ${signalsPanel("На что обратить внимание · последние 30 дней",
-          "Заказчики, у которых несколько закупок по одной теме за месяц — возможный сигнал интереса к технологии.",
+          "Заказчики с несколькими закупками по одной теме за месяц. Нажмите строку — откроются их тендеры.",
           buyerSignals(T, 30, 2), "tender")}
         <div class="panels">
           ${columns(dyn, buckets, ["tender"])}
-          ${bars("Распределение тендеров по темам", byTopicCount(T), { hit: hitTopic("tender") })}
-          ${growthPanel("Динамика изменения количества тендеров по темам", T, "tender")}
-          ${bars("Кто сколько закупил (₽)", spend, { fmt: (v) => fmtMoney(v, "RUB"), note: selTopic ? `Тема: ${topicInfo[selTopic].name}` : "Сумма начальных цен ЕИС в рублях по заказчику · нажмите заказчика", wide: true, hit: hitCustomer })}
-          ${bars("Самые активные заказчики (по числу закупок)", top(T, (d) => shortOrg(d.customer)), { hit: hitCustomer })}
+          ${topicPanel("Тендеры по темам", tTopics, { kind: "topics-tender", click: true })}
+          ${growthPanel(T, P)}
+          ${bars("Кто сколько закупил (₽)", spend, { fmt: (v) => fmtMoney(v, "RUB"), note: "Нажмите заказчика — откроются его закупки. Суммы НМЦК ЕИС в ₽", wide: true, kind: "spend", click: true })}
+          ${bars("Самые активные заказчики (по числу закупок)", cust, { note: "Нажмите — список тендеров заказчика", kind: "customers", click: true })}
           ${moneyTopic.length ? bars(`Сумма по выбранной теме`, moneyTopic, { fmt: (v) => fmtMoney(v, "RUB") }) : ""}
           <section class="panel wide"><h3>Крупнейшие закупки</h3>${biggest.length ? biggest.map((d) =>
-            `<div class="bar-row"><span class="bar-label wide-label"><a href="${esc(d.url)}" target="_blank" rel="noopener" title="${esc(d.title_ru || d.title)}">${esc(shortOrg(d.customer) || "—")}: ${esc(d.title_ru || d.title)}</a></span><b>${fmtMoney(d.price, d.currency)}</b></div>`).join("") : '<div class="muted">Нет данных</div>'}</section>
-          ${bars("Частые ключевые слова в тендерах", top(T, (d) => d.keywords, 12), { color: "#7c3aed", hit: hitKeyword("tender") })}
+            `<div class="bar-row clickable" role="button" data-drill-tab="tender" data-drill-org="${esc(shortOrg(d.customer))}" data-drill-label="${esc(shortOrg(d.customer))}">
+              <span class="bar-label wide-label"><a href="${esc(d.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="${esc(d.title_ru || d.title)}">${esc(shortOrg(d.customer) || "—")}: ${esc(d.title_ru || d.title)}</a></span><b>${fmtMoney(d.price, d.currency)}</b></div>`).join("") : '<div class="muted">Нет данных</div>'}</section>
+          ${bars("Частые ключевые слова в тендерах", kws, { color: "#7c3aed", note: "Нажмите слово — откроются тендеры", kind: "kw-tender", click: true })}
         </div>`;
     } else if (view === "patent") {
+      const apps = top(P, (d) => shortOrg((d.applicants || [])[0]));
+      const kws = top(P, (d) => d.keywords, 12);
+      const pTopics = byTopicCount(P);
+      clickApplicants(apps); clickKeywords(kws, "patent"); clickTopics(pTopics, "patent");
       html = `
         <div class="kpis">${kpi(P.length, "патентов и заявок")}${kpi(P.filter((d) => /^действ/i.test(d.status || "")).length, "действуют (ФИПС)")}${kpi(P.filter((d) => d.source.startsWith("ФИПС")).length, "российских")}${kpi(P.filter((d) => d.source.startsWith("EPO")).length, "европейских")}</div>
         ${signalsPanel("На что обратить внимание · последние 90 дней",
-          "Заявители, у которых несколько публикаций по одной теме за квартал — возможный сигнал активной разработки.",
+          "Заявители с несколькими публикациями по одной теме за квартал. Нажмите — откроются их патенты.",
           applicantSignals(P, 90, 2), "patent")}
         <div class="panels">
           ${columns(dyn, buckets, ["patent"])}
-          ${bars("Распределение патентов по темам", byTopicCount(P), { color: TC.patent, hit: hitTopic("patent") })}
-          ${growthPanel("Динамика изменения количества патентов по темам", P, "patent")}
+          ${topicPanel("Патенты по темам", pTopics, { color: TC.patent, kind: "topics-patent", click: true })}
+          ${growthPanel(T, P)}
           ${bars("Статус охраны", top(P.filter((d) => d.status), (d) => d.status[0].toUpperCase() + d.status.slice(1), 8), { color: TC.patent, note: "По данным реестра ФИПС" })}
-          ${bars("Самые активные патентообладатели", top(P, (d) => shortOrg((d.applicants || [])[0])), { color: TC.patent, wide: true, hit: hitApplicant })}
-          ${bars("Частые ключевые слова в патентах", top(P, (d) => d.keywords, 12), { color: "#7c3aed", hit: hitKeyword("patent") })}
+          ${bars("Самые активные патентообладатели", apps, { color: TC.patent, wide: true, note: "Нажмите — список патентов заявителя", kind: "applicants", click: true })}
+          ${bars("Частые ключевые слова в патентах", kws, { color: "#7c3aed", note: "Нажмите слово — откроются патенты", kind: "kw-patent", click: true })}
         </div>`;
     } else {
+      const cust = top(T, (d) => shortOrg(d.customer));
+      const apps = top(P, (d) => shortOrg((d.applicants || [])[0]));
+      const spend = topSpend(rub);
+      const kws = top(list, (d) => d.keywords, 12);
+      clickCustomers(cust); clickApplicants(apps); clickSpend(spend); clickKeywords(kws, "tender"); clickTopics(byTopic, "all");
       html = `
         <div class="kpis">${kpi(T.length, "тендеров")}${kpi(P.length, "патентов")}${kpi(openN, "тендеров с открытым приёмом")}${kpi(fmtMoney(totalRub, "RUB") || "—", "сумма закупок в РФ")}</div>
         ${signalsPanel("Сигналы за последний месяц",
-          "Кто активно закупает какую технологию — удобная точка входа: «почему именно сейчас?»",
+          "Кто активно закупает какую технологию. Нажмите строку — откроются тендеры этого заказчика по теме.",
           buyerSignals(T, 30, 2), "tender")}
         <div class="legend"><span><i style="background:${TC.tender}"></i>Тендеры</span><span><i style="background:${TC.patent}"></i>Патенты</span></div>
         <div class="panels">
           ${columns(dyn, buckets)}
-          ${bars("Распределение патентов и тендеров по темам", byTopic, { wide: true, hit: (r) => ({ tab: "tender", topic: topicIdByName[r[0]] || "" }) })}
-          ${growthPanel("Динамика изменения количества патентов и тендеров по темам", list, "both")}
-          ${bars("Самые активные заказчики", top(T, (d) => shortOrg(d.customer)), { hit: hitCustomer })}
-          ${bars("Самые активные патентообладатели", top(P, (d) => shortOrg((d.applicants || [])[0])), { color: TC.patent, hit: hitApplicant })}
-          ${bars("Кто сколько закупил (₽)", topSpend(rub), { fmt: (v) => fmtMoney(v, "RUB"), note: "Начальные цены тендеров ЕИС в рублях · нажмите заказчика", wide: true, hit: hitCustomer })}
-          ${bars("Частые ключевые слова", top(list, (d) => d.keywords, 12), { color: "#7c3aed", wide: true, hit: hitKeyword("tender") })}
+          ${topicPanel("Распределение патентов и тендеров по темам", byTopic, { wide: true, kind: "topics-all", click: true })}
+          ${growthPanel(T, P)}
+          ${bars("Самые активные заказчики", cust, { note: "Нажмите — тендеры заказчика", kind: "customers", click: true })}
+          ${bars("Самые активные патентообладатели", apps, { color: TC.patent, note: "Нажмите — патенты заявителя", kind: "applicants", click: true })}
+          ${bars("Кто сколько закупил (₽)", spend, { fmt: (v) => fmtMoney(v, "RUB"), note: "Нажмите заказчика — его закупки. НМЦК ЕИС в ₽", wide: true, kind: "spend", click: true })}
+          ${bars("Частые ключевые слова", kws, { color: "#7c3aed", wide: true, note: "Нажмите слово — поиск по нему", kind: "kw-tender", click: true })}
         </div>`;
     }
     $("#analytics").innerHTML = switcher + html;
@@ -623,20 +669,11 @@
       return;
     }
     const list = sorted(filtered(tab));
-    const drillBits = [
-      state.drill?.customer && `заказчик «${state.drill.customer}»`,
-      state.drill?.applicant && `заявитель «${state.drill.applicant}»`,
-    ].filter(Boolean);
-    $("#summary").innerHTML = list.length
-      ? `Найдено: ${list.length}${drillBits.length ? ` · фильтр из аналитики: ${esc(drillBits.join(", "))} <button type="button" class="link" id="clearDrill">сбросить</button>` : ""}`
-      : "";
+    $("#summary").innerHTML = (list.length ? `Найдено: ${list.length}` : "") + drillChip();
+    const chipBtn = $("#clearDrill");
+    if (chipBtn) chipBtn.onclick = clearDrill;
     $("#list").innerHTML = list.length ? list.slice(0, state.shown).map(card).join("") : emptyState();
     $("#more").hidden = list.length <= state.shown;
-    $("#clearDrill")?.addEventListener("click", () => {
-      state.drill = null;
-      $("#q").value = "";
-      requestRender(0);
-    });
   }
 
   function setTab(tab) {
@@ -697,9 +734,9 @@
   document.querySelectorAll("#tabs button").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
   $("#more").onclick = () => { state.shown += PAGE; render(); };
   $("#reset").onclick = () => {
-    state.drill = null;
     ["#q", "#topic", "#country", "#source"].forEach((s) => ($(s).value = ""));
     $("#dateFrom").value = $("#dateTo").value = "";
+    state.drill = null;
     requestRender(0);
   };
   $("#stats").addEventListener("click", (e) => {
@@ -719,22 +756,53 @@
 
   $("#analytics").addEventListener("click", (e) => {
     const an = e.target.closest("[data-an]")?.dataset.an;
-    if (an) {
-      state.an = an;
-      renderAnalytics();
+    if (an) { state.an = an; renderAnalytics(); return; }
+
+    const signal = e.target.closest(".signal[data-drill-tab]");
+    if (signal) {
+      const tab = signal.dataset.drillTab;
+      const org = signal.dataset.drillOrg || "";
+      drillTo({
+        tab,
+        customer: tab === "tender" ? org : "",
+        applicant: tab === "patent" ? org : "",
+        topic: signal.dataset.drillTopic || "",
+        since: signal.dataset.drillSince || "",
+        until: today,
+        label: signal.dataset.drillLabel || org,
+        clearDates: !signal.dataset.drillSince,
+      });
       return;
     }
-    const hit = e.target.closest("[data-go-tab]");
-    if (!hit) return;
-    drillTo({
-      tab: hit.dataset.goTab,
-      topic: hit.dataset.goTopic || "",
-      customer: hit.dataset.goCustomer || "",
-      applicant: hit.dataset.goApplicant || "",
-      q: hit.dataset.goQ || "",
-      days: hit.dataset.goDays ? +hit.dataset.goDays : 0,
-    });
+
+    const grow = e.target.closest(".grow-row[data-drill-topic]");
+    if (grow && grow.dataset.drillTopic) {
+      $("#topic").value = grow.dataset.drillTopic;
+      state.drill = { label: grow.dataset.drillLabel || "" };
+      setTab("tender");
+      toast(grow.dataset.drillLabel || "Тема");
+      return;
+    }
+
+    const big = e.target.closest(".bar-row[data-drill-org]");
+    if (big && big.dataset.drillOrg) {
+      drillTo({ tab: "tender", customer: big.dataset.drillOrg, label: big.dataset.drillLabel || big.dataset.drillOrg });
+      return;
+    }
+
+    const row = e.target.closest(".bar-row.clickable");
+    const panel = row?.closest("[data-bar-kind]");
+    if (row && panel) {
+      const kind = panel.dataset.barKind;
+      const idx = +row.dataset.bar;
+      const cfg = state._barClicks?.[kind]?.[idx];
+      if (cfg) {
+        if (cfg.topic) $("#topic").value = cfg.topic;
+        drillTo(cfg);
+      }
+    }
   });
+
 
   setTab(SORTS[location.hash.slice(1)] ? location.hash.slice(1) : "stats");
 
